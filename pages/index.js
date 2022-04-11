@@ -15,7 +15,7 @@ export default function Home() {
 
       <TopNav></TopNav>
 
-     <main className="flex h-100">
+     <main className="flex h-100 w-100 text-xl">
 
      </main>
 
