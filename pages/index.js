@@ -13,10 +13,10 @@ export default function Home() {
       </Head>
 
 
-      <TopNav></TopNav>
+      <TopNav/>
 
      <main className="flex h-100 w-100 text-xl">
-
+      
      </main>
 
     </div>
