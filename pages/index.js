@@ -2,6 +2,7 @@ import Image from 'next/image'
 import TopNav from "../src/components/TopNav";
 import appDetails from "../config/appDetails";
 import Head from "next/head";
+import Intro from "../src/components/pages/Home/Intro";
 
 
 export default function Home() {
@@ -15,8 +16,12 @@ export default function Home() {
 
       <TopNav/>
 
+      <header>
+        <Intro/>
+      </header>
+
      <main className="flex h-100 w-100 text-xl">
-      
+
      </main>
 
     </div>
