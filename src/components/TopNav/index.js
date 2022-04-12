@@ -5,11 +5,16 @@ import Image from "next/image";
 import ScLogo from "../svgs/ScLogo";
 import Link from "next/link";
 import Button from "../Button";
+import {useIntersection, useWindowScroll} from "@mantine/hooks";
+import clsx from "clsx";
 
 const TopNav = props => {
+
+  const [scroll] = useWindowScroll();
+
   return (
-    <nav className="sticky top-0 z-50 flex items-center px-2 pt-0.5 transition-all">
-      <div className="w-full flex justify-between align-center text-white font-semibold">
+    <nav className={clsx("sticky top-0 z-50 flex items-center px-2 py-1 transition-all items-center", {"bg-purple shadow": scroll.y > 50})}>
+      <div className="w-full flex justify-between items-center text-white font-semibold">
         <div className="flex gap-x-1">
 
             <div>
@@ -29,7 +34,7 @@ const TopNav = props => {
           <div>Pricing</div>
           <div>Solutions</div>
         </div>
-        <div className="flex gap-x-5 justify-end">
+        <div className="flex gap-x-5 justify-end items-center">
           <div>Login</div>
           <Button className="py-1.5 px-5">Get Started</Button>
         </div>
