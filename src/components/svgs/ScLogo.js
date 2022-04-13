@@ -7,9 +7,6 @@ const ScLogo = (props) => (
     x={0}
     y={0}
     viewBox="0 0 811.7 800"
-    style={{
-      enableBackground: "new 0 0 811.7 800",
-    }}
     xmlSpace="preserve"
     {...props}
   >

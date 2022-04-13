@@ -10,10 +10,12 @@ import VideoLogo from "../../svgs/VideoLogo";
 import PassageLogo from "../../svgs/PassageLogo";
 import CustomLogo from "../../svgs/CustomLogo";
 import DemoMenuItem from "./DemoMenuItem";
+import MCQDemoItem from "./DemoItems/MCQDemoItem";
+import MSQDemoItem from "./DemoItems/MSQDemoItem";
 
 const menuItems = [
-  {logo : <MCQLogo />, title : "MCQ", activeComponent : null},
-  {logo : <MSQLogo />, title : "MSQ", activeComponent : null},
+  {logo : <MCQLogo />, title : "MCQ", activeComponent : <MCQDemoItem />},
+  {logo : <MSQLogo />, title : "MSQ", activeComponent : <MSQDemoItem />},
   {logo : <CodingLogo />, title : "Coding", activeComponent : null},
   {logo : <RankingLogo />, title : "Ranking", activeComponent : null},
   {logo : <VideoLogo />, title : "Video", activeComponent : null},
@@ -29,14 +31,16 @@ const TestDemoTop = () => {
   return (
     <div className={clsx("flex grow")}>
       <Card className={clsx(style.interactiveCard, "p-0")}>
-        <div className="flex justify-between">
+        <div className="flex justify-between w-full">
           <div className="flex flex-col justify-evenly w-50 bg-gray-extra-light rounded-l-xl ">
             {
               menuItems.map((item, index) => <DemoMenuItem key={item.title} logo={item.logo} title={item.title} active={index === activeItem} onClick={() => setActiveItem(index)} />)
             }
           </div>
-          <div className="flex ">
-            tv
+          <div className="flex w-full ">
+            {
+              menuItems[activeItem].activeComponent
+            }
           </div>
         </div>
       </Card>

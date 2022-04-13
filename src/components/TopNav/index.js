@@ -19,9 +19,7 @@ const TopNav = props => {
 
             <div>
               {/*<Image src="/logo.svg"  alt="SkillCounty Logo" width={70} height={70}/>*/}
-              <Link href="/" passHref>
-                <ScLogo width={30} height={30} className="fill-gray-light"/>
-              </Link>
+              <ScLogo width={30} height={30} className="fill-gray-light"/>
             </div>
             <div className="tracking-wide text-xl font-bold">
               <Link href="/">SkillCounty</Link>
