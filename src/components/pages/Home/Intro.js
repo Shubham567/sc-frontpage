@@ -29,7 +29,7 @@ const Intro = () => {
                     Start Free Trial
                   </CallToActionBtn>
                 </div>
-                <div>
+                <div className={clsx(styles.textShadow, "text-xs")}>
                   or Request Demo
                 </div>
               </div>
