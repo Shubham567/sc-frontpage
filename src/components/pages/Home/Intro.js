@@ -10,15 +10,15 @@ const Intro = () => {
   return (
     <div className={""}>
       <BgTopVector className={"absolute top-0 -mt-9 w-screen -z-10"} />
-          <div className="flex justify-around items-center z h-screen text-white">
-            <div className="flex flex-col gap-y-4">
-              <div>
+          <div className="flex justify-around gap-1 items-center z h-screen text-white">
+            <div className="flex w-1/2 flex-col gap-y-4 -mt-16 pl-5">
+              <div className="inline">
                 <h1 className={clsx("text-6xl", styles.textShadow)}>Hire with <strong>Evidence!</strong></h1>
               </div>
-              <div>
-                <h2 className={clsx("text-3xl", styles.textShadow)}>Measure skill, Assess personality & Fit</h2>
+              <div className="flex">
+                <h2 className={clsx("text-3xl", styles.textShadow,)}>Measure skill, Assess personality & Fit</h2>
               </div>
-              <div>
+              <div className="flex">
                 <p className={clsx(styles.textMaxWidth,  styles.textShadow)}>
                   Upgrade your hiring. Use SkillCounty Assessment Platform to hire the right candidates faster and more efficiently.
                 </p>
@@ -34,7 +34,7 @@ const Intro = () => {
                 </div>
               </div>
             </div>
-            <div className="flex">
+            <div className="flex w-1/2">
               {/*// The Interactive comp goes here*/}
               <TestDemoTop />
             </div>

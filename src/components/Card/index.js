@@ -5,7 +5,7 @@ import clsx from "clsx";
 const Card = ({ children, fluid,className,...props}) => {
   return (
     <div className={clsx(
-      "flex bg-white shadow-xl text-gray-extra-dark p-4 rounded-xl",
+      "flex bg-white shadow-xl text-gray-extra-dark p-4 rounded-xl border-1 border-gray-light",
       {"w-full": fluid},
       className)
     } {...props}>
