@@ -13,12 +13,13 @@ import DemoMenuItem from "./DemoMenuItem";
 import MCQDemoItem from "./DemoItems/MCQDemoItem";
 import MSQDemoItem from "./DemoItems/MSQDemoItem";
 import CodingDemoItem from "./DemoItems/CodingDemoItem";
+import RankingDemoItem from "./DemoItems/RankingDemoItem";
 
 const menuItems = [
   {logo : <MCQLogo />, title : "MCQ", activeComponent : <MCQDemoItem />},
   {logo : <MSQLogo />, title : "MSQ", activeComponent : <MSQDemoItem />},
   {logo : <CodingLogo />, title : "Coding", activeComponent : <CodingDemoItem />},
-  {logo : <RankingLogo />, title : "Ranking", activeComponent : null},
+  {logo : <RankingLogo />, title : "Ranking", activeComponent : <RankingDemoItem />},
   {logo : <VideoLogo />, title : "Video", activeComponent : null},
   {logo : <PassageLogo />, title : "Passage", activeComponent : null},
   {logo : <CustomLogo />, title : "Custom", activeComponent : null},

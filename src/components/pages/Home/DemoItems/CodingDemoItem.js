@@ -44,7 +44,7 @@ const CodingDemoItem = () => {
           return (prev !== "" ? prev +"\n" + codeLines[prevNumLines] : codeLines[0]);
         })
         Prism.highlightAll();
-      }, 100);
+      }, 40);
     });
 
     promise.then(() => {
@@ -90,7 +90,7 @@ const CodingDemoItem = () => {
                   className={clsx( "w-2/3","shadow-2xl", "z-10")}
                   questionText={texts.questionText}
                   questionNum={3}
-                  marksScored={20}
+                  marksScored={10}
       >
         <div className="flex flex-col w-full gap-2 justify-center items-center">
           <div className="flex justify-center w-15 border-4 border-green rounded-full">
