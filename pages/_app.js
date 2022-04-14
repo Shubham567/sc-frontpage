@@ -1,4 +1,5 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
+import '../styles/prism.css';
 import {AnimatePresence} from "framer-motion";
 
 function MyApp({ Component, pageProps }) {

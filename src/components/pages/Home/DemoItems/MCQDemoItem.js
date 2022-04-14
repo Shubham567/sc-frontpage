@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {motion, useAnimation} from "framer-motion";
+import clsx from "clsx";
+import DemoReport from "./DemoReport";
 
 const texts = {
   questionText: "What is the ratio of speed to the magnitude of velocity when the body is moving in one direction?",
@@ -8,26 +10,31 @@ const texts = {
     {text: "Greater than one", active: true},
     {text: "Equal to one", active: false},
     {text: "Greater than or equal to one", active: false},
-  ]
+  ],
+  correctOptionIndex : 2
 }
 
 const MCQDemoItem = () => {
   const [questionText,setQuestionText] = useState("");
   const controls = useAnimation();
+  const controlDemoReport = useAnimation();
+  const [markOption,setMarkOption] = useState(false);
 
   useEffect(() => {
     let timer;
     let promise = new Promise((resolve, reject) => {
+      const questionWords = texts.questionText.split(" ");
       timer = setInterval(() => {
         setQuestionText(prev => {
-          if(prev.length === texts.questionText.length){
+          const prevWords = prev === "" ? 0 : prev.split(" ")
+          if(prevWords.length === questionWords.length){
             clearInterval(timer);
             resolve();
             return prev;
           }
-          return (prev + texts.questionText[prev.length]);
+          return (prev + " " + questionWords[prevWords.length || 0]);
         })
-      }, 10);
+      }, 16);
     });
 
     promise.then(() => {
@@ -39,13 +46,19 @@ const MCQDemoItem = () => {
           duration: 0.3 + (0.1) * i
         }
       }));
-    }).then(() => console.log("Animation Finished"))
+    }).then(() => {
+      setMarkOption(true);
+      return controlDemoReport.start({
+        x: 0,
+        opacity: 1
+      });
+    })
 
     return () => clearInterval(timer);
   }, [])
 
   return (
-    <div className="w-full pl-5 pt-5">
+    <div className="w-full pl-5 pt-5 relative">
       <div className="flex flex-col w-full gap-4">
         <div className="flex bold">
           <div className="flex w-1/3 text-sm text-purple-dark">Question 1</div>
@@ -65,11 +78,35 @@ const MCQDemoItem = () => {
               animate={controls}
               initial={{opacity: 0, y : 20}}
               className="flex gap-2 items-center">
-              <input type="radio" name="mcq" checked={t.active} disabled/> {t.text}
+              <input type="radio" name="mcq" checked={t.active && markOption} disabled/> {t.text}
             </motion.div>)
             }
         </div>
       </div>
+      <DemoReport component={motion.div}
+                  animate={controlDemoReport}
+                  className={clsx( "w-2/3","shadow-2xl")}
+                  questionText={texts.questionText}
+                  questionNum={1}
+                  marksScored={0}
+      >
+        <div className="flex flex-col w-full gap-2">
+          <div className="text-xs text-gray">
+            Selected Answer
+          </div>
+          {
+            texts.options.filter(opt => opt.active).map((opt, i) => <div key={i} className="flex w-full border rounded-xl border-red text-red items-center gap-3 p-2">
+              <input type="radio" checked disabled/><span>{opt.text}</span>
+            </div>)
+          }
+          <div className="text-xs text-gray">
+            Correct Answer
+          </div>
+          <div className="flex w-full border rounded-xl border-green text-green items-center gap-3 p-2">
+            <input type="radio" disabled/><span>{texts.options[texts.correctOptionIndex].text}</span>
+          </div>
+        </div>
+      </DemoReport>
     </div>
   );
 };

@@ -2,15 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from "clsx";
 
-const Card = ({ children, fluid,className,...props}) => {
+const Card = ({ children,component, fluid,className,...props}) => {
+  const RenderComp = component || "div";
   return (
-    <div className={clsx(
+    <RenderComp className={clsx(
       "flex bg-white shadow-xl text-gray-extra-dark p-4 rounded-xl border-1 border-gray-light",
       {"w-full": fluid},
       className)
     } {...props}>
       {children}
-    </div>
+    </RenderComp>
   );
 };
 
