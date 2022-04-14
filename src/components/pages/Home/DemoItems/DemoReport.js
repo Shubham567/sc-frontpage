@@ -1,16 +1,19 @@
-import React, {memo} from 'react';
+import React, {memo, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import Card from "../../../Card";
 import clsx from "clsx";
 import styles from "./CommonDemoReport.module.css";
 
 const DemoReport = memo(({questionNum,questionText,marksScored,children,className,...props}) => {
-  let slicedText = questionText.slice(0, 26);
+  let slicedText = questionText.slice(0, 36);
   let screen = typeof window === "object" ? window.screen : null;
+
+
   return (
     <Card fluid className={clsx(styles.demoReportLg, className)} {...props}
           initial={{x: (screen?.availWidth || 4000) + 500, opacity: 0}}
           transition={{x: {type: "spring", stiffness: 500, damping: 30}}}
+          exit={{ opacity: 0 }}
     >
       <div className="flex flex-col mt-2 px-2 w-full justify-between">
         <div className="flex justify-between">

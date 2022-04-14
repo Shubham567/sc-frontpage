@@ -14,7 +14,7 @@ const texts = {
   correctOptionIndex : 2
 }
 
-const MCQDemoItem = () => {
+const MCQDemoItem = ({questionNum}) => {
   const [questionText,setQuestionText] = useState("");
   const controls = useAnimation();
   const controlDemoReport = useAnimation();
@@ -87,7 +87,7 @@ const MCQDemoItem = () => {
                   animate={controlDemoReport}
                   className={clsx( "w-2/3","shadow-2xl")}
                   questionText={texts.questionText}
-                  questionNum={1}
+                  questionNum={questionNum}
                   marksScored={0}
       >
         <div className="flex flex-col w-full gap-2">

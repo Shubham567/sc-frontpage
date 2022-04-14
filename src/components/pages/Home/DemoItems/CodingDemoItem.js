@@ -6,7 +6,7 @@ import Prism from "prismjs";
 import AnimatedDoubleTick from "../../../svgs/AnimatedDoubleTick";
 
 const texts = {
-  questionText: "Write a program to perform Insertion Sort using Javascript",
+  questionText: "Write a program to perform Insertion Sort.",
   code: "function insertionSort(inputArr) {\n" +
     "    let n = inputArr.length;\n" +
     "        for (let i = 1; i < n; i++) {\n" +

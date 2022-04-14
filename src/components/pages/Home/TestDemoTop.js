@@ -14,14 +14,15 @@ import MCQDemoItem from "./DemoItems/MCQDemoItem";
 import MSQDemoItem from "./DemoItems/MSQDemoItem";
 import CodingDemoItem from "./DemoItems/CodingDemoItem";
 import RankingDemoItem from "./DemoItems/RankingDemoItem";
+import PassageDemoItem from "./DemoItems/PassageDemoItem";
 
 const menuItems = [
-  {logo : <MCQLogo />, title : "MCQ", activeComponent : <MCQDemoItem />},
-  {logo : <MSQLogo />, title : "MSQ", activeComponent : <MSQDemoItem />},
-  {logo : <CodingLogo />, title : "Coding", activeComponent : <CodingDemoItem />},
-  {logo : <RankingLogo />, title : "Ranking", activeComponent : <RankingDemoItem />},
+  {logo : <CodingLogo />, title : "Coding", activeComponent : CodingDemoItem},
+  {logo : <MCQLogo />, title : "MCQ", activeComponent : MCQDemoItem},
+  {logo : <MSQLogo />, title : "MSQ", activeComponent : MSQDemoItem},
+  {logo : <RankingLogo />, title : "Ranking", activeComponent : RankingDemoItem},
   {logo : <VideoLogo />, title : "Video", activeComponent : null},
-  {logo : <PassageLogo />, title : "Passage", activeComponent : null},
+  {logo : <PassageLogo />, title : "Passage", activeComponent : PassageDemoItem},
   {logo : <CustomLogo />, title : "Custom", activeComponent : null},
 ]
 
@@ -29,6 +30,7 @@ const TestDemoTop = () => {
 
   const [activeItem, setActiveItem ] = useState(0);
 
+  const ActiveComp = menuItems[activeItem].activeComponent || (() => null);
 
   return (
     <div className={clsx("flex grow")}>
@@ -41,7 +43,7 @@ const TestDemoTop = () => {
           </div>
           <div className="flex w-full ">
             {
-              menuItems[activeItem].activeComponent
+              <ActiveComp questionNum={activeItem + 1} />
             }
           </div>
         </div>

@@ -16,7 +16,7 @@ const texts = {
   ],
 }
 
-const RankingDemoItem = () => {
+const RankingDemoItem = ({questionNum}) => {
   const [questionText,setQuestionText] = useState("");
   const controls = useAnimation();
   const controlDemoReport = useAnimation();
@@ -78,9 +78,9 @@ const RankingDemoItem = () => {
     <div className="w-full pl-5 pt-5 relative">
       <div className="flex flex-col w-full gap-4">
         <div className="flex bold">
-          <div className="flex w-1/3 text-sm text-purple-dark">Question 1</div>
-          <div className="flex w-1/3 text-sm text-purple-dark justify-center">Multiple Choice</div>
-          <div className="flex w-1/3 text-sm text-purple-dark justify-end pr-5">Physics</div>
+          <div className="flex w-1/3 text-sm text-purple-dark">Question {questionNum}</div>
+          <div className="flex w-1/3 text-sm text-purple-dark justify-center">Ranking</div>
+          <div className="flex w-1/3 text-sm text-purple-dark justify-end pr-5">General Knowledge</div>
         </div>
         <div className="p-8">
           <p>
@@ -103,7 +103,7 @@ const RankingDemoItem = () => {
                   animate={controlDemoReport}
                   className={clsx( "w-2/3","shadow-2xl")}
                   questionText={texts.questionText}
-                  questionNum={4}
+                  questionNum={questionNum}
                   marksScored={4}
       >
         <div className="flex flex-col w-full gap-2 justify-center items-center">
