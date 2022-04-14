@@ -59,7 +59,7 @@ const MSQDemoItem = ({questionNum}) => {
     <div className="w-full pl-5 pt-5 relative">
       <div className="flex flex-col w-full gap-4">
         <div className="flex bold">
-          <div className="flex w-1/3 text-sm text-purple-dark">Question 2</div>
+          <div className="flex w-1/3 text-sm text-purple-dark">Question {questionNum}</div>
           <div className="flex w-1/3 text-sm text-purple-dark justify-center">Multiple Select</div>
           <div className="flex w-1/3 text-sm text-purple-dark justify-end pr-5">Biology</div>
         </div>

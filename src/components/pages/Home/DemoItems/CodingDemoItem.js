@@ -23,7 +23,7 @@ const texts = {
   testCasesNumber: 7
 }
 
-const CodingDemoItem = () => {
+const CodingDemoItem = ({questionNum}) => {
   const [codingText,setCodingText] = useState("");
   const controls = useAnimation();
   const controlDemoReport = useAnimation();
@@ -70,7 +70,7 @@ const CodingDemoItem = () => {
     <div className="w-full pl-5 pt-5 relative">
       <div className="flex flex-col w-full gap-4">
         <div className="flex bold">
-          <div className="flex w-1/3 text-sm text-purple-dark">Question 3</div>
+          <div className="flex w-1/3 text-sm text-purple-dark">Question {questionNum}</div>
           <div className="flex w-1/3 text-sm text-purple-dark justify-center">Coding</div>
           <div className="flex w-1/3 text-sm text-purple-dark justify-end pr-5">Javascript</div>
         </div>
@@ -89,7 +89,7 @@ const CodingDemoItem = () => {
                   animate={controlDemoReport}
                   className={clsx( "w-2/3","shadow-2xl", "z-10")}
                   questionText={texts.questionText}
-                  questionNum={3}
+                  questionNum={questionNum}
                   marksScored={10}
       >
         <div className="flex flex-col w-full gap-2 justify-center items-center">

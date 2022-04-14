@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import clsx from "clsx";
 import Card from "../../Card";
 import style from "./TestDemoTop.module.css";
@@ -29,6 +29,25 @@ const menuItems = [
 const TestDemoTop = () => {
 
   const [activeItem, setActiveItem ] = useState(0);
+  const timerRef = useRef(null);
+
+
+
+  useEffect(() => {
+    timerRef.current = setInterval(() => setActiveItem(prev => (prev + 1) % menuItems.length), 3000);
+    return () => clearInterval(timerRef.current);
+  }, [])
+
+  const handleActiveItemChange = (itemNum) => () => {
+    if(activeItem === itemNum){
+      return;
+    }
+    clearInterval(timerRef.current);
+    setActiveItem(itemNum);
+    setTimeout(() => {
+      timerRef.current = setInterval(() => setActiveItem(prev => (prev + 1) % (menuItems.length)), 3000);
+    }, 5000)
+  };
 
   const ActiveComp = menuItems[activeItem].activeComponent || (() => null);
 
@@ -38,7 +57,7 @@ const TestDemoTop = () => {
         <div className="flex justify-between w-full">
           <div className="flex flex-col justify-evenly w-50 bg-gray-extra-light rounded-l-xl ">
             {
-              menuItems.map((item, index) => <DemoMenuItem key={item.title} logo={item.logo} title={item.title} active={index === activeItem} onClick={() => setActiveItem(index)} />)
+              menuItems.map((item, index) => <DemoMenuItem key={item.title} logo={item.logo} title={item.title} active={index === activeItem} onClick={handleActiveItemChange(index)} />)
             }
           </div>
           <div className="flex w-full ">

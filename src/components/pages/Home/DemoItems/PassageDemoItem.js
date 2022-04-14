@@ -4,7 +4,7 @@ import clsx from "clsx";
 import DemoReport from "./DemoReport";
 
 const texts = {
-  questionHeader : "Read the poem carefully and answer following questions",
+  questionHeader : "Read the passage carefully and answer following questions",
   passageText : "On the coast of Coromandel\n" +
     "Where the earthly shell blows\n" +
     "In the middle of the sands\n" +
@@ -73,12 +73,12 @@ const PassageDemoItem = ({questionNum}) => {
         <div>
           {texts.questionHeader}
         </div>
-        <div>
+        <div className="px-10">
           <pre>
             {texts.passageText}
           </pre>
         </div>
-        <div className="px-8">
+        <div className="px-6">
           <p>
             {questionText}
           </p>
