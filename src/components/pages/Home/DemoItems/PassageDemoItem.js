@@ -80,7 +80,7 @@ const PassageDemoItem = ({questionNum}) => {
         </div>
         <div className="px-6">
           <p>
-            {questionText}
+            Q {questionNum}.a. {questionText}
           </p>
         </div>
         <div className="flex flex-col pl-12 gap-2">

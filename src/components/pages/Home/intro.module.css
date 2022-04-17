@@ -1,5 +1,5 @@
 .textMaxWidth{
-    max-width: clamp( 70%, 400px, 50%);
+    max-width: clamp( 95%, 400px, 50%);
     /*max-width: 400px;*/
 }
 .textShadow{

@@ -15,6 +15,7 @@ import MSQDemoItem from "./DemoItems/MSQDemoItem";
 import CodingDemoItem from "./DemoItems/CodingDemoItem";
 import RankingDemoItem from "./DemoItems/RankingDemoItem";
 import PassageDemoItem from "./DemoItems/PassageDemoItem";
+import CustomDemoItem from "./DemoItems/CustomDemoItem";
 
 const menuItems = [
   {logo : <CodingLogo />, title : "Coding", activeComponent : CodingDemoItem},
@@ -23,36 +24,50 @@ const menuItems = [
   {logo : <RankingLogo />, title : "Ranking", activeComponent : RankingDemoItem},
   {logo : <VideoLogo />, title : "Video", activeComponent : null},
   {logo : <PassageLogo />, title : "Passage", activeComponent : PassageDemoItem},
-  {logo : <CustomLogo />, title : "Custom", activeComponent : null},
+  {logo : <CustomLogo />, title : "Custom", activeComponent : CustomDemoItem},
 ]
+
+const activateAutoAnimation = false;
+const slideUpdateInterval = 3200;
 
 const TestDemoTop = () => {
 
   const [activeItem, setActiveItem ] = useState(0);
+  const intervalRef = useRef(null);
   const timerRef = useRef(null);
 
 
 
   useEffect(() => {
-    timerRef.current = setInterval(() => setActiveItem(prev => (prev + 1) % menuItems.length), 3000);
-    return () => clearInterval(timerRef.current);
+    if(!activateAutoAnimation) {
+      return;
+    }
+    clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => setActiveItem(prev => (prev + 1) % menuItems.length), slideUpdateInterval);
+    return () => clearInterval(intervalRef.current);
   }, [])
 
   const handleActiveItemChange = (itemNum) => () => {
     if(activeItem === itemNum){
       return;
     }
-    clearInterval(timerRef.current);
+
     setActiveItem(itemNum);
-    setTimeout(() => {
-      timerRef.current = setInterval(() => setActiveItem(prev => (prev + 1) % (menuItems.length)), 3000);
-    }, 5000)
+
+    if(!activateAutoAnimation) {
+      return;
+    }
+    clearTimeout(timerRef.current);
+    clearInterval(intervalRef.current);
+      timerRef.current = setTimeout(() => {
+      intervalRef.current = setInterval(() => setActiveItem(prev => (prev + 1) % (menuItems.length)), slideUpdateInterval);
+    }, 3000)
   };
 
   const ActiveComp = menuItems[activeItem].activeComponent || (() => null);
 
   return (
-    <div className={clsx("flex grow")}>
+    <div className={clsx("flex grow scale-50 sm:scale-75 md:scale-75 lg:scale-80 xl:scale-100")}>
       <Card className={clsx(style.interactiveCard, "p-0")}>
         <div className="flex justify-between w-full">
           <div className="flex flex-col justify-evenly w-50 bg-gray-extra-light rounded-l-xl ">
@@ -60,7 +75,7 @@ const TestDemoTop = () => {
               menuItems.map((item, index) => <DemoMenuItem key={item.title} logo={item.logo} title={item.title} active={index === activeItem} onClick={handleActiveItemChange(index)} />)
             }
           </div>
-          <div className="flex w-full ">
+          <div className="flex w-full">
             {
               <ActiveComp questionNum={activeItem + 1} />
             }

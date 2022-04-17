@@ -27,3 +27,11 @@ input[type="radio"] {
 input[type="radio"]:checked {
     background-color: #93e026;
 }
+
+::selection{
+    background-color: #66bf3c;
+    color: #fff;
+}
+
+progress::-moz-progress-bar {background-color: #66bf3c;}
+progress::-webkit-progress-bar {background-color: #66bf3c; width: 100%;}
