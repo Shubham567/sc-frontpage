@@ -28,7 +28,7 @@ const menuItems = [
   {logo : <CustomLogo />, title : "Custom", activeComponent : CustomDemoItem},
 ]
 
-const activateAutoAnimation = false;
+const activateAutoAnimation = true;
 const slideUpdateInterval = 3200;
 
 const TestDemoTop = () => {

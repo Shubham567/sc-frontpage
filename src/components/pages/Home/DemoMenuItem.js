@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 const DemoMenuItem = ({className,active,logo,title,...props}) => {
   return (
-    <div className={clsx("flex flex-col p-2 text-center hover:bg-white hover:rounded-l-xl cursor-pointer",
+    <div className={clsx("flex flex-col p-2 text-center hover:bg-white hover:rounded-l-xl cursor-pointer select-none",
       {"bg-white rounded-l-xl" : active},
       className)}  {...props}>
       <div className="fill-purple-dark flex justify-center">{logo}</div>
