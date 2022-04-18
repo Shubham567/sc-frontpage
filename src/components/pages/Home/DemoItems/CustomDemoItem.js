@@ -1,9 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {motion, useAnimation} from "framer-motion";
 import clsx from "clsx";
 import DemoReport from "./DemoReport";
 import PdfFile from "../../../svgs/PdfFile";
 import CustomReportIcon from "../../../svgs/CustomReportIcon";
+import pdfFile from "../../../svgs/PdfFile";
 
 const texts = {
   questionText: "Please do upload design portfolio here in pdf format",
@@ -23,6 +24,7 @@ const CustomDemoItem = ({questionNum}) => {
   const controlUploadBox = useAnimation();
   const controlDemoReport = useAnimation();
   const [progressValue, setProgressValue] = useState(0);
+  const pdfFileIconRef = useRef(null);
 
   useEffect(() => {
     let timer = null;
@@ -53,6 +55,7 @@ const CustomDemoItem = ({questionNum}) => {
       });
     })
       .then(() => {
+      pdfFileIconRef.current.style.visibility = "hidden";
       return controlUploadBox.start({
         borderRadius: "20px",
         transition: {
@@ -105,7 +108,7 @@ const CustomDemoItem = ({questionNum}) => {
               Drag a file or Click to upload
             </span>
           </motion.div>
-          <motion.div className="absolute" initial={{opacity: 0,y : 200, x: 0}} animate={controls}>
+          <motion.div className="absolute" ref={pdfFileIconRef} initial={{opacity: 0,y : 200, x: 0}} animate={controls}>
             <PdfFile />
           </motion.div>
           {
