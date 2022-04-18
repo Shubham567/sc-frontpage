@@ -6,6 +6,7 @@ import Intro from "../src/components/pages/Home/Intro";
 import BgTopVector from "../src/components/svgs/BgTopVector";
 import React from "react";
 import useScreenSize from "../src/hooks/useScreenSize";
+import CustomerList from "../src/components/pages/Home/CustomerList";
 
 
 export default function Home() {
@@ -24,8 +25,11 @@ export default function Home() {
       <BgTopVector  className={"absolute top-0 -mt-10 -z-10"} height={screen.height} width={screen.width} />
       <header>
         <Intro/>
-
       </header>
+
+      <aside>
+        <CustomerList />
+      </aside>
 
      <main className="flex h-100 w-100 text-xl">
 
