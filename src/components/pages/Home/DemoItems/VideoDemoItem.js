@@ -5,14 +5,17 @@ import DemoReport from "./DemoReport";
 import PdfFile from "../../../svgs/PdfFile";
 import CustomReportIcon from "../../../svgs/CustomReportIcon";
 import Image from "next/image";
+import interviewImage from "../../../../../assets/interview.png";
+import PlayIcon from "../../../svgs/PlayIcon";
+
 
 const texts = {
   questionText: "Tell us about yourself.",
+  transcript: "I am blah blah blah blah blah blah blah blah ..."
 }
 
 const VideoDemoItem = ({questionNum}) => {
   const [questionText,setQuestionText] = useState("");
-  const controls = useAnimation();
   const controlImageBox = useAnimation();
   const controlDemoReport = useAnimation();
   const [progressValue, setProgressValue] = useState(0);
@@ -38,14 +41,7 @@ const VideoDemoItem = ({questionNum}) => {
     });
 
 
-    promise.then(() =>  controls.start({
-        opacity: 1,
-        x: 100, y: 20,
-        transition: {
-          duration: 1
-        }
-      })
-    ).then(() => controlImageBox.start({
+    promise.then(() => controlImageBox.start({
         borderRadius: "20px",
         transition: {
           duration: 0.2
@@ -92,15 +88,13 @@ const VideoDemoItem = ({questionNum}) => {
         </div>
         <div className="flex flex-col pl-12 gap-2 px-4">
           <motion.div className="flex justify-center items-center rounded" animate={controlImageBox}>
-            <Image src="" />
+            <Image src={interviewImage} height={200} width={300} alt="One way interview"/>
           </motion.div>
-          <motion.div className="absolute" initial={{opacity: 0,y : 200, x: 0}} animate={controls}>
-            <PdfFile />
-          </motion.div>
+
           {
             progressValue > 0 &&
-            <div className="flex flex-col gap-2">
-              <div className="flex items-center gap-2 px-3"><span>
+            <div className="flex flex-col gap-2 ">
+              <div className="flex items-center gap-2 px-3 justify-center"><span>
                 {progressValue > 0  && progressValue < 100 ?"Uploading Video..." : "Video Uploaded"}
               </span>
               <progress className="" value={progressValue} max={100}/>
@@ -114,15 +108,24 @@ const VideoDemoItem = ({questionNum}) => {
                   className={clsx( "w-2/3","shadow-2xl")}
                   questionText={texts.questionText}
                   questionNum={questionNum}
-                  marksAssigned={20}
                   noLiveReport
       >
         <div className="flex flex-col w-full gap-2 items-center">
           <div className="text-xs text-gray">
-            Uploaded File
+            Video
           </div>
-          <div className="flex">
-            <CustomReportIcon/>
+          <div className="flex relative">
+            <Image src={interviewImage} height={200} width={300} alt="One way interview"/>
+            <div className="absolute w-full h-full flex justify-center items-center" style={{background: "rgba(255,255,255,0.5)"}}>
+              <PlayIcon />
+              <div>Play</div>
+            </div>
+          </div>
+          <div className="text-xs text-gray">
+            Audio Transcript:
+          </div>
+          <div className="text-xs text-gray-dark">
+            {texts.transcript}
           </div>
         </div>
       </DemoReport>
