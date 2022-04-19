@@ -7,6 +7,7 @@ import BgTopVector from "../src/components/svgs/BgTopVector";
 import React from "react";
 import useScreenSize from "../src/hooks/useScreenSize";
 import CustomerList from "../src/components/pages/Home/CustomerList";
+import QuestionTags from "../src/components/pages/Home/QuestionTags";
 
 
 export default function Home() {
@@ -30,6 +31,10 @@ export default function Home() {
       <aside>
         <CustomerList />
       </aside>
+
+      <section>
+        <QuestionTags />
+      </section>
 
      <main className="flex h-100 w-100 text-xl">
 

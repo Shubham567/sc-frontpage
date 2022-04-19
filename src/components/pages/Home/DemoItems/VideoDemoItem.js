@@ -116,7 +116,7 @@ const VideoDemoItem = ({questionNum}) => {
           </div>
           <div className="flex relative">
             <Image src={interviewImage} height={200} width={300} alt="One way interview"/>
-            <div className="absolute w-full h-full flex justify-center items-center" style={{background: "rgba(255,255,255,0.5)"}}>
+            <div className="absolute w-full h-full flex justify-center items-center" style={{background: "rgba(255,255,255,0.7)"}}>
               <PlayIcon />
               <div>Play</div>
             </div>
