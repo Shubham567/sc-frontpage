@@ -8,6 +8,7 @@ import React from "react";
 import useScreenSize from "../src/hooks/useScreenSize";
 import CustomerList from "../src/components/pages/Home/CustomerList";
 import QuestionTags from "../src/components/pages/Home/QuestionTags";
+import OnTopBgTrapez from "../src/components/pages/Home/OnTopBgTrapez";
 
 
 export default function Home() {
@@ -32,11 +33,13 @@ export default function Home() {
         <CustomerList />
       </aside>
 
-      <section>
+      <aside>
+        <h3 className="hidden">Types of questions available at SkillCounty.com</h3>
         <QuestionTags />
-      </section>
+      </aside>
 
-     <main className="flex h-100 w-100 text-xl">
+     <main className="flex h-100">
+       <OnTopBgTrapez />
 
      </main>
 

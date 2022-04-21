@@ -74,7 +74,7 @@ const QuestionTags = props => {
           return <motion.div key={tag.name}
                       className="shadow shadow-gray-dark rounded border border-gray absolute -z-10 flex p-1 px-3 text-blue items-center gap-4 bg-white"
                              initial="hidden"
-                            whileInView="visible"
+                              whileInView="visible"
                              viewport={{ once: true }}
                         animate={{x: tag.x, y: tag.y, transition: {delay : 0.3, duration : 0.5}}}>
             {Icon && <Icon className="h-4 w-auto"/>}
