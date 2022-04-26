@@ -22,7 +22,11 @@ module.exports = {
       'gray-light': '#DBDBDB',
       'gray-extra-light': '#ececec',
       "red": "#EA4335",
-      "white" : "#fff"
+      "white" : "#fff",
+      "primary": "#0146E0",
+      "secondary" : "#FFBE03",
+      "alternate" : "",
+      "dark" : "#393939"
     },
     extend: {
       fontFamily: {

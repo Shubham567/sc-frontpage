@@ -60,10 +60,10 @@ const MCQDemoItem = ({questionNum}) => {
   return (
     <div className="w-full pl-5 pt-5 relative">
       <div className="flex flex-col w-full gap-4">
-        <div className="flex bold">
-          <div className="flex w-1/3 text-sm text-purple-dark">Question {questionNum}</div>
-          <div className="flex w-1/3 text-sm text-purple-dark justify-center">Multiple Choice</div>
-          <div className="flex w-1/3 text-sm text-purple-dark justify-end pr-5">Physics</div>
+        <div className="flex bold text-primary">
+          <div className="flex w-1/3 text-sm">Question {questionNum}</div>
+          <div className="flex w-1/3 text-sm justify-center">Multiple Choice</div>
+          <div className="flex w-1/3 text-sm justify-end pr-5">Physics</div>
         </div>
         <div className="p-8">
           <p>

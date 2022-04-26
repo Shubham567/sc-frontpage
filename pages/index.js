@@ -24,7 +24,7 @@ export default function Home() {
 
 
       <TopNav/>
-      <BgTopVector  className={"absolute top-0 -mt-10 -z-10"} height={screen.height} width={screen.width} />
+      {/*<BgTopVector  className={"absolute top-0 -mt-10 -z-10"} height={screen.height} width={screen.width} />*/}
       <header>
         <Intro/>
       </header>

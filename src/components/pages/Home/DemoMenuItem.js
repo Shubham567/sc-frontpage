@@ -7,8 +7,8 @@ const DemoMenuItem = ({className,active,logo,title,...props}) => {
     <div className={clsx("flex flex-col p-2 text-center hover:bg-white hover:rounded-l-xl cursor-pointer select-none",
       {"bg-white rounded-l-xl" : active},
       className)}  {...props}>
-      <div className="fill-purple-dark flex justify-center">{logo}</div>
-      <div className="text-xs uppercase text-purple-dark">{title}</div>
+      <div className="fill-primary flex justify-center">{logo}</div>
+      <div className="text-xs uppercase text-primary">{title}</div>
     </div>
   );
 };

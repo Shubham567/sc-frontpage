@@ -3,15 +3,17 @@ import PropTypes from 'prop-types';
 import clsx from "clsx";
 
 
-const Button = ({className,secondary, children, ...props}) => {
+const Button = ({className,secondary, outlined,children, ...props}) => {
   return (
     <button
       className={clsx(
-        "flex justify-center " +
+        "flex justify-center" +
         "align-center rounded-lg " +
-        "shadow-lg px-10 py-2",
-        {"text-purple-dark bg-white" : !secondary},
-        {"text-white bg-green" : secondary},
+        "shadow-lg px-6 py-2 transition-all",
+        {"bg-primary text-white" : !secondary && !outlined},
+        {"text-white bg-secondary" : secondary && !outlined},
+        {"border border-2 border-primary text-primary bg-white hover:bg-primary hover:text-white" : !secondary && outlined},
+        {"border border-2 border-secondary text-secondary bg-white hover:bg-secondary hover:text-white" : secondary && outlined},
         className,)}
       {...props}>
       {children}

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
-import {motion} from "framer-motion";
+import {motion, useAnimation} from "framer-motion";
 import ScTestDemoLogo from "../../svgs/ScTestDemoLogo";
 
 import c from "programming-languages-logos/src/c/c.svg";
@@ -61,23 +61,70 @@ const tags = [
   {name: "Brand Management", icon: null, x: -320, y : 230},
 ]
 
+const colorsForLogos = [
+  "#649d38",
+  "#ae119a",
+  "#c42e2e",
+  "#629881",
+  "#2de2ff",
+  "#5b5b5b",
+  "#631fb8"
+];
+
 const QuestionTags = props => {
+
+  const logoRef = useRef(null);
+  const controls = useAnimation();
+
+
+  useEffect(() => {
+
+
+    let io = new IntersectionObserver( (e) => {
+      if(!e[0].isIntersecting ){
+        return;
+      }
+
+      controls.start((i) => {
+          return {
+            x: tags[i].x,
+            y: tags[i].y,
+            transition: {
+              delay: 0.1 * i,
+              duration: 0.2
+            }
+          }
+        }
+      ).then(() => {
+
+      })
+      },{threshold: 1}
+    )
+
+    io.observe(logoRef.current);
+
+    return () => {
+      io.disconnect();
+    }
+  }, [])
+
 
   return (
     <div className="flex justify-center items-center" style={{height: 700}}>
-      <div className="flex justify-center">
+      <div className="flex justify-center" ref={logoRef}>
         <ScTestDemoLogo />
       </div>
       {
-        tags.map(tag => {
+        tags.map((tag,i) => {
           let Icon = tag.icon;
           return <motion.div key={tag.name}
-                      className="shadow shadow-gray-dark rounded border border-gray absolute -z-10 flex p-1 px-3 text-blue items-center gap-4 bg-white"
+                      className="shadow shadow-gray-dark rounded border border-gray absolute -z-10 flex p-1 px-3 text-dark items-center gap-4 bg-white"
                              initial="hidden"
-                              whileInView="visible"
-                             viewport={{ once: true }}
-                        animate={{x: tag.x, y: tag.y, transition: {delay : 0.3, duration : 0.5}}}>
-            {Icon && <Icon className="h-4 w-auto"/>}
+                              // whileInView="visible"
+                             // viewport={{ once: true }}
+                        custom={i}
+                        animate={controls}>
+            {Icon ? <Icon className="h-4 w-auto"/> : <span className="font-extrabold" style={{color: colorsForLogos[i % colorsForLogos.length]}}>{tag.name[0]}</span>}
             <span>{tag.name}</span>
           </motion.div>
         })
