@@ -5,6 +5,7 @@ import CallToActionBtn from "../../Button/CallToActionBtn";
 import styles from "./intro.module.css";
 import clsx from "clsx";
 import TestDemoTop from "./TestDemoTop";
+import Link from "next/link";
 
 const Intro = () => {
   return (
@@ -27,12 +28,12 @@ const Intro = () => {
           </div>
           <div>
             <div>
-              <CallToActionBtn>
+              <CallToActionBtn outlined className="rounded-full">
                 Start Free Trial
               </CallToActionBtn>
             </div>
-            <div className={clsx(styles.textShadow, "text-xs")}>
-              or Request Demo
+            <div className={clsx(styles.textShadow, "text-xs px-3 mt-1")}>
+              or <Link href={"/"}>Request Demo</Link>
             </div>
           </div>
         </div>
