@@ -9,6 +9,8 @@ import useScreenSize from "../src/hooks/useScreenSize";
 import CustomerList from "../src/components/pages/Home/CustomerList";
 import QuestionTags from "../src/components/pages/Home/QuestionTags";
 import OnTopBgTrapez from "../src/components/pages/Home/OnTopBgTrapez";
+import HowToUse from "../src/components/pages/Home/HowToUse";
+import OnSolidBg from "../src/components/pages/Home/OnSolidBg";
 
 
 export default function Home() {
@@ -38,9 +40,10 @@ export default function Home() {
         <QuestionTags />
       </aside>
 
-     <main className="flex h-100">
+     <main className="flex flex-col h-100">
        <OnTopBgTrapez />
-
+       <HowToUse />
+       <OnSolidBg />
      </main>
 
     </div>

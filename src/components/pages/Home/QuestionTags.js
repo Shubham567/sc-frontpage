@@ -84,14 +84,14 @@ const QuestionTags = props => {
       if(!e[0].isIntersecting ){
         return;
       }
-
+      io.disconnect();
       controls.start((i) => {
           return {
             x: tags[i].x,
             y: tags[i].y,
             transition: {
               delay: 0.1 * i,
-              duration: 0.2
+              duration: 0.1
             }
           }
         }

@@ -19,11 +19,11 @@ import CustomDemoItem from "./DemoItems/CustomDemoItem";
 import VideoDemoItem from "./DemoItems/VideoDemoItem";
 
 const menuItems = [
+  {logo : <VideoLogo />, title : "Video", activeComponent : VideoDemoItem},
   {logo : <CodingLogo />, title : "Coding", activeComponent : CodingDemoItem},
   {logo : <MCQLogo />, title : "MCQ", activeComponent : MCQDemoItem},
   {logo : <MSQLogo />, title : "MSQ", activeComponent : MSQDemoItem},
   {logo : <RankingLogo />, title : "Ranking", activeComponent : RankingDemoItem},
-  {logo : <VideoLogo />, title : "Video", activeComponent : VideoDemoItem},
   {logo : <PassageLogo />, title : "Passage", activeComponent : PassageDemoItem},
   {logo : <CustomLogo />, title : "Custom", activeComponent : CustomDemoItem},
 ]
