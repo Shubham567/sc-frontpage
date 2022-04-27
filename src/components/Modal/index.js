@@ -17,10 +17,10 @@ const Modal = ({children,title,actions,onClose,open,className}) => {
   if(open) {
     return (
       <Popover>
-        <Card ref={cardRef} className={clsx(className, "relative")} style={{minWidth: "66%", minHeight: "33%",}}>
+        <Card role="dialog" aria-modal={true} ref={cardRef} className={clsx(className, "relative")} style={{minWidth: "66%", minHeight: "33%",}}>
           <div className="flex flex-col w-full gap-6">
             <div className="flex w-full justify-between">
-              <div className="flex font-semibold text-sm">{title}</div>
+              <div className="flex font-semibold text-sm" aria-labelledby={title}>{title}</div>
               {onClose && <div className="flex justify-self-end">
                 <button className="rounded" onClick={onClose}>
                   <IoClose/>

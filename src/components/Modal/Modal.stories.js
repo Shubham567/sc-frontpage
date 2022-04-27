@@ -14,5 +14,5 @@ Default.args = {
   open: true,
   title: "This is Modal title",
   children: "This modal has 3 components. title, children and actions. This section is children",
-  actions: <><p>This are actions &nbsp;&nbsp;</p> <Button outlined className="text-sm">Cancel</Button> <Button className="text-sm">Confirm</Button></>
+  actions: <><p>This are actions &nbsp;&nbsp;</p> <Button outlined className="text-sm">Cancel</Button>&nbsp; <Button className="text-sm">Confirm</Button></>
 }
