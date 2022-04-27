@@ -17,13 +17,13 @@ const PopOver = props => {
     dataCon.popOverCount += 1;
 
     if(dataCon.popOverCount > 0){
-      document.body.style.overflow = "hidden";
+      document.body.style.overflowY = "hidden";
     }
 
     return () => {
       dataCon.popOverCount--;
       if(dataCon.popOverCount === 0){
-        document.body.style.overflow = "auto";
+        document.body.style.overflowY = "auto";
       }
     }
 

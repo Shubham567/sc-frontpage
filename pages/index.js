@@ -4,7 +4,7 @@ import appDetails from "../config/appDetails";
 import Head from "next/head";
 import Intro from "../src/components/pages/Home/Intro";
 import BgTopVector from "../src/components/svgs/BgTopVector";
-import React from "react";
+import React, {useState} from "react";
 import useScreenSize from "../src/hooks/useScreenSize";
 import CustomerList from "../src/components/pages/Home/CustomerList";
 import QuestionTags from "../src/components/pages/Home/QuestionTags";
@@ -12,17 +12,20 @@ import OnTopBgTrapez from "../src/components/pages/Home/OnTopBgTrapez";
 import HowToUse from "../src/components/pages/Home/HowToUse";
 import OnSolidBg from "../src/components/pages/Home/OnSolidBg";
 import Modal from "../src/components/Modal";
-
+import Button from "../src/components/Button"
 
 export default function Home() {
 
   const screen  = useScreenSize();
-
+  const [open,setOpen] = useState(true);
+  const toggle = () => {
+    setOpen(prev => !prev);
+  }
   return (
     <div className="relative">
       <Head>
         <title>{appDetails.title}</title>
-\-        <meta name="description" content={appDetails.metaDescription} />
+        <meta name="description" content={appDetails.metaDescription} />
       </Head>
 
 
@@ -41,13 +44,13 @@ export default function Home() {
         <QuestionTags />
       </aside>
 
-
+      <Modal open={open} title="hello" onClose={toggle}/>
      <main className="flex flex-col h-100">
        <OnTopBgTrapez />
        <HowToUse />
        <OnSolidBg />
      </main>
-
+      <Button onClick={toggle}>TestModal</Button>
     </div>
   )
 }

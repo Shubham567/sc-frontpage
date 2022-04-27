@@ -20,7 +20,7 @@ const CustomerList = props => {
       <div className="flex justify-evenly gap-5">
         {
           customerListData.map(ci => <div  key={ci.name} className="flex p-5" width={ci.width} height={ci.height}>
-            <Image src={ci.image} width={ci.width} height={ci.height} fill="responsive" alt={ci.alt} />
+            <Image src={ci.image} width={ci.width} height={ci.height} style={{zIndex: -1}} fill="responsive" alt={ci.alt} />
           </div>)
           }
       </div>

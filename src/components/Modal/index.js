@@ -6,15 +6,18 @@ import Card from "../Card";
 
 import { IoClose } from "react-icons/io5";
 import useEscapeKey from "../../hooks/useEscapeKey";
+import {useClickOutside} from "@mantine/hooks";
 
 const Modal = ({children,title,actions,onClose,open,className}) => {
 
   useEscapeKey(onClose);
 
+  const cardRef = useClickOutside(() => onClose?.())
+
   if(open) {
     return (
       <Popover>
-        <Card className={clsx(className, "relative")} style={{minWidth: "66%", minHeight: "33%",}}>
+        <Card ref={cardRef} className={clsx(className, "relative")} style={{minWidth: "66%", minHeight: "33%",}}>
           <div className="flex flex-col w-full gap-6">
             <div className="flex w-full justify-between">
               <div className="flex font-semibold text-sm">{title}</div>
