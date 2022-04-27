@@ -9,7 +9,8 @@ const Button = ({className,secondary, outlined,children, ...props}) => {
       className={clsx(
         "flex justify-center" +
         "align-center rounded-lg " +
-        "shadow-lg px-6 py-2 transition-all",
+        "shadow-lg px-6 py-2 transition-all " +
+        "active:translate-y-1 active:shadow-none",
         {"bg-primary text-white" : !secondary && !outlined},
         {"text-white bg-secondary" : secondary && !outlined},
         {"border border-2 border-primary text-primary bg-white hover:bg-primary hover:text-white" : !secondary && outlined},

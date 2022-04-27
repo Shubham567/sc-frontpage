@@ -27,7 +27,7 @@ const LinedItemsSteps = props => {
       ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
 
       const linedItems = document.querySelectorAll(".linedItem");
-      ctx.strokeStyle = 'rgba(89,89,89,0.72)';
+      ctx.strokeStyle = 'rgb(215,215,215)';
 
       ctx.beginPath();
       ctx.lineWidth = 2;
@@ -51,10 +51,10 @@ const LinedItemsSteps = props => {
   }, [])
 
   return (
-    <div ref={parentRef} className="flex flex-wrap gap-4 mt-6 items-stretch align-top">
+    <div ref={parentRef} className="flex flex-wrap gap-4 mt-6 justify-center">
        <canvas ref={canvasRef} className="absolute -z-10"/>
       {
-        items.map(item => <div className="flex flex-col justify-center items-center w-40" key={item.name}>
+        items.map(item => <div className="flex flex-col justify-center self-stretch items-center w-40" key={item.name}>
           <div className="flex bg-gray rounded-full linedItem" style={{width: iconSize, height: iconSize}}>
             <div>
 

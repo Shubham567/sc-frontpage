@@ -11,6 +11,7 @@ import QuestionTags from "../src/components/pages/Home/QuestionTags";
 import OnTopBgTrapez from "../src/components/pages/Home/OnTopBgTrapez";
 import HowToUse from "../src/components/pages/Home/HowToUse";
 import OnSolidBg from "../src/components/pages/Home/OnSolidBg";
+import Modal from "../src/components/Modal";
 
 
 export default function Home() {
@@ -40,6 +41,7 @@ export default function Home() {
         <QuestionTags />
       </aside>
 
+      <Modal visible/>
      <main className="flex flex-col h-100">
        <OnTopBgTrapez />
        <HowToUse />

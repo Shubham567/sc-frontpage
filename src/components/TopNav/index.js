@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import Image from "next/image";
 import ScLogo from "../svgs/ScLogo";
 import Link from "next/link";
 import Button from "../Button";
@@ -15,7 +13,7 @@ const TopNav = props => {
   const [scroll] = useWindowScroll();
 
   return (
-    <nav className={clsx("sticky top-0 z-50 flex items-center px-2 py-1 transition-all items-center", `${styles.navBg}`, {"shadow" : scroll.y > 50})}>
+    <nav className={clsx("sticky top-0 flex items-center px-2 py-1 transition-all items-center", `${styles.navBg}`, {"shadow" : scroll.y > 50})}>
       <div className="w-full flex justify-between items-center text-primary font-semibold">
         <div className="flex gap-x-1">
 
