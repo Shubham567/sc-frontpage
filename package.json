@@ -20,7 +20,8 @@
     "prismjs": "^1.27.0",
     "programming-languages-logos": "^0.0.3",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "react-icons": "^4.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",

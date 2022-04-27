@@ -41,7 +41,7 @@ export default function Home() {
         <QuestionTags />
       </aside>
 
-      <Modal visible/>
+
      <main className="flex flex-col h-100">
        <OnTopBgTrapez />
        <HowToUse />

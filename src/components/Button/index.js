@@ -25,6 +25,7 @@ const Button = ({className,secondary, outlined,children, ...props}) => {
 Button.propTypes = {
   className: PropTypes.string,
   secondary: PropTypes.bool,
+  outlined: PropTypes.bool,
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
 
 };

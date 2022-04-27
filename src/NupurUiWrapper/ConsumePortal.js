@@ -9,7 +9,7 @@ const ConsumePortal = props => {
 };
 
 ConsumePortal.propTypes = {
-  children: PropTypes.oneOf([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]).isRequired
+  children: PropTypes.any.isRequired
 };
 
 export default ConsumePortal;

@@ -43,7 +43,6 @@ const PassageDemoItem = ({questionNum}) => {
     });
 
     promise.then(() => {
-      console.log("Text ANi finished");
       return controls.start((i) => ({
         opacity: 1,
         y: 0,

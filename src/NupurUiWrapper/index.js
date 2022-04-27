@@ -14,7 +14,7 @@ const NupurUiWrapper = props => {
 };
 
 NupurUiWrapper.propTypes = {
-  children: PropTypes.oneOf([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]).isRequired
+  children: PropTypes.any.isRequired
 };
 
 export default NupurUiWrapper;

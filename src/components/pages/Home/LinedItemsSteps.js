@@ -34,7 +34,6 @@ const LinedItemsSteps = props => {
       ctx.setLineDash([10, 6, ]);
       linedItems.forEach((li) => {
         const liPos = li.getBoundingClientRect();
-        console.log(liPos,parentPos);
         ctx.lineTo(liPos.left-parentPos.left + halfIconSize, liPos.top - parentPos.top + halfIconSize);
       })
       ctx.stroke();
