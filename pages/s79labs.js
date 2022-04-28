@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className="flex justify-center items-center h-screen flex-col">
         <h1 className="text-9xl flex">
-          Welcome to&nbsp;<a className="font-bold" href="/">s759Labs</a>
+          Welcome to&nbsp;
         </h1>
 
         <p className="flex">
