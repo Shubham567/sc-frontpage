@@ -1,26 +1,20 @@
-import Image from 'next/image'
 import TopNav from "../src/components/TopNav";
 import appDetails from "../config/appDetails";
 import Head from "next/head";
 import Intro from "../src/components/pages/Home/Intro";
-import BgTopVector from "../src/components/svgs/BgTopVector";
-import React, {useState} from "react";
-import useScreenSize from "../src/hooks/useScreenSize";
+import React from "react";
 import CustomerList from "../src/components/pages/Home/CustomerList";
 import QuestionTags from "../src/components/pages/Home/QuestionTags";
 import OnTopBgTrapez from "../src/components/pages/Home/OnTopBgTrapez";
 import HowToUse from "../src/components/pages/Home/HowToUse";
 import OnSolidBg from "../src/components/pages/Home/OnSolidBg";
-import Modal from "../src/components/Modal";
-import Button from "../src/components/Button"
+import SectionWithCardsAndButtons from "../src/components/pages/Home/SectionWithCardsAndButtons";
+import TopEllipses from "../src/components/svgs/TopEllipses";
+import Footer from "../src/components/Footer";
+
 
 export default function Home() {
 
-  const screen  = useScreenSize();
-  const [open,setOpen] = useState(true);
-  const toggle = () => {
-    setOpen(prev => !prev);
-  }
   return (
     <div className="relative">
       <Head>
@@ -28,9 +22,10 @@ export default function Home() {
         <meta name="description" content={appDetails.metaDescription} />
       </Head>
 
-
+      <TopEllipses className="absolute top-0 right-0 -z-50"  />
       <TopNav/>
-      {/*<BgTopVector  className={"absolute top-0 -mt-10 -z-10"} height={screen.height} width={screen.width} />*/}
+
+
       <header>
         <Intro/>
       </header>
@@ -44,13 +39,15 @@ export default function Home() {
         <QuestionTags />
       </aside>
 
-      <Modal open={open} title="hello" onClose={toggle}/>
      <main className="flex flex-col h-100">
        <OnTopBgTrapez />
        <HowToUse />
        <OnSolidBg />
+       <SectionWithCardsAndButtons  />
+       <SectionWithCardsAndButtons  reverse/>
      </main>
-      <Button onClick={toggle}>TestModal</Button>
+
+      <Footer />
     </div>
   )
 }

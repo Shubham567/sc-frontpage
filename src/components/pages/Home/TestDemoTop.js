@@ -30,6 +30,7 @@ const menuItems = [
 
 const activateAutoAnimation = true;
 const slideUpdateInterval = 3200;
+const clickCooldown = 5000;
 
 const TestDemoTop = () => {
 
@@ -62,7 +63,7 @@ const TestDemoTop = () => {
     clearInterval(intervalRef.current);
       timerRef.current = setTimeout(() => {
       intervalRef.current = setInterval(() => setActiveItem(prev => (prev + 1) % (menuItems.length)), slideUpdateInterval);
-    }, 3000)
+    }, clickCooldown);
   };
 
   const ActiveComp = menuItems[activeItem].activeComponent || (() => null);

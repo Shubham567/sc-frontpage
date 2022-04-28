@@ -1,7 +1,9 @@
 import React, {useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
 import {motion, useAnimation} from "framer-motion";
-import ScTestDemoLogo from "../../svgs/ScTestDemoLogo";
+// import ScTestDemoLogo from "../../svgs/ScTestDemoLogo";
+import Image from "next/image";
+import sampleTestDemoImg from "../../../../assets/sampleTestDemo.png";
 
 import c from "programming-languages-logos/src/c/c.svg";
 import cpp from "programming-languages-logos/src/cpp/cpp.svg";
@@ -112,7 +114,7 @@ const QuestionTags = props => {
   return (
     <div className="flex justify-center items-center" style={{height: 700}}>
       <div className="flex justify-center" ref={logoRef}>
-        <ScTestDemoLogo />
+        <Image src={sampleTestDemoImg} width={470} height={350} style={{zIndex: -1}}/>
       </div>
       {
         tags.map((tag,i) => {

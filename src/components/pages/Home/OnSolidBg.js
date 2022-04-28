@@ -11,14 +11,14 @@ const contents = [
 
 const OnSolidBg = props => {
   return (
-    <div className="flex items-center bg-primary justify-center py-8 my-8" style={{minHeight: 200}}>
+    <div className="flex items-center bg-primary justify-center my-8" style={{minHeight: 200}}>
       {
-        contents.map((content, i) => <article key={content.title} className={clsx("flex flex-col p-5 text-white gap-5 self-stretch w-1/3",
+        contents.map((content, i) => <article key={content.title} className={clsx("flex flex-col px-5 py-8 text-white gap-3 self-stretch w-1/3",
           {"border-x-2 border-gray-light" : i&1})}>
         <h3 className="text-2xl font-semibold tracking-wider">
           {content.title}
         </h3>
-          <div className="text-lg font-light leading-8">
+          <div className="font-light leading-6">
             <p>
               {
                 content.content
