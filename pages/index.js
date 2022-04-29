@@ -11,6 +11,7 @@ import OnSolidBg from "../src/components/pages/Home/OnSolidBg";
 import SectionWithCardsAndButtons from "../src/components/pages/Home/SectionWithCardsAndButtons";
 import TopEllipses from "../src/components/svgs/TopEllipses";
 import Footer from "../src/components/Footer";
+import UseCases from "../src/components/pages/Home/UseCases";
 
 
 export default function Home() {
@@ -40,13 +41,14 @@ export default function Home() {
       </aside>
 
      <main className="flex flex-col h-100">
-       <OnTopBgTrapez />
        <HowToUse />
        <OnSolidBg />
        <SectionWithCardsAndButtons  />
        <SectionWithCardsAndButtons  reverse/>
+       <UseCases />
      </main>
 
+      <OnTopBgTrapez />
       <Footer />
     </div>
   )

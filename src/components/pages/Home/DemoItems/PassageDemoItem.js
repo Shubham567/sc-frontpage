@@ -59,7 +59,7 @@ const PassageDemoItem = ({questionNum}) => {
     })
 
     return () => clearInterval(timer);
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="w-full pl-5 pt-5 relative">
