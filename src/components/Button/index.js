@@ -3,30 +3,59 @@ import PropTypes from 'prop-types';
 import clsx from "clsx";
 
 
-const Button = ({className,secondary, outlined,children, ...props}) => {
+const Button = React.memo(React.forwardRef(({className,variant,color,children,size,rounded, ...props},fwdRef) => {
+
+
+  const commonStyles = (variant === "contained" || variant === "outlined") ?
+    "flex justify-center align-center shadow-lg transition-all active:translate-y-1 active:shadow-none"
+    : "px-1";
+
+  const textStyles = (variant === "contained" ? "text-white" : `${color && `text-${color}`}`)
+  const bgStyles = variant ? variant === "outlined" ? "bg-white" : color ? `bg-${color}` :  "bg-${color}" : "" //in case of no variant;
+  const borderStyles = variant === "outlined" && (color ? `border-2 border-${color} hover:text-white hover:bg-${color}` : "border-2")
+  const sizeStyles =  (variant === "contained" || variant === "outlined") ?
+     size === "md" || !size ? "px-4 py-2"  :
+       size === "sm" ? "px-3 py-1" :
+         size === "lg" ? "px-5 py-2" :
+           size === "xl" ? "px-6 py-3"
+             :""
+    : "";
+
+  const fontSizeStyles = size === "md" || !size ? "text-normal"  :
+    size === "sm" ? "text-sm" :
+      size === "lg" ? "text-lg" :
+        size === "xl" ? "text-2xl"
+          : ""
 
   return (
     <button
       className={clsx(
-        "flex justify-center" +
-        "align-center rounded-lg " +
-        "shadow-lg px-6 py-2 transition-all " +
-        "active:translate-y-1 active:shadow-none",
-        {"bg-primary text-white" : !secondary && !outlined},
-        {"text-white bg-secondary" : secondary && !outlined},
-        {"border border-2 border-primary text-primary bg-white hover:bg-primary hover:text-white" : !secondary && outlined},
-        {"border border-2 border-secondary text-secondary bg-white hover:bg-secondary hover:text-white" : secondary && outlined},
-        className,)}
+        commonStyles,
+        textStyles,
+        bgStyles,
+        borderStyles,
+        sizeStyles,
+        fontSizeStyles,
+        {
+          "rounded-full" : rounded,
+          "rounded-lg" : !rounded,
+        },
+        className
+        )}
+      ref={fwdRef}
       {...props}>
       {children}
     </button>
   );
-};
+}));
+
+Button.displayName = "Button";
 
 Button.propTypes = {
   className: PropTypes.string,
-  secondary: PropTypes.bool,
-  outlined: PropTypes.bool,
+  size: PropTypes.oneOf(["sm","lg","xl"]),
+  color: PropTypes.oneOf(["primary","secondary"]),
+  variant: PropTypes.oneOf(["default","primary","secondary"]),
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
 
 };

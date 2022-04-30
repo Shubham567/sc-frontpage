@@ -2,7 +2,7 @@ import IconButton from "./index";
 import {FaFacebook} from "react-icons/all";
 
 export default {
-  title: "IconButton",
+  title: "Ui/IconButton",
   component: IconButton
 }
 

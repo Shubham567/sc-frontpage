@@ -1,13 +1,19 @@
 import Modal from "./index";
 import PropTypes from "prop-types";
 import Button from "../Button";
+import NupurUiWrapper from "../../NupurUiWrapper";
 
 export default {
   component: Modal,
-  title: "Modal"
+  title: "Ui/Modal",
+  // decorators: (Story) => <div>
+  //   <NupurUiWrapper>
+  //     <Story />
+  //   </NupurUiWrapper>
+  // </div>
 }
 
-const Template = args => <div><div id="portal" /> <Modal {...args}/></div>
+const Template = args =>  <div><div id="portal"/><Modal {...args}/></div>
 
 export const Default = Template.bind({});
 Default.args = {

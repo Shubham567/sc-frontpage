@@ -8,6 +8,12 @@ import clsx from "clsx";
 
 import styles from "./TopNav.module.css";
 
+const centralLinks = [
+  {name: "Campus Placement", link: "/cp"},
+  {name: "Pricing", link: "/pricing"},
+  {name: "Solutions", link: "/solution"},
+]
+
 const TopNav = props => {
 
   const [scroll] = useWindowScroll();
@@ -27,11 +33,9 @@ const TopNav = props => {
             </div>
         </div>
         <div className="flex gap-x-5 font-semibold">
-          <div>
-            Campus Placement
-          </div>
-          <div>Pricing</div>
-          <div>Solutions</div>
+          {
+            centralLinks.map(cl => <Link key={cl.link} href={cl.link}>{cl.name}</Link>)
+          }
         </div>
         <div className="flex gap-x-5 justify-end items-center">
           <div>Login</div>
