@@ -90,7 +90,7 @@ const Footer = () => {
       <div className="flex">
 
       </div>
-      <div className="flex border-gray border-y justify-between p-4">
+      <div className="flex border-gray border-y justify-between px-4 py-8">
         <div className="flex gap-6 text-sm">
           {
             sections.map(section => <div key={section.name} className="flex flex-col gap-2">
