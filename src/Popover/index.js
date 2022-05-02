@@ -31,7 +31,7 @@ const PopOver = props => {
 
   return (
     <ConsumePortal>
-      <div className={clsx("top-0 left-0 w-full h-screen flex justify-center items-center")} style={{background: "rgba(255, 255, 255, 0.6)", backdropFilter: "blur(4px)", position: "fixed"}}>
+      <div className={clsx("z-20 top-0 left-0 w-full h-screen flex justify-center items-center")} style={{background: "rgba(255, 255, 255, 0.6)", backdropFilter: "blur(4px)", position: "fixed"}}>
         {props.children}
       </div>
     </ConsumePortal>

@@ -20,7 +20,7 @@ const TopNav = props => {
 
   return (
     <nav
-      className={clsx("sticky top-0 flex items-center px-2 py-1 transition-all items-center", `${styles.navBg}`, {"shadow" : scroll.y > 50})}>
+      className={clsx("sticky z-10 top-0 flex items-center px-2 py-1 transition-all items-center", `${styles.navBg}`, {"shadow" : scroll.y > 50})}>
       <div className="w-full flex justify-between items-center text-primary font-semibold">
         <div className="flex gap-x-1">
 

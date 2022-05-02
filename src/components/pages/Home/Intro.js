@@ -5,15 +5,15 @@ import clsx from "clsx";
 import TestDemoTop from "./TestDemoTop";
 import Link from "next/link";
 
+import commonStyles from "./Home.module.css";
+
 const Intro = () => {
   return (
-    <div className={""}>
-      <div className="flex flex-col lg:flex-row xl:flex-row justify-around gap-1 items-center z h-screen text-dark ">
-
-        <div className="flex w-full lg:w-1/2 xl:w-1/2 2xl:w-1/2 flex-col gap-y-4 -mt-16 pl-5">
-
+    <div className={clsx(commonStyles.intro, "sm:pt-40 md:pt-32 lg:pt-0 xl:pt-0")}>
+      <div className="flex flex-col lg:flex-row xl:flex-row justify-around gap-1 items-center h-screen text-dark ">
+        <div className="flex w-full lg:w-1/2 xl:w-1/2 2xl:w-1/2 flex-col items-center sm:items-center md:items-center lg:items-start gap-y-4 -mt-16 pl-5">
           <div>
-            <h1 className={clsx("text-3xl text-center " +
+            <h1 className={clsx("text-3xl text-center" +
               "md:text-4xl lg:text-6xl xl:text-6xl 2xl:text-6xl" +
               " lg:text-left xl:text-left 2xl:text-left", styles.textShadow)}>
               Hire with <strong className="text-secondary">Evidence!</strong></h1>
@@ -31,7 +31,7 @@ const Intro = () => {
 
           <div>
             <div>
-              <CallToActionBtn outlined className="rounded-full">
+              <CallToActionBtn variant="contained" color="primary">
                 Start Free Trial
               </CallToActionBtn>
             </div>
@@ -43,7 +43,7 @@ const Intro = () => {
 
         </div>
 
-        <div className="flex  lg:w-1/2 xl:w-1/2 2xl:w-1/2" style={{zIndex: -1}}>
+        <div className="flex  lg:w-1/2 xl:w-1/2 2xl:w-1/2" style={{zIndex: 0}}>
           {/*// The Interactive comp goes here*/}
           <TestDemoTop />
         </div>

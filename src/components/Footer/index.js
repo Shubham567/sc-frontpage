@@ -91,7 +91,7 @@ const Footer = () => {
 
       </div>
       <div className="flex border-gray border-y justify-between px-4 py-8">
-        <div className="flex gap-6 text-sm">
+        <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row gap-6 text-sm">
           {
             sections.map(section => <div key={section.name} className="flex flex-col gap-2">
               <h5 className="text-dark font-semibold">

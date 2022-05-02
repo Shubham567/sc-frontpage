@@ -10,8 +10,8 @@ const Button = React.memo(React.forwardRef(({className,variant,color,children,si
     "flex justify-center align-center shadow-lg transition-all active:translate-y-1 active:shadow-none"
     : "px-1";
 
-  const textStyles = (variant === "contained" ? "text-white" : `${color && `text-${color}`}`)
-  const bgStyles = variant ? variant === "outlined" ? "bg-white" : color ? `bg-${color}` :  "bg-${color}" : "" //in case of no variant;
+  const textStyles = variant ? (variant === "contained" ? "text-white" : `${color && `text-${color}`} hover:text-white`) : "text-inherit";
+  const bgStyles = variant ? variant === "outlined" ? `bg-white` : color ? `bg-${color}` :  "bg-${color}" : "" //in case of no variant;
   const borderStyles = variant === "outlined" && (color ? `border-2 border-${color} hover:text-white hover:bg-${color}` : "border-2")
   const sizeStyles =  (variant === "contained" || variant === "outlined") ?
      size === "md" || !size ? "px-4 py-2"  :

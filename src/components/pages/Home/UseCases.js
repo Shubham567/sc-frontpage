@@ -24,7 +24,7 @@ const UseCases = props => {
           Use Cases
         </h2>
       </div>
-      <div className="flex mt-3 gap-4">
+      <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row mt-3 gap-4">
         {
           data.map( item => <div key={item.name} className="flex flex-col gap-3">
           <h3 className="text-lg font-semibold text-primary">{item.name}</h3>

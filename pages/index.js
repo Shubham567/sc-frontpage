@@ -12,6 +12,14 @@ import SectionWithCardsAndButtons from "../src/components/pages/Home/SectionWith
 import TopEllipses from "../src/components/svgs/TopEllipses";
 import Footer from "../src/components/Footer";
 import UseCases from "../src/components/pages/Home/UseCases";
+import Button from "../src/components/Button";
+
+const primaryBgContents = [
+  // Max 3 items
+  {title: "Library", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
+  {title: "AI Evaluation", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
+  {title: "Proctoring", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
+]
 
 
 export default function Home() {
@@ -40,13 +48,40 @@ export default function Home() {
         <QuestionTags />
       </aside>
 
-     <main className="flex flex-col h-100">
-       <HowToUse />
-       <OnSolidBg />
-       <SectionWithCardsAndButtons  />
-       <SectionWithCardsAndButtons  reverse/>
-       <UseCases />
-     </main>
+      <main className="flex flex-col h-100">
+        <HowToUse />
+        <OnSolidBg contents={primaryBgContents}/>
+        <SectionWithCardsAndButtons
+          topCardHeading={"One Way Interview"}
+          topCardContent={"Lorem ipsum dolor sit amet,"}
+          mainHeading="One way Interview"
+          mainContent="Lorem ipsum dolor sit amet"
+          mainControls={<>
+            <Button variant="outlined" color="primary">
+              Request Demo
+            </Button>
+            <Button variant="contained" color="primary">
+              Get Started
+            </Button>
+          </>}
+        />
+        <SectionWithCardsAndButtons  reverse
+                                     topCardHeading={"Live Pair"}
+                                     topCardContent={"Lorem ipsum dolor sit amet,"}
+                                     mainHeading="Live Pair"
+                                     mainContent="Lorem ipsum dolor sit amet"
+                                     mainControls={<>
+                                       <Button variant="outlined" color="primary">
+                                         Request Demo
+                                       </Button>
+                                       <Button variant="contained" color="primary">
+                                         Get Started
+                                       </Button>
+                                     </>}
+        />
+        <UseCases />
+
+      </main>
 
       <OnTopBgTrapez />
       <Footer />

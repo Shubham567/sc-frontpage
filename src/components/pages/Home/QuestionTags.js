@@ -112,15 +112,15 @@ const QuestionTags = props => {
 
 
   return (
-    <div className="flex justify-center items-center" style={{height: 700}}>
+    <div className="flex justify-center items-center scale-50 sm:scale-75 md:scale-75 lg:scale-100 xl:scale-105" style={{height: 700}}>
       <div className="flex justify-center" ref={logoRef}>
-        <Image src={sampleTestDemoImg} width={470} height={350} style={{zIndex: -1}}/>
+        <Image src={sampleTestDemoImg} width={470} height={350}/>
       </div>
       {
         tags.map((tag,i) => {
           let Icon = tag.icon;
           return <motion.div key={tag.name}
-                      className="shadow shadow-gray-dark rounded border border-gray absolute -z-10 flex p-1 px-3 text-dark items-center gap-4 bg-white"
+                      className="shadow -z-10 shadow-gray-dark rounded border border-gray absolute flex p-1 px-3 text-dark items-center gap-4 bg-white"
                              initial="hidden"
                               // whileInView="visible"
                              // viewport={{ once: true }}
