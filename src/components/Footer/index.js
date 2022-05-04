@@ -2,6 +2,7 @@ import React from 'react';
 import Link from "next/link";
 import {IoLogoFacebook, IoLogoInstagram, IoLogoTwitter, IoLogoYoutube} from "react-icons/io";
 import IconButton from "../IconButton";
+
 const sections = [
   {
     name: "Services",
@@ -86,11 +87,12 @@ const socialLinks  = [
 
 const Footer = () => {
   return (
-    <footer className="mt-8 flex flex-col text-primary">
+    <footer className="mt-8 flex flex-col text-primary relative">
+      {/*<FooterGrayTriangles className="absolute bottom-0 left-0 w-full h-full -z-10" />*/}
       <div className="flex">
 
       </div>
-      <div className="flex border-gray border-y justify-between px-4 py-8">
+      <div className="flex flex-col sm:flex-row  border-gray border-y justify-between px-4 py-8 gap-4 sm:gap-1">
         <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row gap-6 text-sm">
           {
             sections.map(section => <div key={section.name} className="flex flex-col gap-2">
@@ -106,7 +108,7 @@ const Footer = () => {
             )
           }
         </div>
-        <div className="flex items-end flex-col p-2 gap-2">
+        <div className="flex items-start sm:items-end flex-col p-2 gap-2">
           <div className=" font-semibold">Follow Us</div>
           <div className="flex gap-2">
             {
