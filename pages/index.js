@@ -13,6 +13,7 @@ import TopEllipses from "../src/components/svgs/TopEllipses";
 import Footer from "../src/components/Footer";
 import UseCases from "../src/components/pages/Home/UseCases";
 import Button from "../src/components/Button";
+import ThreeCards from "../src/components/ThreeCards";
 
 const primaryBgContents = [
   // Max 3 items
@@ -79,6 +80,16 @@ export default function Home() {
                                        </Button>
                                      </>}
         />
+        <ThreeCards data={[
+          {heading: "Customized Assessment", content: "Team SupportLorem ipsum dolor sit amet"},
+          {heading: "Downloadable Report", content: "Lorem ipsum dolor sit amet"},
+          {heading: "Question Types", content: "Lorem ipsum dolor sit amet"},]} />
+        <ThreeCards mainTitle={"Enterprise Ready"}
+          bgColor="primary" data={[
+          {heading: "Team Support", content: "Team SupportLorem ipsum dolor sit amet"},
+          {heading: "ATS Integration", content: "Lorem ipsum dolor sit amet"},
+          {heading: "WorkSpace", content: "Lorem ipsum dolor sit amet"},
+        ]}/>
         <UseCases />
 
       </main>

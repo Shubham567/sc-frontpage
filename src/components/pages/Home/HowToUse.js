@@ -5,7 +5,7 @@ const HowToUse = () => {
   return (
     <div className="flex flex-col items-center justify-center gap-2 mt-5" style={{minHeight: 300}}>
       <div className="flex">
-        <h1 className="text-3xl font-semibold text-primary">
+        <h1 className="text-3xl text-center font-semibold text-primary">
           How to use SkillCounty?
         </h1>
       </div>
