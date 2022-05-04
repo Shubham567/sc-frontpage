@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 const NupurUiWrapper = props => {
 
   return (
-    <div>
+    <div className="relative">
       {
         props.children
       }
-      <div id="portal"></div>
+      <div id="portal" className="relative" style={{zIndex: 20}}/>
     </div>
   );
 };

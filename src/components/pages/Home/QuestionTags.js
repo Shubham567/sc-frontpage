@@ -122,8 +122,8 @@ const QuestionTags = props => {
           return <motion.div key={tag.name}
                       className="shadow -z-10 shadow-gray-dark rounded border border-gray absolute flex p-1 px-3 text-dark items-center gap-4 bg-white"
                              initial="hidden"
-                              // whileInView="visible"
-                             // viewport={{ once: true }}
+                            // whileInView="visible"
+                            // viewport={{ once: true }}
                         custom={i}
                         animate={controls}>
             {Icon ? <Icon className="h-4 w-auto"/> : <span className="font-extrabold" style={{color: colorsForLogos[i % colorsForLogos.length]}}>{tag.name[0]}</span>}

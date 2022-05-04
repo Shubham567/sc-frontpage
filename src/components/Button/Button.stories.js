@@ -1,5 +1,5 @@
 import Button from "./index";
-import CallToActionBtn from "./CallToActionBtn"
+// import CallToActionBtn from "./CallToActionBtn"
 
 export default {
   components: Button,
@@ -33,6 +33,14 @@ Default.args = {
   variant: "contained",
 }
 
+
+export const OutLined = Template.bind({})
+OutLined.args = {
+  children: "OutLined",
+  variant: "outlined",
+
+}
+
 export const Rounded = Template.bind({});
 Rounded.args = {
   children:  "Button",
@@ -42,7 +50,27 @@ Rounded.args = {
   rounded: true,
 }
 
-export const CallToActionButton = CallToActionBtn.bind({});
-CallToActionButton.args = {
-  children: "Get Started",
+export const Small = Template.bind({});
+Small.args = {
+  children: "Small Button",
+  size: "sm",
+  variant: "contained",
 }
+export const Large = Template.bind({});
+Large.args = {
+  children: "Small Button",
+  size: "lg",
+  variant: "contained",
+}
+export const ExtraLarge = Template.bind({});
+ExtraLarge.args = {
+  children: "Small Button",
+  size: "xl",
+  variant: "contained",
+}
+
+//
+// export const CallToActionButton = CallToActionBtn.bind({});
+// CallToActionButton.args = {
+//   children: "Get Started",
+// }
