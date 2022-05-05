@@ -83,7 +83,7 @@ const DemoForm = () => {
                 </label>
                 <textarea
                   className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                  type="tel" placeholder="Enter a message/request" name="message" id="demoFormMsg"/>
+                  type="tel" placeholder="Enter a message / request" name="message" id="demoFormMsg"/>
                 <p className="text-red-500 text-xs italic">We ll contact you soon</p>
               </div>
               <div className="flex items-center gap-2 justify-end">

@@ -26,15 +26,19 @@ const sections = [
     links: [
       {
         name: "Refund & Cancellation",
-        link: ""
+        link: "refund_and_cancellation"
       },
       {
         name: "Terms of use",
-        link: ""
+        link: "/terms"
       },
       {
         name: "Privacy Policy",
-        link: ""
+        link: "/privacy"
+      },
+      {
+        name: "About us",
+        link: "/about-us"
       },
       {
         name: "Sitemap",
@@ -64,15 +68,15 @@ const sections = [
     links: [
       {
         name: "Pre-Employment Assessment",
-        link: ""
+        link: "https://www.skillcounty.com/blog/employment-tests-or-screening-tests-and-assessment-tools/"
       },
       {
         name: "SkillCounty vs TestDome",
-        link: ""
+        link: "https://www.skillcounty.com/blog/the-bake-off-skillcounty-vs-testdome/"
       },
       {
         name: "SkillCounty vs Hackerrank",
-        link: ""
+        link: "https://www.skillcounty.com/blog/the-bake-off-skillcounty-vs-hackerrank/"
       },
     ]
   }
