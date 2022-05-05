@@ -14,6 +14,7 @@ import Footer from "../src/components/Footer";
 import UseCases from "../src/components/pages/Home/UseCases";
 import Button from "../src/components/Button";
 import ThreeCards from "../src/components/ThreeCards";
+import DemoForm from "../src/components/pages/Home/DemoForm";
 
 const primaryBgContents = [
   // Max 3 items
@@ -24,7 +25,6 @@ const primaryBgContents = [
 
 
 export default function Home() {
-
   return (
     <div className="relative">
       <Head>
@@ -34,7 +34,6 @@ export default function Home() {
 
       <TopEllipses className="absolute top-0 right-0 -z-50"  />
       <TopNav/>
-
 
       <header>
         <Intro/>
@@ -85,7 +84,7 @@ export default function Home() {
           {heading: "Downloadable Report", content: "Lorem ipsum dolor sit amet"},
           {heading: "Question Types", content: "Lorem ipsum dolor sit amet"},]} />
         <ThreeCards mainTitle={"Enterprise Ready"}
-          bgColor="primary" data={[
+                    bgColor="primary" data={[
           {heading: "Team Support", content: "Team SupportLorem ipsum dolor sit amet"},
           {heading: "ATS Integration", content: "Lorem ipsum dolor sit amet"},
           {heading: "WorkSpace", content: "Lorem ipsum dolor sit amet"},
@@ -96,6 +95,7 @@ export default function Home() {
 
       <OnTopBgTrapez />
       <Footer />
+      <DemoForm />
     </div>
   )
 }
