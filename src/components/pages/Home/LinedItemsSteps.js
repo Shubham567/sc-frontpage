@@ -1,15 +1,18 @@
 import React, {useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
 
+import {BsFillPersonCheckFill, BsFillPersonPlusFill , BsNewspaper, BsFillFileEarmarkBarGraphFill, BsFillPatchCheckFill} from 'react-icons/bs';
+import {AiFillFolderAdd} from 'react-icons/ai';
+
 const iconSize = 100;
 
 const items = [
-  {name: "Step 1", heading: "Login to SkillCounty.com",  icon: "A"},
-  {name: "Step 2", heading: "Create a test for any job role",  icon: "A"},
-  {name: "Step 3", heading: "Invite candidates",  icon: "A"},
-  {name: "Step 4", heading: "Candidates take test",  icon: "A"},
-  {name: "Step 5", heading: "Review Test Report",  icon: "A"},
-  {name: "Step 6", heading: "Shortlist Candidates",  icon: "A"},
+  {name: "Step 1", heading: "Login to SkillCounty.com",  icon: BsFillPersonCheckFill},
+  {name: "Step 2", heading: "Create a test for any job role",  icon: AiFillFolderAdd},
+  {name: "Step 3", heading: "Invite candidates",  icon: BsFillPersonPlusFill},
+  {name: "Step 4", heading: "Candidates take test",  icon: BsNewspaper},
+  {name: "Step 5", heading: "Review Test Report",  icon: BsFillFileEarmarkBarGraphFill},
+  {name: "Step 6", heading: "Shortlist Candidates",  icon: BsFillPatchCheckFill},
 ]
 
 const LinedItemsSteps = props => {
@@ -53,14 +56,14 @@ const LinedItemsSteps = props => {
     <div ref={parentRef} className="flex flex-wrap gap-4 mt-6 justify-center">
        <canvas ref={canvasRef} className="absolute -z-10"/>
       {
-        items.map(item => <div className="flex flex-col justify-center self-stretch items-center w-40" key={item.name}>
-          <div className="flex bg-gray rounded-full linedItem" style={{width: iconSize, height: iconSize}}>
-            <div>
-
+        items.map(Item => <div className="flex flex-col justify-center self-stretch items-center w-40" key={Item.name}>
+          <div className="flex bg-white outline-offset-1 border border-gray justify-center items-center rounded-full linedItem" style={{width: iconSize, height: iconSize}}>
+            <div className="text-4xl text-primary">
+              <Item.icon />
             </div>
           </div>
-          <div className="flex text-secondary">{item.name}</div>
-          <div className="flex text-sm text-gray-dark text-center">{item.heading}</div>
+          <div className="flex text-secondary">{Item.name}</div>
+          <div className="flex text-sm text-gray-dark text-center">{Item.heading}</div>
         </div>)
       }
     </div>

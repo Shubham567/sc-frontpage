@@ -60,7 +60,7 @@ const TopNav = props => {
             screen.width > breakPoint ?
               <>
                 <Link href='https://app.skillcounty.com/auth'>Login</Link>
-                <Button className="py-1.5 px-5">Get Started</Button>
+                <Button variant="contained" color="secondary" className="py-1.5 px-5">Get Started</Button>
               </>
               :
               <IconButton aria-label="menu" large onClick={toggleSideMenu}>
