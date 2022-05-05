@@ -48,7 +48,7 @@ const PopOver = ({x = "center",y = "center",className,...props}) => {
   return (
     <ConsumePortal>
       <div className={clsx("top-0 left-0 w-full h-screen flex",`items-${yVal}`, `justify-${xVal}`, className)}
-           style={{background: "rgba(255, 255, 255, 0.6)", backdropFilter: "blur(4px)", position: "fixed"}}>
+           style={{background: "rgba(255, 255, 255, 0.6)", backdropFilter: "blur(6px)", position: "fixed"}}>
         {props.children}
       </div>
     </ConsumePortal>

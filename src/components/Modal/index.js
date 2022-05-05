@@ -6,19 +6,20 @@ import Card from "../Card";
 
 import { IoClose } from "react-icons/io5";
 import useEscapeKey from "../../hooks/useEscapeKey";
-import {useClickOutside} from "@mantine/hooks";
+import {useClickOutside, useFocusTrap} from "@mantine/hooks";
 
-const Modal = ({children,title,actions,onClose,open,className}) => {
+const Modal = ({children,title,actions,onClose,open,adjustable,className}) => {
 
   useEscapeKey(onClose);
+  const focusTrapRef = useFocusTrap(open);
 
   const cardRef = useClickOutside(() => onClose?.())
 
   if(open) {
     return (
       <Popover>
-        <Card role="dialog" aria-modal={true} ref={cardRef} className={clsx(className, "relative")} style={{minWidth: "66%", minHeight: "33%",}}>
-          <div className="flex flex-col w-full gap-6">
+        <Card role="dialog" aria-modal={true} ref={cardRef} className={clsx(className, "relative")} style={adjustable ? {minHeight: "10%"} : {minWidth: "66%", minHeight: "33%",}}>
+          <div ref={focusTrapRef} className="flex flex-col w-full gap-6">
             <div className="flex w-full justify-between">
               <div className="flex font-semibold text-sm" aria-labelledby={title}>{title}</div>
               {onClose && <div className="flex justify-self-end">

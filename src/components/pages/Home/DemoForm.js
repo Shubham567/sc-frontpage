@@ -1,14 +1,22 @@
 import React from 'react';
 import Modal from "../../Modal";
 import Button from "../../Button";
+import {useDispatch, useSelector} from "react-redux";
+import {actionSetHomeDemoRequestForm} from "../../../store/reducers/homeReducer/homeReducerActions";
 
 const DemoForm = () => {
+
+  const demoOpen = useSelector(state => state.homeReducer.demoFormOpen)
+
+  const dispatch = useDispatch();
+  const closeModal = () => dispatch(actionSetHomeDemoRequestForm(false));
+
   return (
     <div>
-      <Modal title="Request a Demo" open="true">
+      <Modal adjustable title="Request a Demo" open={demoOpen} onClose={closeModal}>
         <div className="flex flex-col">
           <div className="w-full">
-            <form className="bg-white rounded px-8 pt-6 pb-8 mb-4">
+            <form className="bg-white rounded px-6 pt-2  mb-4">
               <div className="mb-4">
                 <label className="block text-primary text-sm font-bold mb-2" htmlFor="username">
                   Name
@@ -45,6 +53,7 @@ const DemoForm = () => {
               <div className="flex items-center gap-2 justify-end">
                 <Button variant="outlined"
                         color="primary"
+                        onClick={closeModal}
 
                 >
                  Cancel

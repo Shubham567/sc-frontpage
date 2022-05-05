@@ -14,8 +14,6 @@ function MyApp({ Component, pageProps }) {
   </Provider>
 }
 
-export default MyApp;
-
 
 const makeStore = () => store;
 export default withRedux(makeStore)(MyApp);

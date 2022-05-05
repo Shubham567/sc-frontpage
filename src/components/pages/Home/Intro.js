@@ -7,8 +7,14 @@ import Link from "next/link";
 
 import commonStyles from "./Home.module.css";
 import Button from "../../Button";
+import {useDispatch} from "react-redux";
+import {actionSetHomeDemoRequestForm} from "../../../store/reducers/homeReducer/homeReducerActions";
 
 const Intro = () => {
+
+  const dispatch = useDispatch();
+  const openModal = () => dispatch(actionSetHomeDemoRequestForm(true));
+
   return (
     <div className={clsx(commonStyles.intro, "sm:pt-40 md:pt-48 lg:pt-0 xl:pt-0")}>
       <div className="flex flex-col lg:flex-row xl:flex-row justify-around gap-1 items-center text-dark " style={{minHeight: "100vh"}}>
@@ -44,7 +50,7 @@ const Intro = () => {
             </div>
 
             <div className={clsx(styles.textShadow, "text-xs px-3 mt-1 text-center")}>
-              or <Link href={"/"}>Request Demo</Link>
+              or <Button size="sm" onClick={openModal}>Request Demo</Button>
             </div>
           </div>
 
