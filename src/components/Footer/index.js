@@ -116,11 +116,11 @@ const Footer = () => {
           <div className=" font-semibold">Follow Us</div>
           <div className="flex gap-2">
             {
-              socialLinks.map(sl => <Link href={sl.link} key={sl.name} passHref={true}>
+              socialLinks.map(sl => <a href={sl.link} key={sl.name} target="_blank" >
                 <IconButton aria-label={sl.name} contained primary>
                   {sl.icon}
                 </IconButton>
-              </Link>)
+              </a>)
             }
           </div>
         </div>
