@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PopOver from "../../Popover";
+import BackDrop from "../../BackDrop";
 import {useClickOutside} from "@mantine/hooks";
 import {AnimatePresence, motion} from "framer-motion";
 import clsx from "clsx";
@@ -15,7 +15,7 @@ const SideMenu = ({x = "left",open,onClose, children,...props}) => {
   return (
     <AnimatePresence>
       { open &&
-        <PopOver x="left" y="top">
+        <BackDrop x="left" y="top">
         <motion.div ref={outRef} className="bg-white h-screen shadow-xl shadow-primary"
                     style={{width: menuWidth}}
                     initial={{x: -menuWidth}}
@@ -30,7 +30,7 @@ const SideMenu = ({x = "left",open,onClose, children,...props}) => {
             children
           }
         </motion.div>
-      </PopOver>}
+      </BackDrop>}
     </AnimatePresence>
   );
 };

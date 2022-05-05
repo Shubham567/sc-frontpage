@@ -11,7 +11,7 @@ const dataCon = {
   popOverCount : 0
 }
 
-const PopOver = ({x = "center",y = "center",className,...props}) => {
+const BackDrop = ({x = "center",y = "center",className,...props}) => {
 
   useEffect(() => {
     dataCon.popOverCount += 1;
@@ -55,10 +55,10 @@ const PopOver = ({x = "center",y = "center",className,...props}) => {
   )
 };
 
-PopOver.propTypes = {
+BackDrop.propTypes = {
   children: PropTypes.any.isRequired,
   x: PropTypes.oneOf(["center","left","right"]),
   y: PropTypes.oneOf(["center","top","bottom"]),
 };
 
-export default PopOver;
+export default BackDrop;

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from "clsx";
-import Popover from "../../Popover";
+import BackDrop from "../../BackDrop";
 import Card from "../Card";
 
 import { IoClose } from "react-icons/io5";
@@ -17,7 +17,7 @@ const Modal = ({children,title,actions,onClose,open,adjustable,className}) => {
 
   if(open) {
     return (
-      <Popover>
+      <BackDrop>
         <Card role="dialog" aria-modal={true} ref={cardRef} className={clsx(className, "relative")} style={adjustable ? {minHeight: "10%"} : {minWidth: "66%", minHeight: "33%",}}>
           <div ref={focusTrapRef} className="flex flex-col w-full gap-6">
             <div className="flex w-full justify-between">
@@ -38,7 +38,7 @@ const Modal = ({children,title,actions,onClose,open,adjustable,className}) => {
             </div>
           </div>
         </Card>
-      </Popover>
+      </BackDrop>
     )
   }
   else {
