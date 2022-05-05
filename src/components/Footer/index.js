@@ -83,10 +83,10 @@ const sections = [
 ]
 
 const socialLinks  = [
-  {name: "Facebook", link: "", icon: <IoLogoFacebook />},
-  {name: "Twitter", link: "", icon: <IoLogoTwitter />},
-  {name: "Instagram", link: "", icon: <IoLogoInstagram />},
-  {name: "Youtube", link: "", icon: <IoLogoYoutube />},
+  {name: "Facebook", link: "https://www.facebook.com/skillcounty", icon: <IoLogoFacebook />},
+  {name: "Twitter", link: "https://twitter.com/skillcounty_com", icon: <IoLogoTwitter />},
+  {name: "Instagram", link: "https://www.instagram.com/_skillcounty/", icon: <IoLogoInstagram />},
+  {name: "Youtube", link: "https://www.youtube.com/channel/UCWkB0Kw80TpzZSqLChMmYKw", icon: <IoLogoYoutube />},
 ]
 
 const Footer = () => {
