@@ -2,8 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import BgTrapez from "../../svgs/BgTrapez";
 import Button from "../../Button";
+import {useDispatch} from "react-redux";
+import {actionSetHomeDemoRequestForm} from "../../../store/reducers/homeReducer/homeReducerActions";
 
 const OnTopBgTrapez = props => {
+  const dispatch = useDispatch();
+  const openModal = () => dispatch(actionSetHomeDemoRequestForm(true));
   return (
     <div className="w-full relative flex items-center justify-center" style={{minHeight: 400, width: "100%"}}>
       <BgTrapez className="absolute top-0 fill-primary" width="100%" height="100%" style={{zIndex: -2}}/>
@@ -13,7 +17,7 @@ const OnTopBgTrapez = props => {
         <h3 className="text-gray-light text-center">Getting better results at more affordable price, without any limits!
           Get started in under 5 mins*</h3>
         <div className="flex gap-4">
-          <Button variant="outlined" color="primary">Request Demo</Button>
+          <Button variant="outlined" onClick={openModal} color="primary">Request Demo</Button>
           <Button color="secondary" variant="contained">Get Started</Button>
         </div>
       </div>

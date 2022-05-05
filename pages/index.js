@@ -15,6 +15,12 @@ import UseCases from "../src/components/pages/Home/UseCases";
 import Button from "../src/components/Button";
 import ThreeCards from "../src/components/ThreeCards";
 import DemoForm from "../src/components/pages/Home/DemoForm";
+import {useDispatch} from "react-redux";
+import {actionSetHomeDemoRequestForm} from "../src/store/reducers/homeReducer/homeReducerActions";
+import ImageBesideText from "../src/components/ImageBesideText";
+
+import livePairImg from "../assets/livePair.png";
+import videoQuestionImg from "../assets/videoQuestion.png";
 
 const primaryBgContents = [
   // Max 3 items
@@ -25,6 +31,9 @@ const primaryBgContents = [
 
 
 export default function Home() {
+  const dispatch = useDispatch();
+  const openModal = () => dispatch(actionSetHomeDemoRequestForm(true));
+
   return (
     <div className="relative">
       <Head>
@@ -51,34 +60,36 @@ export default function Home() {
       <main className="flex flex-col h-100">
         <HowToUse />
         <OnSolidBg contents={primaryBgContents}/>
-        <SectionWithCardsAndButtons
-          topCardHeading={"One Way Interview"}
-          topCardContent={"Lorem ipsum dolor sit amet,"}
-          mainHeading="One way Interview"
-          mainContent="Lorem ipsum dolor sit amet"
-          mainControls={<>
-            <Button variant="outlined" color="primary">
-              Request Demo
-            </Button>
-            <Button variant="contained" color="primary">
-              Get Started
-            </Button>
-          </>}
+        <ImageBesideText imageProps={{alt : "Live pair, collaborative coding interview", src: livePairImg}}
+                         title="Live Pair"
+                         content="Lorem ipsum dolor sit amet, consectetur adip"
+                         controls={
+                           <>
+                             <Button variant="outlined" color="primary" onClick={openModal}>
+                               Request Demo
+                             </Button>
+                             <Button variant="contained" color="primary">
+                               Get Started
+                             </Button>
+                           </>
+                         }
         />
-        <SectionWithCardsAndButtons  reverse
-                                     topCardHeading={"Live Pair"}
-                                     topCardContent={"Lorem ipsum dolor sit amet,"}
-                                     mainHeading="Live Pair"
-                                     mainContent="Lorem ipsum dolor sit amet"
-                                     mainControls={<>
-                                       <Button variant="outlined" color="primary">
-                                         Request Demo
-                                       </Button>
-                                       <Button variant="contained" color="primary">
-                                         Get Started
-                                       </Button>
-                                     </>}
+        <ImageBesideText imageProps={{alt : "One way asynchronous video interview", src: videoQuestionImg}}
+                         title="One way interview"
+                         content="Lorem ipsum dolor sit amet, consectetur adip"
+                         reverse
+                         controls={
+                           <>
+                             <Button variant="outlined" color="primary" onClick={openModal}>
+                               Request Demo
+                             </Button>
+                             <Button variant="contained" color="primary">
+                               Get Started
+                             </Button>
+                           </>
+                         }
         />
+
         <ThreeCards data={[
           {heading: "Customized Assessment", content: "Team SupportLorem ipsum dolor sit amet"},
           {heading: "Downloadable Report", content: "Lorem ipsum dolor sit amet"},

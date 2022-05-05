@@ -40,7 +40,7 @@ const tags = [
   {name: "Postgres", icon: null, x: 290, y : -220, tech: true},
   {name: "MySQL", icon: null, x: 300, y : 240, tech: true},
   {name: "SQL Server", icon: null, x: 300, y : 240, tech: true},
-  {name: "Product Manager", icon: null, x: -50, y : 240, tech: true},
+  {name: "Product Manager", icon: null, x: -50, y : 240},
   {name: "Data Science", icon: null, x: -50, y : -210, tech: true},
   {name: "Rust", icon: null, x: -80, y : 270, tech: true},
   {name: "NodeJS", icon: null, x: -90, y : -240, tech: true},
