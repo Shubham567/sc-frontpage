@@ -17,7 +17,7 @@ const Template = args => <EffectIncrementUpto {...args} />
 export const Default = Template.bind({});
 Default.args = {
   targetValue : 99,
-  maxIncrementDelay: 48,
+  maxIncrementDelay: 24,
   children: "%"
 }
 
