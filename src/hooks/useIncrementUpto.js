@@ -20,7 +20,7 @@ export default function useIncrementUpto(targetValue,maxIncrementDelay, onIncrem
   const viewActivationRef = useRef();
 
   const timerRefs = useRef([]);
-  const maxDelay = maxIncrementDelay || idealIncrementDelay;
+  const maxDelay = (maxIncrementDelay || idealIncrementDelay) - 1;
 
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function useIncrementUpto(targetValue,maxIncrementDelay, onIncrem
 
       let totalDelay = 0;
       for(let x = 0; x < targetValue ; x++){
-        const y = a * (x - h)**2;
+        const y = a * (x - h)**2 + 1;
         totalDelay += y;
 
         timerRefs.current.push(setTimeout(() => {
