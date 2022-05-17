@@ -12,7 +12,7 @@ const idealIncrementDelay = 36; // in ms
  * @param {function} onIncrement - Callback when an increment is done
  * @example
  * useIncrementUpto(47)
- * @returns {Number,Ref} Returns the current value & Ref to attach to trigger activation
+ * @returns {(number|React.MutableRefObject<undefined>)[]} Returns the current value & Ref to attach to trigger activation
  */
 export default function useIncrementUpto(targetValue,maxIncrementDelay, onIncrement){
 
