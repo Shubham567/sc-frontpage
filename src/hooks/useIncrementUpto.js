@@ -34,14 +34,13 @@ export default function useIncrementUpto(targetValue,maxIncrementDelay, onIncrem
       // this formula ensures
 
       const h = targetValue / 2;
-      const k = maxDelay;
-      const a = -1 * k / (h**2);
+      // k -> maxDelay
+      const a = maxDelay / (h**2);
 
       let totalDelay = 0;
       for(let x = 0; x < targetValue ; x++){
-        const y = a * (x - h)**2 + k;
-        const delay = maxDelay - y;
-        totalDelay += delay;
+        const y = a * (x - h)**2;
+        totalDelay += y;
 
         timerRefs.current.push(setTimeout(() => {
           setValue(prev => {
