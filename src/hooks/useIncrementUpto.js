@@ -8,8 +8,8 @@ const idealIncrementDelay = 36; // in ms
  * It uses parabola function to start slow then speedup to max on mid point, then slow down again.
  * Ideal for values between 0 - 1000.
  * @param {number} targetValue - Value to reach by counting upwards
- * @param {number} maxIncrementDelay - How frequently the timer should update, Default value 36
- * @param {function} onIncrement - Callback when an increment is done
+ * @param {number=} [maxIncrementDelay= 36] maxIncrementDelay - How frequently the timer should update, Default value 36
+ * @param {function=} onIncrement - Callback when an increment is done
  * @example
  * useIncrementUpto(47)
  * @returns {(number|React.MutableRefObject<undefined>)[]} Returns the current value & Ref to attach to trigger activation
