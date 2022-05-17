@@ -1,8 +1,21 @@
 import {useEffect, useRef, useState} from "react";
 
-const idealIncrementDelay = 24; // in ms
+const idealIncrementDelay = 36; // in ms
 
+
+/**
+ * Use to Create Increment effect.
+ * It uses parabola function to start slow then speedup to max on mid point, then slow down again.
+ * Ideal for values between 0 - 1000.
+ * @param {number} targetValue - Value to reach by counting upwards
+ * @param {number} maxIncrementDelay - How frequently the timer should update, Default value 36
+ * @param {function} onIncrement - Callback when an increment is done
+ * @example
+ * useIncrementUpto(47)
+ * @returns {Number,Ref} Returns the current value & Ref to attach to trigger activation
+ */
 export default function useIncrementUpto(targetValue,maxIncrementDelay, onIncrement){
+
   const [currentValue,setValue] = useState(0);
   const viewActivationRef = useRef();
 
@@ -21,11 +34,12 @@ export default function useIncrementUpto(targetValue,maxIncrementDelay, onIncrem
       // this formula ensures
 
       const h = targetValue / 2;
-      const a = -1 * maxDelay / (h**2);
+      const k = maxDelay;
+      const a = -1 * k / (h**2);
 
       let totalDelay = 0;
       for(let x = 0; x < targetValue ; x++){
-        const y = a * (x - h)**2;
+        const y = a * (x - h)**2 + k;
         const delay = maxDelay - y;
         totalDelay += delay;
 

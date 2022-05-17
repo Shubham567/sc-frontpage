@@ -4,14 +4,14 @@ import useIncrementUpto from "../../../hooks/useIncrementUpto";
 
 
 
-const EffectIncrementUpto = ({wrapperComponent,wrapperProps,maxIncrementDelay,children,targetValue,padStart = 2,padStartWith = "0",...props}) => {
+const EffectIncrementUpto = ({wrapperComponent,maxIncrementDelay,children,targetValue,padStart = 2,padStartWith = "0",...props}) => {
 
   const [currentValue, viewActivationRef] = useIncrementUpto(targetValue);
 
   const WrapperComponent = wrapperComponent || "div";
 
   return (
-    <WrapperComponent {...wrapperProps}>
+    <WrapperComponent {...props}>
       <span ref={viewActivationRef}>{currentValue.toString().padStart(padStart, padStartWith)}</span>
       {children}
     </WrapperComponent>
@@ -21,7 +21,6 @@ const EffectIncrementUpto = ({wrapperComponent,wrapperProps,maxIncrementDelay,ch
 EffectIncrementUpto.propTypes = {
   targetValue: PropTypes.number.isRequired,
   wrapperComponent: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  wrapperProps: PropTypes.object,
   maxIncrementDelay: PropTypes.number,
   padStart: PropTypes.number,
   padStartWith : PropTypes.string,
