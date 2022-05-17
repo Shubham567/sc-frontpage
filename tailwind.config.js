@@ -23,8 +23,8 @@ module.exports = {
       'gray-extra-light': '#ececec',
       "red": "#EA4335",
       "white" : "#fff",
-      "primary": "#0146E0",
-      "secondary" : "#d79d06",
+      "primary": "#204474",
+      "secondary" : "#FFE459",
       "alternate" : "",
       "dark" : "#393939"
     },
