@@ -15,7 +15,7 @@ module.exports = {
       'orange': '#ffba00',
       'green': '#34A853',
       'green-light': '#68CB60',
-      'yellow': '#F7DF1E',
+      'yellow': '#FFE459',
       'gray-dark': '#8C8C8C',
       'gray-extra-dark': '#5b5b5b',
       'gray': '#C4C4C4',
@@ -24,7 +24,7 @@ module.exports = {
       "red": "#EA4335",
       "white" : "#fff",
       "primary": "#204474",
-      "secondary" : "#FFE459",
+      "secondary" : "#F28705",
       "alternate" : "",
       "dark" : "#393939"
     },
