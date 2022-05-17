@@ -1,40 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 import CollapsibleCard from "../src/components/CollapsibleCard";
 import { IoIosPhonePortrait } from "react-icons/io";
-
-const Component = () => {
-  return (
-    <div>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
-    </div>
-  )
-}
+import ProgressWithText from "../src/components/ProgressWithText";
+import EffectProgressBarIncrement from "../src/components/Effects/EffectProgressBarIncrement";
 
 const Demo = () => {
+
+  // const [value,setValue] = useState(0);
+
   return (
-    <div>
-      <CollapsibleCard
-        topCollapsibleComponent={
-          <div className={"flex justify-center align-center"}>
-            <img src="/images/brands/merckLogo.png" alt="image"/>
-          </div>
-        }
-        collapsibleComponent={<Component/>}
-        bgHeading={"bg-gray-light"}
-        bgCollapsible={"bg-yellow"}
-        heading={<div className={"flex align-center"}> <div>Top View</div></div>}
-      />
-      <CollapsibleCard
-        collapsibleComponent={<Component/>}
-        bgHeading={"bg-gray-light"}
-        bgCollapsible={"bg-yellow"}
-        heading={<div className={"flex align-center"}> <h1>Top View</h1></div>}
-      />
-      <CollapsibleCard collapsibleComponent={<Component/>} bgHeading={"bg-gray-light"} bgCollapsible={"bg-blue"} heading={<div className={"flex align-center"}><h1><IoIosPhonePortrait /></h1> <h1>Top View</h1></div>}/>
+    <div className="flex flex-col items-center justify-center gap-4 p-5">
+      {/*<div className="max-w-md w-50">*/}
+      {/*<ProgressWithText max={100} value={value}  />*/}
+      {/*</div>*/}
+      {/*<input type="range" min={0} max={100}  onChange={e => setValue(e.target.value)}/>*/}
+      <EffectProgressBarIncrement targetValue={10/2} />
     </div>
   );
 };

@@ -45,8 +45,12 @@ export default function useIncrementUpto(targetValue,maxIncrementDelay, onIncrem
         timerRefs.current.push(setTimeout(() => {
           setValue(prev => {
             let newVal = prev + 1;
-            onIncrement?.(newVal);
-            return  newVal;
+            if(newVal <= targetValue){
+              //Todo: Monkey patch here fix it
+              onIncrement?.(newVal);
+              return  newVal;
+            }
+            return prev;
           });
         },totalDelay));
 
@@ -59,6 +63,7 @@ export default function useIncrementUpto(targetValue,maxIncrementDelay, onIncrem
     return () => {
       // eslint-disable-next-line react-hooks/exhaustive-deps
       timerRefs.current.forEach(timer => clearTimeout(timer));
+      setValue(0);
     }
   }, [])
 
