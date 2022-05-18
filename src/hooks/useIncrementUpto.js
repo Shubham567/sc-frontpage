@@ -44,7 +44,7 @@ export default function useIncrementUpto(targetValue,maxIncrementDelay, onIncrem
       // k -> maxDelay
       const a = maxDelay / (h**2);
 
-      let totalDelay = 0;
+      let totalDelay = 300;
       for(let x = 0; x < targetValue ; x++){
         const y = a * (x - h)**2 + 1;
         totalDelay += y;
