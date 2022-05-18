@@ -24,7 +24,7 @@ export default function useIncrementUpto(targetValue,maxIncrementDelay, onIncrem
 
 
   useEffect(() => {
-    const io = new IntersectionObserver(() => {
+    const io = new IntersectionObserver((entries) => {
 
       // Using Parabolic equation to calculate delay for a point
       // y = a (x - h)^2 + k
@@ -32,6 +32,13 @@ export default function useIncrementUpto(targetValue,maxIncrementDelay, onIncrem
       // h = mid point of equation, half of maximum value to be reached, in this case targetValue
       // k = maximum increment delay,
       // this formula ensures
+
+
+      for(let i = 0; i < entries.length; i++){
+        if(!entries[i].isIntersecting){
+          return;
+        }
+      }
 
       const h = targetValue / 2;
       // k -> maxDelay
