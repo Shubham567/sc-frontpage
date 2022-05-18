@@ -26,7 +26,7 @@ module.exports = {
       "primary": "#204474",
       "secondary" : "#F28705",
       "alternate" : "",
-      "dark" : "#393939"
+      "dark" : "#393939",
     },
     extend: {
       fontFamily: {

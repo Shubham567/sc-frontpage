@@ -21,6 +21,8 @@ import ImageBesideText from "../src/components/ImageBesideText";
 
 import livePairImg from "../assets/livePair.png";
 import videoQuestionImg from "../assets/videoQuestion.png";
+import HiringAssessment from "../src/components/Sections/HiringAssessmentPortal";
+import PercentageView from "../src/components/Sections/PercentageView";
 
 const primaryBgContents = [
   // Max 3 items
@@ -41,12 +43,15 @@ export default function Home() {
         <meta name="description" content={appDetails.metaDescription} />
       </Head>
 
-      <TopEllipses className="absolute top-0 right-0 -z-50"  />
+      {/*<TopEllipses className="absolute top-0 right-0 -z-50"  />*/}
       <TopNav/>
 
       <header>
         <Intro/>
       </header>
+      <section>
+        <PercentageView />
+      </section>
 
       <aside>
         <CustomerList />
@@ -89,6 +94,8 @@ export default function Home() {
                            </>
                          }
         />
+
+        <HiringAssessment />
 
         <ThreeCards data={[
           {heading: "Customized Assessment", content: "Team SupportLorem ipsum dolor sit amet"},
