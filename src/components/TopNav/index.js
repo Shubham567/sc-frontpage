@@ -53,7 +53,7 @@ const TopNav = props => {
         <div className="flex gap-x-5 justify-end items-center">
           {
             screen.width > 768 &&
-            <div className="flex gap-x-5 font-normal text-dark text-bs">
+            <div className="flex gap-x-5 font-medium text-dark text-bs">
               {
                 centralLinks.map(cl => <Link key={cl.link} href={cl.link}>{cl.name}</Link>)
               }

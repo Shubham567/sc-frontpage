@@ -23,6 +23,7 @@ import livePairImg from "../assets/livePair.png";
 import videoQuestionImg from "../assets/videoQuestion.png";
 import HiringAssessment from "../src/components/Sections/HiringAssessmentPortal";
 import PercentageView from "../src/components/Sections/PercentageView";
+import Advantage from "../src/components/Sections/Advantage";
 
 const primaryBgContents = [
   // Max 3 items
@@ -57,10 +58,10 @@ export default function Home() {
         <CustomerList />
       </aside>
 
-      <aside>
-        <h3 className="hidden">Types of questions available at SkillCounty.com</h3>
-        <QuestionTags />
-      </aside>
+      {/*<aside>*/}
+      {/*  <h3 className="hidden">Types of questions available at SkillCounty.com</h3>*/}
+      {/*  <QuestionTags />*/}
+      {/*</aside>*/}
 
       <main className="flex flex-col h-100">
         <HowToUse />
@@ -112,6 +113,9 @@ export default function Home() {
       </main>
 
       <OnTopBgTrapez />
+      <section>
+        <Advantage />
+      </section>
       <Footer />
       <DemoForm />
     </div>
