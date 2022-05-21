@@ -19,9 +19,9 @@ const Intro = () => {
   const openModal = () => dispatch(actionSetHomeDemoRequestForm(true));
   //flex-col lg:flex-row xl:flex-row justify-around gap-1 items-center
   return (
-    <div className={clsx(commonStyles.intro, "sm:pt-40 md:pt-48 lg:pt-0 xl:pt-0 relative")}>
-      <div className="flex flex-start items-center text-dark" style={{minHeight: "100vh"}}>
-        <div className="xl:ml-8 xl:border-l-8 xl:border-l-yellow xl:pl-6 xl:pt-20 xl:pb-20 flex w-full lg:w-1/2 xl:w-1/2 2xl:w-1/2 flex-col items-center sm:items-center md:items-center lg:items-start gap-y-4 -mt-16 pl-5">
+    <div className={clsx(commonStyles.intro, "pt-36 sm:pt-40 md:pt-48 lg:pt-0 xl:pt-0 relative")}>
+      <div className="flex mt-96 sm:mt-72 lg:mt-0 pb-16 lg:pb-0 min-h-min lg:min-h-screen flex-start items-center text-dark">
+        <div className="xl:ml-8 pt-8 md:mt-12 xl:border-l-8 xl:border-l-yellow xl:pl-6 xl:pt-20 xl:pb-20 flex w-full lg:w-1/2 xl:w-1/2 2xl:w-1/2 flex-col items-center sm:items-center md:items-center lg:items-start gap-y-4 -mt-16 pl-5">
           <div>
             <h1 className={clsx("tracking-wide mb-4 text-4xl text-center " +
               "md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-6xl" +
@@ -65,10 +65,21 @@ const Intro = () => {
 
         </div>
 
-        <div className="flex w-full -top-10 right-0 absolute -z-10" >
+        <div className="flex mt-8 lg:bg-transparent items-center justify-end w-full lg:w-1/2 h-96 top-0 lg:h-full absolute lg:right-0 lg:top-0" >
           {/*// The Interactive comp goes here*/}
           {/*<TestDemoTop />*/}
-           <Image src="/images/young-businesswoman.png" width="1921px" height="987px" fill="" responsive objectFit="cover" />
+           <Image src="/images/cool-girl.png" layout="fill" objectFit="contain" />
+          <div className="flex w-2/5 h-full flex-col">
+            <p className="mt-8 text-md md:text-2xl font-normal mb-2">Calculate  ROI</p>
+            <div className="flex">
+              <div className="ml-12">
+                <Image src="/images/arrowIcon.png" width="71px" height="59px" />
+              </div>
+              <button className="mt-4 ml-2">
+                <Image src="/images/roiIcon.png" width="80px" height="80px" />
+              </button>
+            </div>
+          </div>
         </div>
 
       </div>

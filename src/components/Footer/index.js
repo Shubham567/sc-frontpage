@@ -100,7 +100,7 @@ const Footer = () => {
       <div className="mt-56 ml-2 md:ml-8">
         <Image src="/images/skillcounty-footer-logo.svg" width="349px" height="71px" alt="logo" />
       </div>
-      <div className="flex md:pl-12 md:pr-8 xl:mt-28 mt-12 flex-col sm:flex-row border-gray border-y justify-between px-4 py-8 gap-4 sm:gap-1">
+      <div className="flex md:pl-12 md:pr-8 xl:mt-28 mt-12 flex-col sm:flex-row justify-between px-4 py-8 gap-4 sm:gap-1">
         <div className="flex text-yellow flex-col md:flex-row lg:flex-row xl:flex-row gap-12 text-sm">
           {
             sections.map(section => <div key={section.name} className="flex flex-col gap-2">

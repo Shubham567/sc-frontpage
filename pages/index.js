@@ -47,7 +47,7 @@ export default function Home() {
       {/*<TopEllipses className="absolute top-0 right-0 -z-50"  />*/}
       <TopNav/>
 
-      <header>
+      <header className="bg-cover bg-no-repeat bg-right md:bg-center" style={{backgroundImage: "url(/images/cool-girl-bg.png)"}}>
         <Intro/>
       </header>
       <section>
