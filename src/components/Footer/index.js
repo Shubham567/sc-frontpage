@@ -120,7 +120,7 @@ const Footer = () => {
           <div className="text-yellow font-semibold">Follow Us</div>
           <div className="flex gap-2 text-yellow">
             {
-              socialLinks.map(sl => <a href={sl.link} key={sl.name} target="_blank" >
+              socialLinks.map(sl => <a href={sl.link} rel="noopener noreferrer" key={sl.name} target="_blank" >
                 <IconButton className="bg-yellow" aria-label={sl.name} contained>
                   {sl.icon}
                 </IconButton>
