@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import Card from "../Card";
 import clsx from "clsx";
+import {AnimatePresence, motion} from "framer-motion";
 
 const SlidePresentationWideScreen = ({data,...props}) => {
 
@@ -15,7 +16,7 @@ const SlidePresentationWideScreen = ({data,...props}) => {
   return (
     <div className="flex w-full justify-center items-center gap-6" >
       <ul role="presentation" className="flex flex-col gap-8">
-          {/* Controls */}
+        {/* Controls */}
         {
           data.map((dataPoint, index) => {
             const isActiveItem = currentActiveIndex === index;
@@ -38,23 +39,41 @@ const SlidePresentationWideScreen = ({data,...props}) => {
               </div>
             </li>
           })
-          }
+        }
       </ul>
       <div className="flex max-w-lg">
         <Card fluid className="flex flex-col gap-4 px-10 py-6">
           {/*  Content Viewer section */}
-          { data[currentActiveIndex].image &&
-              <div className="">
-              {
-                data[currentActiveIndex].image
-              }
-            </div>
-          }
-          <div className="">
-            {
-              data[currentActiveIndex].content
+          <AnimatePresence exitBeforeEnter>
+            { data[currentActiveIndex].image &&
+              <motion.div className=""
+                          initial="hidden"
+                          whileInView="visible"
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.3 }}
+                          variants={{
+                            visible: { opacity: 1, scale: 1, y: 0 },
+                            hidden: { opacity: 0, scale: 0 , y: 20}
+                          }}>
+                {
+                  data[currentActiveIndex].image
+                }
+              </motion.div>
             }
-          </div>
+            <motion.div className=""
+                        key={data[currentActiveIndex].title}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.3 }}
+                        variants={{
+                          visible: { opacity: 1, scale: 1, y: 0 },
+                          hidden: { opacity: 0, scale: 0 , y: 20}}} >
+              {
+                data[currentActiveIndex].content
+              }
+            </motion.div>
+          </AnimatePresence>
         </Card>
       </div>
     </div>
