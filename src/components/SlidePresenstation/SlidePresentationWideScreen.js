@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import Card from "../Card";
+import clsx from "clsx";
 
 const SlidePresentationWideScreen = ({data,...props}) => {
 
@@ -17,13 +18,20 @@ const SlidePresentationWideScreen = ({data,...props}) => {
           {/* Controls */}
         {
           data.map((dataPoint, index) => {
+            const isActiveItem = currentActiveIndex === index;
             return <li key={dataPoint.title} className="">
-              <div className="flex items-center gap-6" onClick={toggleCurrentActiveIndexTo(index)} role="button" aria-label={dataPoint.title} aria-pressed={currentActiveIndex === index}>
+              <div className="flex items-center gap-6"
+                   onClick={toggleCurrentActiveIndexTo(index)} role="button"
+                   aria-label={dataPoint.title} aria-pressed={isActiveItem}>
                 <div className="flex text-secondary">
                   {dataPoint.icon}
                 </div>
                 <div className="flex" >
-                  <h4 className="font-semibold tracking-wider">
+                  <h4 className={clsx("tracking-wider",
+                    {
+                      "font-semibold text-dark " : isActiveItem,
+                      "text-gray-dark" : !isActiveItem
+                    })}>
                     {dataPoint.title}
                   </h4>
                 </div>
