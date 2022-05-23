@@ -92,7 +92,7 @@ const socialLinks  = [
 
 const Footer = () => {
   return (
-    <footer style={{backgroundImage: "url(/images/footer-background.png)"}} className="bg-cover mt-8 flex flex-col text-primary relative">
+    <footer role="navigation" aria-label="useful links" style={{backgroundImage: "url(/images/footer-background.png)"}} className="bg-cover mt-8 flex flex-col text-primary relative">
       {/*<FooterGrayTriangles className="absolute bottom-0 left-0 w-full h-full -z-10" />*/}
       {/*<div className="flex absolute">*/}
       {/*  <Image src="/images/footer-background.png" objectFit="cover" width="1920px" height="917" alt="footer-bg" />*/}

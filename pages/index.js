@@ -50,9 +50,9 @@ export default function Home() {
       <header className="bg-cover bg-no-repeat bg-right md:bg-center" style={{backgroundImage: "url(/images/cool-girl-bg.png)"}}>
         <Intro/>
       </header>
-      <section>
+      <main>
         <PercentageView />
-      </section>
+      </main>
 
       <aside>
         <CustomerList />
@@ -113,9 +113,11 @@ export default function Home() {
       </main>
 
       <OnTopBgTrapez />
-      <section>
-        <Advantage />
-      </section>
+      <main>
+        <section>
+          <Advantage />
+        </section>
+      </main>
       <Footer />
       <DemoForm />
     </div>
