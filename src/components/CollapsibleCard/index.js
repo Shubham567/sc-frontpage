@@ -25,12 +25,12 @@ const CollapsibleCard = (
   }
 
   return (
-    <div className={"flex max-w-sm m-2 text-dark justify-center align-center"}>
+    <div className={"flex min-w-full md:min-w-0 m-4 text-dark justify-center align-center md:max-w-sm"}>
       <Card fluid>
-        <div className={clsx("w-full p-2 rounded-md", bgHeading)}>
+        <div className={clsx("w-full md:min-w-full md:max-w-full p-2 rounded-md", bgHeading)}>
           <div className={clsx("w-full mb-2 md:block", currentState)}>{topCollapsibleComponent && topCollapsibleComponent}</div>
           <div className={"w-full flex align-center justify-between"}>
-            <div className={"mb-2 font-semibold"}>{heading && heading}</div>
+            <div className={"font-semibold"}>{heading && heading}</div>
             <div onClick={collapseHandler} className="cursor-pointer md:hidden">
               {isCollapse ? closeIcon ? closeIcon : <IoIosArrowUp/> : openIcon ? openIcon : <IoIosArrowDown/>}
             </div>

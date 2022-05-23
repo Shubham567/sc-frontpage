@@ -12,8 +12,11 @@ import useScreenSize from "../../hooks/useScreenSize";
 import IconButton from "../IconButton";
 import {IoMdMenu} from "react-icons/io"
 import SideMenu from "../SideMenu";
+import {useRouter} from "next/router";
 
 const centralLinks = [
+  {name: "Platform", link: "/platform"},
+  {name: "Solutions", link: "/solutions"},
   {name: "Pricing", link: "/pricing"},
 ]
 
@@ -28,44 +31,47 @@ const TopNav = props => {
 
   const [scroll] = useWindowScroll();
   const screen = useScreenSize();
+  const router = useRouter();
 
 
-
-  const [openSideMenu,toggleSideMenu] = useToggle(false, [false,true]);
+  const [openSideMenu, toggleSideMenu] = useToggle(false, [false, true]);
 
   return (
     <nav
       role="navigation" aria-label="SkillCounty quick navigation"
-      className={clsx("sticky z-10 top-0 flex items-center px-2 py-1 transition-all items-center", `${styles.navBg}`, {"shadow" : scroll.y > 50})}>
+      className={clsx("fixed w-full z-10 top-0 flex items-center px-4 py-2.5 transition-all items-center", `${styles.navBg}`, {[`shadow ${styles.navBgScroll}`]: scroll.y > 50})}>
       <div className="w-full flex justify-between items-center text-primary font-semibold">
-        <div className="flex gap-x-1">
-
+        <div className="flex items-center gap-x-1">
           <div>
             {/*<Image src="/logo.svg"  alt="SkillCounty Logo" width={70} height={70}/>*/}
-            <ScLogo width={30} height={30} className="fill-primary"/>
+            <ScLogo width={36} height={36} className="fill-dark"/>
           </div>
-          <div className="tracking-wide text-xl font-bold">
+          <div className="tracking-wide text-dark text-2xl font-bold">
             <Link href="/">SkillCounty</Link>
           </div>
         </div>
-        {
-          screen.width > 768 &&
-          <div className="flex gap-x-5 font-semibold">
-            {
-              centralLinks.map(cl => <Link key={cl.link} href={cl.link}>{cl.name}</Link>)
-            }
-          </div>
-        }
+
         <div className="flex gap-x-5 justify-end items-center">
+          {
+            screen.width > 768 &&
+            <div className="flex gap-x-5 font-medium text-dark text-bs">
+              {
+                centralLinks.map(cl => <Link key={cl.link} href={cl.link}>{cl.name}</Link>)
+              }
+            </div>
+          }
           {
             screen.width > breakPoint ?
               <>
-                <Link href='https://app.skillcounty.com/auth'>Login</Link>
-                <Button variant="contained" color="secondary" className="py-1.5 px-5">Get Started</Button>
+                <div className={"font-normal ml-8 text-dark text-bs"}>
+                  <Link href='#'>Try Yourself</Link>
+                </div>
+                <Button onClick={() => router.replace('https://app.skillcounty.com/auth')} variant="contained"
+                        color="primary" className="py-1.5 px-5">Login</Button>
               </>
               :
               <IconButton aria-label="menu" large onClick={toggleSideMenu}>
-                <IoMdMenu />
+                <IoMdMenu/>
               </IconButton>
           }
         </div>
@@ -73,7 +79,7 @@ const TopNav = props => {
       <SideMenu open={openSideMenu} onClose={toggleSideMenu}>
         <div className="flex flex-col text-primary p-2">
           {
-            sideMenuItems.map( menuItem => <div key={menuItem.name}>
+            sideMenuItems.map(menuItem => <div key={menuItem.name}>
               <Link href={menuItem.link}>
                 {menuItem.name}
               </Link>
@@ -85,8 +91,6 @@ const TopNav = props => {
   );
 };
 
-TopNav.propTypes = {
-
-};
+TopNav.propTypes = {};
 
 export default TopNav;
