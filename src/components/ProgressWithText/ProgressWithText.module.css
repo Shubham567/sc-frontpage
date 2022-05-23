@@ -1,0 +1,24 @@
+.text {
+    color : rgb(255, 83, 0);
+}
+
+.text:after{
+    mix-blend-mode: difference;
+    color: rgb(0, 255, 255);
+    content: attr(progress-value);
+}
+
+.progress{
+    border-radius: 2px;
+}
+
+.progress::-moz-progress-bar {
+    background: rgb(255, 30, 0);
+    border-radius: 2px;
+}
+
+/* For Chrome or Safari */
+.progress::-webkit-progress-value {
+    background: rgb(255, 30, 0);
+    border-radius: 2px;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import Link from "next/link";
 import {IoLogoFacebook, IoLogoInstagram, IoLogoTwitter, IoLogoYoutube} from "react-icons/io";
 import IconButton from "../IconButton";
+import Image from "next/image";
 
 const sections = [
   {
@@ -91,16 +92,19 @@ const socialLinks  = [
 
 const Footer = () => {
   return (
-    <footer className="mt-8 flex flex-col text-primary relative">
+    <footer style={{backgroundImage: "url(/images/footer-background.png)"}} className="bg-cover mt-8 flex flex-col text-primary relative">
       {/*<FooterGrayTriangles className="absolute bottom-0 left-0 w-full h-full -z-10" />*/}
-      <div className="flex">
-
+      {/*<div className="flex absolute">*/}
+      {/*  <Image src="/images/footer-background.png" objectFit="cover" width="1920px" height="917" alt="footer-bg" />*/}
+      {/*</div>*/}
+      <div className="mt-56 ml-2 md:ml-8">
+        <Image src="/images/skillcounty-footer-logo.svg" width="349px" height="71px" alt="logo" />
       </div>
-      <div className="flex flex-col sm:flex-row  border-gray border-y justify-between px-4 py-8 gap-4 sm:gap-1">
-        <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row gap-6 text-sm">
+      <div className="flex md:pl-12 md:pr-8 xl:mt-28 mt-12 flex-col sm:flex-row justify-between px-4 py-8 gap-4 sm:gap-1">
+        <div className="flex text-yellow flex-col md:flex-row lg:flex-row xl:flex-row gap-12 text-sm">
           {
             sections.map(section => <div key={section.name} className="flex flex-col gap-2">
-              <h5 className="text-dark font-semibold">
+              <h5 className="text-yellow font-semibold">
                 {section.name}
               </h5>
                 {
@@ -113,11 +117,11 @@ const Footer = () => {
           }
         </div>
         <div className="flex items-start sm:items-end flex-col p-2 gap-2">
-          <div className=" font-semibold">Follow Us</div>
-          <div className="flex gap-2">
+          <div className="text-yellow font-semibold">Follow Us</div>
+          <div className="flex gap-2 text-yellow">
             {
-              socialLinks.map(sl => <a href={sl.link} key={sl.name} target="_blank" >
-                <IconButton aria-label={sl.name} contained primary>
+              socialLinks.map(sl => <a href={sl.link} rel="noopener noreferrer" key={sl.name} target="_blank" >
+                <IconButton className="bg-yellow" aria-label={sl.name} contained>
                   {sl.icon}
                 </IconButton>
               </a>)

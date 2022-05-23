@@ -1,40 +1,42 @@
-import React from 'react';
+import React, {useState} from 'react';
 import CollapsibleCard from "../src/components/CollapsibleCard";
 import { IoIosPhonePortrait } from "react-icons/io";
+import ProgressWithText from "../src/components/ProgressWithText";
+import EffectProgressBarIncrement from "../src/components/Effects/EffectProgressBarIncrement";
+import EffectAppearOnView from "../src/components/Effects/EffectAppearOnView";
+import ThreeCards from "../src/components/ThreeCards";
 
-const Component = () => {
-  return (
-    <div>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
-    </div>
-  )
-}
+const arr = [2,12,31,312,3,1]
+arr.length = 10;
 
 const Demo = () => {
+
+  // const [value,setValue] = useState(0);
+
   return (
-    <div>
-      <CollapsibleCard
-        topCollapsibleComponent={
-          <div className={"flex justify-center align-center"}>
-            <img src="/images/brands/merckLogo.png" alt="image"/>
-          </div>
-        }
-        collapsibleComponent={<Component/>}
-        bgHeading={"bg-gray-light"}
-        bgCollapsible={"bg-yellow"}
-        heading={<div className={"flex align-center"}> <div>Top View</div></div>}
-      />
-      <CollapsibleCard
-        collapsibleComponent={<Component/>}
-        bgHeading={"bg-gray-light"}
-        bgCollapsible={"bg-yellow"}
-        heading={<div className={"flex align-center"}> <h1>Top View</h1></div>}
-      />
-      <CollapsibleCard collapsibleComponent={<Component/>} bgHeading={"bg-gray-light"} bgCollapsible={"bg-blue"} heading={<div className={"flex align-center"}><h1><IoIosPhonePortrait /></h1> <h1>Top View</h1></div>}/>
+    <div className="flex flex-col items-center justify-center gap-4 w-full">
+      {/*<div className="max-w-md w-50">*/}
+      {/*<ProgressWithText max={100} value={value}  />*/}
+      {/*</div>*/}
+      {/*<input type="range" min={0} max={100}  onChange={e => setValue(e.target.value)}/>*/}
+      {
+        arr.map((i,k) => <div key={k}>
+          <EffectAppearOnView className="mb-96 w-full">
+            <ThreeCards data={[
+              {heading: "Customized Assessment", content: "Team SupportLorem ipsum dolor sit amet"},
+              {heading: "Downloadable Report", content: "Lorem ipsum dolor sit amet"},
+              {heading: "Question Types", content: "Lorem ipsum dolor sit amet"},]}/>
+          </EffectAppearOnView>
+          <EffectAppearOnView className="mb-96">
+            <ThreeCards mainTitle={"Enterprise Ready"}
+                        bgColor="primary" data={[
+              {heading: "Team Support", content: "Team SupportLorem ipsum dolor sit amet"},
+              {heading: "ATS Integration", content: "Lorem ipsum dolor sit amet"},
+              {heading: "WorkSpace", content: "Lorem ipsum dolor sit amet"},
+            ]}/>
+          </EffectAppearOnView>
+        </div>)
+      }
     </div>
   );
 };
