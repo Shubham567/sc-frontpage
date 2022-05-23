@@ -38,6 +38,7 @@ const TopNav = props => {
 
   return (
     <nav
+      role="navigation" aria-label="SkillCounty quick navigation"
       className={clsx("fixed w-full z-10 top-0 flex items-center px-4 py-2.5 transition-all items-center", `${styles.navBg}`, {[`shadow ${styles.navBgScroll}`]: scroll.y > 50})}>
       <div className="w-full flex justify-between items-center text-primary font-semibold">
         <div className="flex items-center gap-x-1">
