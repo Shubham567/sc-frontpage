@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import useScreenSize from "../../hooks/useScreenSize";
 import SlidePresentationWideScreen from "./SlidePresentationWideScreen";
+import SlidePresentationSmallScreen from "./SlidePresentationSmallScreen";
 
 
 const triggerBreakpoint = 700;
@@ -12,7 +13,10 @@ const SlidePresentation = ({cardProps,data,...props}) => {
   return (
     <div className="flex w-full">
       {
-        screen.width > triggerBreakpoint ? <SlidePresentationWideScreen data={data} /> : null
+        screen.width > triggerBreakpoint ?
+          <SlidePresentationWideScreen data={data} />
+          :
+          <SlidePresentationSmallScreen data={data} />
       }
     </div>
   );
