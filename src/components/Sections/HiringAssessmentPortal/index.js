@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from "next/image"
 import CollapsibleCard from "../../CollapsibleCard";
+import EffectAppearOnView from "../../Effects/EffectAppearOnView";
 
 const HiringAssessment = () => {
   return (
@@ -10,18 +11,20 @@ const HiringAssessment = () => {
           <Image width="781px" height="824px" src="/images/dottedSkillCounty.png" alt="SkillCounty logo"/>
         </div>
         <h1 className="text-center text-4xl font-normal text-primary mb-2 font-bold">Hiring Assessment Platform</h1>
-        <div className="w-full flex flex-wrap justify-center">
-          {
-            rawData.map((item) => (
-              <CollapsibleCard
-                key={item.id}
-                collapsibleComponent={<p>{item.content}</p>}
-                heading={<p>{item.title}</p>}
-                topCollapsibleComponent={item.image}
-              />
-            ))
-          }
-        </div>
+        {/*<EffectAppearOnView>*/}
+          <div className="w-full flex flex-wrap justify-center items-center">
+            {
+              rawData.map((item) => (
+                <CollapsibleCard
+                  key={item.id}
+                  collapsibleComponent={<p>{item.content}</p>}
+                  heading={<p>{item.title}</p>}
+                  topCollapsibleComponent={item.image}
+                />
+              ))
+            }
+          </div>
+        {/*</EffectAppearOnView>*/}
       </div>
     </div>
   );

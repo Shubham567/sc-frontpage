@@ -3,6 +3,7 @@ import clsx from "clsx";
 import {IoIosArrowDown, IoIosArrowUp} from "react-icons/io";
 import Card from "../Card";
 import PropTypes from "prop-types";
+import EffectAppearOnView from "../Effects/EffectAppearOnView";
 
 const CollapsibleCard = (
   {
@@ -25,25 +26,31 @@ const CollapsibleCard = (
   }
 
   return (
-    <div className={"flex min-w-full md:min-w-0 m-4 text-dark justify-center align-center md:max-w-sm"}>
-      <Card fluid>
-        <div className={clsx("w-full md:min-w-full md:max-w-full p-2 rounded-md", bgHeading)}>
-          <div className={clsx("w-full mb-2 md:block", currentState)}>{topCollapsibleComponent && topCollapsibleComponent}</div>
-          <div className={"w-full flex align-center justify-between"}>
-            <div className={"font-semibold"}>{heading && heading}</div>
-            <div onClick={collapseHandler} className="cursor-pointer md:hidden">
-              {isCollapse ? closeIcon ? closeIcon : <IoIosArrowUp/> : openIcon ? openIcon : <IoIosArrowDown/>}
-            </div>
-          </div>
-          <div className={clsx("p-2 -mb-2 -ml-2 -mr-2 rounded-b-md md:block", bgCollapsible, currentState)}>
-            {
-              collapsibleComponent && collapsibleComponent
-            }
-          </div>
-        </div>
-      </Card>
-    </div>
-
+     <div className={"flex min-w-full md:min-w-0 m-4 text-dark justify-center align-center md:max-w-sm"}>
+       <Card fluid>
+         {/*<EffectAppearOnView>*/}
+           <div onClick={collapseHandler} className={clsx("w-full md:min-w-full md:max-w-full p-2 rounded-md", bgHeading)}>
+             <EffectAppearOnView>
+               <div className={clsx("w-full mb-2 md:block", currentState)}>{topCollapsibleComponent && topCollapsibleComponent}</div>
+             </EffectAppearOnView>
+             <div className={"w-full flex align-center justify-between"}>
+               <EffectAppearOnView><div className={"font-semibold"}>{heading && heading}</div></EffectAppearOnView>
+              <EffectAppearOnView> <div className="cursor-pointer md:hidden">
+                {isCollapse ? closeIcon ? closeIcon : <IoIosArrowUp/> : openIcon ? openIcon : <IoIosArrowDown/>}
+              </div>
+              </EffectAppearOnView>
+             </div>
+             <EffectAppearOnView>
+               <div className={clsx("p-2 -mb-2 -ml-2 -mr-2 rounded-b-md md:block", bgCollapsible, currentState)}>
+                 {
+                   collapsibleComponent && collapsibleComponent
+                 }
+               </div>
+             </EffectAppearOnView>
+           </div>
+         {/*</EffectAppearOnView>*/}
+       </Card>
+     </div>
   );
 };
 
