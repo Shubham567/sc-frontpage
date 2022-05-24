@@ -29,7 +29,7 @@ export default function Home() {
               and online community for software developers (“SkillCounty”). These Terms also include the SkillCounty
               Privacy Policy. By accessing and using SkillCounty,
               You agree to comply with these Terms. You may not access and use SkillCounty if You do not agree to the
-              version of the Terms posted at the time You access SkillCounty.<br/> The terms "We" and "Us" refer to
+              version of the Terms posted at the time You access SkillCounty.<br/> The terms &quot;We&quot; and &quot;Us&quot; refer to
               Interview street
               Incorporation, a s759labs doing business as SkillCounty. Acceptance of the SkillCounty Terms<br/> Your
                 access to SkillCounty is subject to these Terms. We reserve the right to update and change these Terms
@@ -137,16 +137,15 @@ export default function Home() {
               proposed or suggested by You (“Feedback”), We shall have the right to use such Feedback at Our
               discretion, including, but not
               limited to the incorporation of such suggested changes into SkillCounty and/or our other products and
-              services. You hereby grant to Us a perpetual, irrevocable, non­exclusive license under all rights
+              services. You hereby grant to Us a perpetual, irrevocable, non-exclusive license under all rights
               necessary to incorporate and use
               Your Feedback for any purpose.</p>
-            <p></p>
             <h3 className="text-xl text-primary">Code of Conduct</h3>
             <p>
               We have the right, but not the obligation, to remove or block Content from SkillCounty that We determine
               in Our reasonable discretion to be in violation of these Terms, to be unlawful, offensive, threatening,
               libelous, defamatory, obscene or otherwise
-              objectionable, that violates any party's intellectual property or that is detrimental to the quality or
+              objectionable, that violates any party&apos;s intellectual property or that is detrimental to the quality or
               intended spirit of SkillCounty. We also have the right, but not the obligation, to limit or revoke the
               use privileges of the SkillCounty
               Account of any Hacker who posts such Content or engages in such behavior. You alone are responsible for
@@ -243,7 +242,7 @@ export default function Home() {
               Sites, is solely at Your own risk.</p>
             <h3 className="text-xl text-primary">Disclaimers/ No Warranties. Limitation of Liability</h3>
             <p>EXCEPT AS MAY BE SET FORTH IN ANY SEPARATE SIGNED AGREEMENT BY INTERVIEWSTREET AND YOU, SkillCounty IS
-              PROVIDED "AS IS" WITH NO REPRESENTATIONS OR WARRANTIES OF ANY KIND, EXPRESS, STATUTORY OR IMPLIED, AS TO
+              PROVIDED &quot;AS IS&quot; WITH NO REPRESENTATIONS OR WARRANTIES OF ANY KIND, EXPRESS, STATUTORY OR IMPLIED, AS TO
               THE OPERATION OF SkillCounty, OR
               THE INFORMATION, CONTENT, MATERIALS, OR PRODUCTS INCLUDED ON SkillCounty. TO THE FULLEST EXTENT
               PERMISSIBLE BY APPLICABLE LAW, INTERVIEWSTREET AND ITS AFFILIATES, IF ANY, DISCLAIM ALL WARRANTIES,
@@ -314,11 +313,11 @@ export default function Home() {
               submit to the personal and exclusive jurisdiction of the courts located within the county of Santa Clara
               County, California.</p>
             <h3 className="text-xl text-primary">SkillCounty Jobs Terms of Service </h3>
-            <p>These Terms of Service (the "Terms") govern Your access to and use of the SkillCounty Jobs website,
-              online services and mobile applications (collectively,"SkillCounty Jobs"). By accessing and using
+            <p>These Terms of Service (the &quot;Terms&quot;) govern Your access to and use of the SkillCounty Jobs website,
+              online services and mobile applications (collectively,&quot;SkillCounty Jobs&quot;). By accessing and using
               SkillCounty Jobs, You agree to comply with
               these Terms. You may not use SkillCounty Jobs if You do not agree to the version of the Terms posted at
-              the time You access SkillCounty Jobs. The terms "We," "Us," and "SkillCounty" refer to s759labs, a
+              the time You access SkillCounty Jobs. The terms &quot;We,&quot; &quot;Us,&quot; and &quot;SkillCounty&quot; refer to s759labs, a
               s759labs doing business as SkillCounty.
               <br/><br/>1. Eligibility to Use SkillCounty Jobs<br/> To access or use SkillCounty Jobs, You must be 18
                 years of age or older and have the power and authority to enter into these Terms. Except as approved by
@@ -326,7 +325,7 @@ export default function Home() {
                 personal, non-commercial use. You may not use SkillCounty Jobs if we have terminated Your account or
                 banned You.<br/>2. Your SkillCounty Account SkillCounty Account.<br/>In order to access and use
                   SkillCounty Jobs, We require You to become
-                  a member of the SkillCounty online community (a "Hacker") by creating a SkillCounty account using Your
+                  a member of the SkillCounty online community by creating a SkillCounty account using Your
                   name, email address, mobile telephone number and creating a password. Additional account registration
                   requirements may also apply. You
                   are entirely responsible for maintaining the confidentiality of Your password. You agree not to use
@@ -336,7 +335,7 @@ export default function Home() {
                   of Your account or access to Your password. You are solely responsible for any and all use of Your
                   account. Passwords are subject to cancellation or suspension by SkillCounty at any time. Social Sign
                   In.If You access SkillCounty through
-                  a social networking site such as Facebook or Google+ ("Social Networking Site"), You agree that
+                  a social networking site such as Facebook or Google+ (&quot;Social Networking Site&quot;), You agree that
                   SkillCounty Jobs may access and store (if applicable) information (including personally identifiable
                   information) accessible to SkillCounty
                   Jobs through Your Social Networking Site subject to the privacy settings that You have set with the
@@ -352,11 +351,11 @@ export default function Home() {
             </p>
             <br/>3. Your Use of SkillCounty Jobs<br/>
               <p>Browse Jobs.You can use SkillCounty Jobs to browse available software developer jobs posted by top
-                companies in select regions (each a"Company"). Take Challenges.When You identify a job that interests
+                companies in select regions (each a&quot;Company&quot;). Take Challenges.When You identify a job that interests
                 You, You can request to solve a software
-                coding challenge ("Challenge") from the Company that posted the job. Once You've submitted a request to
+                coding challenge (&quot;Challenge&quot;) from the Company that posted the job. Once You&apos;ve submitted a request to
                 take a Challenge, You will receive the Challenge via email. You may start the Challenge when convenient
-                for You, but it's recommended
+                for You, but it&apos;s recommended
                 that You take the Challenge within a few days to help ensure that Your Challenge submission is received
                 by the Company before the job is closed. Once started, the Challenge must be solved within the time
                 limit specified and You may only
@@ -389,7 +388,7 @@ export default function Home() {
                   including the information and representations
                   that You make in Your SkillCounty account and corresponding SkillCounty profile and the code You
                   submit
-                  in response to a Challenge ("Your Information"). Representations Regarding Your Information. You
+                  in response to a Challenge (&quot;Your Information&quot;). Representations Regarding Your Information. You
                   represent and warrant that: You own
                   Your Information or otherwise have the right to provide, post, and/or share Your Information via
                   SkillCounty and/or SkillCounty Jobs as described in these Terms; Your Information does not violate the
@@ -416,7 +415,7 @@ export default function Home() {
                   Jobs
                   from time to time, including, without limitation, identifying potential errors, improvements,
                   modifications, bug fixes, or enhancements
-                  ("Feedback"). If You, through Your evaluation or otherwise, suggests any Feedback, You hereby grant
+                  (&quot;Feedback&quot;). If You, through Your evaluation or otherwise, suggests any Feedback, You hereby grant
                   Indeed a nonexclusive, worldwide, perpetual, irrevocable, royalty-free, sublicensable (through
                   multiple
                   layers of sublicensees) right and
@@ -438,7 +437,7 @@ export default function Home() {
                 <br/>5.Company Information on SkillCounty Jobs
                   <p>Information provided by Companies is made available to You through SkillCounty Jobs, including
                     company
-                    profiles, reviews, photos, job descriptions, and salary information ("Company Information"). Because
+                    profiles, reviews, photos, job descriptions, and salary information (&quot;Company Information&quot;). Because
                     SkillCounty does not control the Company
                     Information, You acknowledge and agree that: (a) SkillCounty is not responsible for, and does not
                     endorse any Company Information; (b) SkillCounty makes no guarantees about the accuracy,
@@ -459,7 +458,7 @@ export default function Home() {
                       Rights
                       <br/> SkillCounty and its third party suppliers and partners hereby reserve all rights in and to
                         SkillCounty Jobs and the underlying or related software for SkillCounty Jobs (collectively,
-                        the"Software"). Nothing in this Agreement will
+                        the&quot;Software&quot;). Nothing in this Agreement will
                         be deemed to grant any license therein other than to access and use SkillCounty Jobs as
                         described in
                         Section 3 above. You may not copy, decompile, disassemble, reverse engineer, reverse assemble,
@@ -609,19 +608,19 @@ export default function Home() {
                                               such right or provision. If any provision of these Terms is found to be
                                               unenforceable or invalid, then
                                               only that provision shall be modified
-                                              to reflect the parties' intention or eliminated to the minimum extent
+                                              to reflect the parties&apos; intention or eliminated to the minimum extent
                                               necessary so that these Terms
                                               shall otherwise remain in full force and effect and enforceable. These
                                               Terms, and any rights or
                                               obligations hereunder, are not assignable,
-                                              transferable or sublicensable by You except with SkillCounty's prior
+                                              transferable or sublicensable by You except with SkillCounty&apos;s prior
                                               written consent, but may be
                                               assigned or transferred by SkillCounty without restriction. Any attempted
                                               assignment by You shall
                                               violate these Terms and be void. The Section
                                               titles in these Terms are for convenience only and have no legal or
                                               contractual effect; as used in these
-                                              Terms, the word "including" means "including but not limited to." Please
+                                              Terms, the word &quot;including&quot; means &quot;including but not limited to.&quot; Please
                                               contact SkillCounty with any
                                               questions regarding these Terms
                                               at support@SkillCounty.com.

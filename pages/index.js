@@ -1,15 +1,10 @@
 import TopNav from "../src/components/TopNav";
-import appDetails from "../config/appDetails";
-import Head from "next/head";
 import Intro from "../src/components/pages/Home/Intro";
 import React from "react";
 import CustomerList from "../src/components/pages/Home/CustomerList";
-import QuestionTags from "../src/components/pages/Home/QuestionTags";
 import OnTopBgTrapez from "../src/components/pages/Home/OnTopBgTrapez";
 import HowToUse from "../src/components/pages/Home/HowToUse";
 import OnSolidBg from "../src/components/pages/Home/OnSolidBg";
-import SectionWithCardsAndButtons from "../src/components/pages/Home/SectionWithCardsAndButtons";
-import TopEllipses from "../src/components/svgs/TopEllipses";
 import Footer from "../src/components/Footer";
 import UseCases from "../src/components/pages/Home/UseCases";
 import Button from "../src/components/Button";
@@ -24,6 +19,7 @@ import videoQuestionImg from "../assets/videoQuestion.png";
 import HiringAssessment from "../src/components/Sections/HiringAssessmentPortal";
 import PercentageView from "../src/components/Sections/PercentageView";
 import Advantage from "../src/components/Sections/Advantage";
+import CommonHead from "../src/components/CommonHead";
 
 const primaryBgContents = [
   // Max 3 items
@@ -39,10 +35,7 @@ export default function Home() {
 
   return (
     <div className="relative">
-      <Head>
-        <title>{appDetails.title}</title>
-        <meta name="description" content={appDetails.metaDescription} />
-      </Head>
+      <CommonHead title="Welcome to SkillCounty"/>
 
       {/*<TopEllipses className="absolute top-0 right-0 -z-50"  />*/}
       <TopNav/>

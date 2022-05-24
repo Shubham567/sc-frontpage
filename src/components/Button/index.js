@@ -55,7 +55,7 @@ Button.propTypes = {
   className: PropTypes.string,
   size: PropTypes.oneOf(["sm","lg","xl"]),
   color: PropTypes.oneOf(["primary","secondary"]),
-  variant: PropTypes.oneOf(["default","primary","secondary"]),
+  variant: PropTypes.oneOf([undefined,"outlined","contained"]),
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
 
 };
