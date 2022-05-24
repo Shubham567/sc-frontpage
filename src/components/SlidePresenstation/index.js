@@ -5,7 +5,7 @@ import SlidePresentationWideScreen from "./SlidePresentationWideScreen";
 import SlidePresentationSmallScreen from "./SlidePresentationSmallScreen";
 
 
-const triggerBreakpoint = 700;
+const triggerBreakpoint = 750;
 const SlidePresentation = ({cardProps,data,...props}) => {
 
   const screen = useScreenSize();
