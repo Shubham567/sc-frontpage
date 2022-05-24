@@ -73,8 +73,8 @@ export default function Home() {
               You own and post on or through SkillCounty belongs to You and You may use it in any way, except as
               prohibited by applicable law or regulations. By using SkillCounty, You are granting Us permission to use
               the Content as described in
-              these Terms. By using SkillCounty You are granting Us a non­exclusive, worldwide, royalty­free, fully
-              paid­up, sublicenseable, irrevocable and transferable right and license to use, host, store, reproduce,
+              these Terms. By using SkillCounty You are granting Us a non-exclusive, worldwide, royalty-free, fully
+              paid-up, sublicenseable, irrevocable and transferable right and license to use, host, store, reproduce,
               create derivative works of,
               distribute, modify, display, and communicate Your Content. If You post Content on or through
               SkillCounty, You represent and warrant that You have the right to post the Content and to grant the
@@ -94,7 +94,7 @@ export default function Home() {
               use SkillCounty only for purposes that are legal, proper and in accordance with these Terms. Your
               disclosure of Your Content does not violate a confidential relationship with any third party or
               establish a confidential relationship
-              Us. You understand that You are responsible for Your Content that You upload, post, e­mail, transmit, or
+              Us. You understand that You are responsible for Your Content that You upload, post, e-mail, transmit, or
               otherwise make available through SkillCounty. Except as permitted in these Terms, You do not have the
               rights to use, reproduce,
               create derivative works of, distribute, publicly perform or publicly display any Content that does not
@@ -216,17 +216,17 @@ export default function Home() {
               by going to dmca.</p>
             <h3 className="text-xl text-primary">Ownership; Proprietary Rights.</h3>
             <p>
-              SkillCounty is owned and operated by Interviewstreet Incorporated. The visual interfaces, graphics,
+              SkillCounty is owned and operated by s759Labs Incorporated. The visual interfaces, graphics,
               design, compilation, information, computer code, products, software (including any downloadable
               software), services, and all other elements of SkillCounty
-              provided by Interviewstreet (“Materials”) are protected by United States copyright, trade dress, patent,
+              provided by s759Labs (“Materials”) are protected by United States copyright, trade dress, patent,
               and trademark laws, international conventions, and all other relevant intellectual property and
               proprietary rights, and applicable
               laws. Except for any third party content or Content uploaded by You, all Materials are the copyrighted
-              property of Interviewstreet or its subsidiaries or affiliated companies and/or third party licensors.
+              property of s759Labs or its subsidiaries or affiliated companies and/or third party licensors.
               All trademarks, service marks,
-              and trade names are proprietary to Interviewstreet or its affiliates and/or third party licensors.
-              Except as expressly authorized by Interviewstreet, You agree not to sell, license, distribute, copy,
+              and trade names are proprietary to s759Labs or its affiliates and/or third party licensors.
+              Except as expressly authorized by s759Labs, You agree not to sell, license, distribute, copy,
               modify, publicly perform or display,
               transmit, publish, edit, adapt, create derivative works from, or otherwise make unauthorized use of the
               Materials.
@@ -241,34 +241,34 @@ export default function Home() {
               including the information, material, products, and services on Linked Sites or available through Linked
               Sites, is solely at Your own risk.</p>
             <h3 className="text-xl text-primary">Disclaimers/ No Warranties. Limitation of Liability</h3>
-            <p>EXCEPT AS MAY BE SET FORTH IN ANY SEPARATE SIGNED AGREEMENT BY INTERVIEWSTREET AND YOU, SkillCounty IS
+            <p>EXCEPT AS MAY BE SET FORTH IN ANY SEPARATE SIGNED AGREEMENT BY s759Labs AND YOU, SkillCounty IS
               PROVIDED &quot;AS IS&quot; WITH NO REPRESENTATIONS OR WARRANTIES OF ANY KIND, EXPRESS, STATUTORY OR IMPLIED, AS TO
               THE OPERATION OF SkillCounty, OR
               THE INFORMATION, CONTENT, MATERIALS, OR PRODUCTS INCLUDED ON SkillCounty. TO THE FULLEST EXTENT
-              PERMISSIBLE BY APPLICABLE LAW, INTERVIEWSTREET AND ITS AFFILIATES, IF ANY, DISCLAIM ALL WARRANTIES,
+              PERMISSIBLE BY APPLICABLE LAW, s759Labs AND ITS AFFILIATES, IF ANY, DISCLAIM ALL WARRANTIES,
               EXPRESS, STATUTORY, OR IMPLIED, INCLUDING,
               BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-              NON­INFRINGEMENT. FURTHER, INTERVIEWSTREET AND ITS AFFILIATES DO NOT WARRANT THE ACCURACY OR
+              NON INFRINGEMENT. FURTHER, s759Labs AND ITS AFFILIATES DO NOT WARRANT THE ACCURACY OR
               COMPLETENESS OF THE INFORMATION, TEXT, GRAPHICS,
               LINKS OR OTHER INFORMATION CONTAINED IN SkillCounty. SOME JURISDICTIONS DO NOT ALLOW LIMITATIONS ON
               IMPLIED WARRANTIES, SO THE ABOVE LIMITATIONS MAY NOT APPLY TO YOU. EXCEPT AS MAY BE SET FORTH IN ANY
               SEPARATE SIGNED AGREEMENT BETWEEN
-              INTERVIEWSTREET AND A YOU, INTERVIEWSTREET DOES NOT WARRANT THAT SkillCounty WILL BE AVAILABLE AT ANY
-              TIME OR FROM ANY PARTICULAR LOCATION, WILL BE SECURE OR ERROR­FREE, THAT DEFECTS WILL BE CORRECTED, OR
+              s759Labs AND A YOU, s759Labs DOES NOT WARRANT THAT SkillCounty WILL BE AVAILABLE AT ANY
+              TIME OR FROM ANY PARTICULAR LOCATION, WILL BE SECURE OR ERROR FREE, THAT DEFECTS WILL BE CORRECTED, OR
               THAT SkillCounty IS FREE OF VIRUSES
               OR OTHER POTENTIALLY HARMFUL COMPONENTS. NO ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN, OBTAINED
-              FROM INTERVIEWSTREET OR SkillCounty SHALL CREATE ANY WARRANTY NOT EXPRESSLY STATED IN THESE TERMS OF
+              FROM s759Labs OR SkillCounty SHALL CREATE ANY WARRANTY NOT EXPRESSLY STATED IN THESE TERMS OF
               SERVICE. EXCEPT AS MAY BE SET FORTH
-              IN ANY SEPARATELY SIGNED AGREEMENT BETWEEN INTERVIEWSTREET AND YOU, NEITHER INTERVIEWSTREET NOR ITS
+              IN ANY SEPARATELY SIGNED AGREEMENT BETWEEN s759Labs AND YOU, NEITHER s759Labs NOR ITS
               AFFILIATES WILL BE LIABLE, UNDER ANY THEORY OF LAW, FOR ANY INDIRECT, INCIDENTAL, PUNITIVE, OR
               CONSEQUENTIAL DAMAGES, INCLUDING, BUT NOT
               LIMITED TO LOSS OF PROFITS OR, BUSINESS INTERRUPTION, AND/OR LOSS OF INFORMATION OR DATA. SOME
               JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE
               ABOVE LIMITATIONS AND EXCLUSIONS MAY NOT
-              APPLY TO YOU. NOTWITHSTANDING ANYTHING TO THE CONTRARY CONTAINED HEREIN, INTERVIEWSTREET’S MAXIMUM
+              APPLY TO YOU. NOTWITHSTANDING ANYTHING TO THE CONTRARY CONTAINED HEREIN, s759Labs’S MAXIMUM
               AGGREGATE LIABILITY TO YOU FOR ANY CAUSES WHATSOEVER, AND REGARDLESS OF THE FORM OF ACTION, WILL AT ALL
               TIMES BE LIMITED TO THE GREATER
-              OF (i) THE AMOUNT PAID, IF ANY, BY YOU TO INTERVIEWSTREET FOR SkillCounty IN THE SIX (6) MONTHS PRIOR TO
+              OF (i) THE AMOUNT PAID, IF ANY, BY YOU TO s759Labs FOR SkillCounty IN THE SIX (6) MONTHS PRIOR TO
               THE ACTION GIVING RISE TO LIABILITY OR (ii) ONE HUNDRED DOLLARS ($100.00).</p>
             <h3 className="text-xl text-primary">Indemnification</h3>
             <p>You agree to indemnify and hold s759labs, its affiliated companies, suppliers, partners, officers,
@@ -277,11 +277,11 @@ export default function Home() {
               (ii) a claim that You, or any third party using Your Credentials, infringed any intellectual property or
               other right of any person or organization using SkillCounty, or (iii) the violation of these Terms by
               You or any third party using
-              Your Credentials. Interviewstreet reserves the right, at our own expense, to assume the exclusive
+              Your Credentials. s759Labs reserves the right, at our own expense, to assume the exclusive
               defense and control of any matter for which You are required to indemnify Us, and You agree to cooperate
               with Our defense of these claims.
               This indemnity shall not apply if a third party uses Your Credentials due to an act or omission of
-              Interviewstreet.</p>
+              s759Labs.</p>
             <h3 className="text-xl text-primary">Miscellaneous.</h3>
             <p>These Terms will remain in full force and effect while You use SkillCounty. Those terms that can continue
               to operate after You stop using SkillCounty (including without limitation Your Content license to Us and
