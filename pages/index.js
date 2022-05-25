@@ -51,7 +51,12 @@ export default function Home() {
         <CustomerList />
       </aside>
 
+      <main>
+          <HiringAssessment />
+      </main>
+
       <OnTopBgTrapez />
+
       <main>
         <section>
           <Advantage />
