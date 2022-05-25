@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from "../../../Button";
+import Button from "../../Button";
 import PropTypes from "prop-types";
-import EffectAppearOnView from "../../../Effects/EffectAppearOnView";
+import EffectAppearOnView from "../../Effects/EffectAppearOnView";
 
 const ActionCard = ({heading, buttonLabel, actionHandler}) => {
   return (
@@ -13,7 +13,7 @@ const ActionCard = ({heading, buttonLabel, actionHandler}) => {
             }
           </h1>
           <div className="mt-8 flex justify-center items-center">
-            <Button onClick={actionHandler} rounded className="bg-secondary text-xl font-medium pl-8 pr-8 pt-2 pb-2 rounded-full text-white">{buttonLabel || "Button"}</Button>
+            <Button onClick={actionHandler} rounded className="bg-secondary hover:bg-orange ease-in-out duration-300 text-xl font-medium pl-8 pr-8 pt-2 pb-2 rounded-full text-white">{buttonLabel || "Button"}</Button>
           </div>
         </div>
       </div>

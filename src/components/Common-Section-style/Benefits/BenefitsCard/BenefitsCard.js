@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 import PropTypes from "prop-types";
-import EffectAppearOnView from "../../../../Effects/EffectAppearOnView";
+import EffectAppearOnView from "../../../Effects/EffectAppearOnView";
 
 const BenefitsCard = ({image, description}) => {
   return (

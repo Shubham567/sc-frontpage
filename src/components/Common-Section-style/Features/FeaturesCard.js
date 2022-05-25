@@ -2,7 +2,7 @@ import React from 'react';
 import Image from "next/image"
 import clsx from "clsx";
 import PropTypes from "prop-types";
-import EffectAppearOnView from "../../../Effects/EffectAppearOnView";
+import EffectAppearOnView from "../../Effects/EffectAppearOnView";
 
 const FeaturesCard = ({direction, heading, image, description}) => {
   return (

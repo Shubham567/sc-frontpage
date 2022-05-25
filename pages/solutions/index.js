@@ -9,9 +9,18 @@ import Actions from "../../src/components/Common-Section-style/Actions/Actions";
 import OtherPlatformTab from "../../src/components/Common-Section-style/OtherPlatformTab/OtherPlatformTab";
 import Footer from "../../src/components/Footer";
 import Image from "next/image";
+import ScaleHiring from "../../src/components/Common-Section-style/ScaleHiring/ScaleHiring";
 
 const actionHandler = ({actionData}) => {
   console.log("Button Clicked")
+}
+
+const requestDemo = () => {
+
+}
+
+const calculateROI = () => {
+
 }
 
 const Platform = () => {
@@ -23,10 +32,13 @@ const Platform = () => {
       </Head>
       <TopNav/>
       <main>
-        <TopPlatformSection {...topRawData} />
+        <TopPlatformSection {...topRawData} hideBg={"invisible"} />
         <Benefits benefitsData={benefitsData} />
         <Features featureData={featureData} />
+        <ScaleHiring title={"Hire Affoardably At Scale"} requestDemo={requestDemo} calculateROI={calculateROI} />
+        <Features featureData={featureData} />
         <Actions actionData={actionData} />
+        <Features featureData={featureData} />
         <OtherPlatformTab tabData={tabData} />
       </main>
       <Footer />
@@ -67,11 +79,6 @@ const benefitsData = [
     image:  <Image src="/images/platform/random.png" width="158px" height="81px" />,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium, sem et efficitur blandit."
   },
-  {
-    id: 4,
-    image:  <Image src="/images/platform/random.png" width="158px" height="81px" />,
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium, sem et efficitur blandit."
-  }
 ];
 
 const featureData = [
@@ -110,8 +117,7 @@ const tabData = [
 ];
 
 const topRawData = {
-  heading : "Lorem ipsum dolor sit amet, consectetur adipiscing bvhv. ",
+  heading : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
   description: "Upgrade your hiring. Use SkillCounty Assessment Platform to hire the right candidates faster and more efficiently. "
 }
-
 

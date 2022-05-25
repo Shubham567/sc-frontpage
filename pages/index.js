@@ -51,60 +51,6 @@ export default function Home() {
         <CustomerList />
       </aside>
 
-      {/*<aside>*/}
-      {/*  <h3 className="hidden">Types of questions available at SkillCounty.com</h3>*/}
-      {/*  <QuestionTags />*/}
-      {/*</aside>*/}
-
-      <main className="flex flex-col h-100">
-        <HowToUse />
-        <OnSolidBg contents={primaryBgContents}/>
-        <ImageBesideText imageProps={{alt : "Live pair, collaborative coding interview", src: livePairImg}}
-                         title="Live Pair"
-                         content="Lorem ipsum dolor sit amet, consectetur adip"
-                         controls={
-                           <>
-                             <Button variant="outlined" color="primary" onClick={openModal}>
-                               Request Demo
-                             </Button>
-                             <Button variant="contained" color="primary">
-                               Get Started
-                             </Button>
-                           </>
-                         }
-        />
-        <ImageBesideText imageProps={{alt : "One way asynchronous video interview", src: videoQuestionImg}}
-                         title="One way interview"
-                         content="Lorem ipsum dolor sit amet, consectetur adip"
-                         reverse
-                         controls={
-                           <>
-                             <Button variant="outlined" color="primary" onClick={openModal}>
-                               Request Demo
-                             </Button>
-                             <Button variant="contained" color="primary">
-                               Get Started
-                             </Button>
-                           </>
-                         }
-        />
-
-        <HiringAssessment />
-
-        <ThreeCards data={[
-          {heading: "Customized Assessment", content: "Team SupportLorem ipsum dolor sit amet"},
-          {heading: "Downloadable Report", content: "Lorem ipsum dolor sit amet"},
-          {heading: "Question Types", content: "Lorem ipsum dolor sit amet"},]} />
-        <ThreeCards mainTitle={"Enterprise Ready"}
-                    bgColor="primary" data={[
-          {heading: "Team Support", content: "Team SupportLorem ipsum dolor sit amet"},
-          {heading: "ATS Integration", content: "Lorem ipsum dolor sit amet"},
-          {heading: "WorkSpace", content: "Lorem ipsum dolor sit amet"},
-        ]}/>
-        <UseCases />
-
-      </main>
-
       <OnTopBgTrapez />
       <main>
         <section>

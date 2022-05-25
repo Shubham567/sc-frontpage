@@ -1,13 +1,14 @@
 import React from 'react';
 import Image from "next/image";
+import clsx from "clsx";
 
-const LeftPart = ({heading, description}) => {
+const LeftPart = ({heading, description, hideBg}) => {
   return (
     <div className="w-1/2 p-4">
-      <div className="w-2/3 -ml-8 h-44 bg-yellow">
+      <div className={clsx("w-2/3 -ml-8 h-44 bg-yellow", hideBg)}>
 
       </div>
-     <div className="-mt-28">
+     <div className={hideBg ? "-mt-36" : "-mt-28"}>
        <h1 className="font-bold text-primary mt-2 text-5xl">{heading && heading}</h1>
        <p className="mt-8 font-medium text-primary text-xl tracking-wide">{description && description}</p>
      </div>
@@ -15,13 +16,13 @@ const LeftPart = ({heading, description}) => {
   )
 }
 
-const RightPart = () => {
+const RightPart = ({hideBg}) => {
   return (
     <div className="w-1/2 flex justify-start flex-col items-center min-h-screen p-4 relative">
-      <div className="w-64 h-80 bg-yellow -z-10">
+      <div className={clsx("w-64 h-80 bg-yellow -z-10", hideBg)}>
 
       </div>
-      <div className="w-64 h-80 bg-yellow -z-10">
+      <div className={clsx("w-64 h-80 bg-yellow -z-10", hideBg)}>
 
       </div>
     <div className="absolute top-1/4">
@@ -31,12 +32,12 @@ const RightPart = () => {
   )
 }
 
-const Background = ({heading, description}) => {
+const Background = ({heading, description, hideBg}) => {
   return (
     <div className="min-h-screen h-screen">
       <div className="min-h-screen pl-4 pr-4 flex justify-between items-center">
-          <LeftPart heading={heading} description={description} />
-         <RightPart />
+          <LeftPart hideBg={hideBg} heading={heading} description={description} />
+         <RightPart hideBg={hideBg} />
       </div>
     </div>
   );

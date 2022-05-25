@@ -26,14 +26,14 @@ const CollapsibleCard = (
   }
 
   return (
-     <div className={"flex min-w-full md:min-w-0 m-4 text-dark justify-center align-center md:max-w-sm"}>
+     <div className={"flex min-w-full md:min-w-0 m-4 text-dark justify-center items-center md:max-w-sm"}>
        <Card fluid>
          {/*<EffectAppearOnView>*/}
            <div onClick={collapseHandler} className={clsx("w-full md:min-w-full md:max-w-full p-2 rounded-md", bgHeading)}>
              <EffectAppearOnView>
-               <div className={clsx("w-full mb-2 md:block", currentState)}>{topCollapsibleComponent && topCollapsibleComponent}</div>
+               <div className={clsx("w-full mb-2 md:block flex justify-center items-center", currentState)}>{topCollapsibleComponent && topCollapsibleComponent}</div>
              </EffectAppearOnView>
-             <div className={"w-full flex align-center justify-between"}>
+             <div className={"w-full flex items-center justify-between"}>
                <EffectAppearOnView><div className={"font-semibold"}>{heading && heading}</div></EffectAppearOnView>
               <EffectAppearOnView> <div className="cursor-pointer md:hidden">
                 {isCollapse ? closeIcon ? closeIcon : <IoIosArrowUp/> : openIcon ? openIcon : <IoIosArrowDown/>}
