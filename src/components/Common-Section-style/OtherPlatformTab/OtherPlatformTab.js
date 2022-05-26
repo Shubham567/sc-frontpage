@@ -1,6 +1,7 @@
 import React from 'react';
 import TabCard from "./TabCard";
 import Image from "next/image";
+import PropTypes from "prop-types";
 
 const OtherPlatformTab = ({tabData}) => {
   return (
@@ -18,4 +19,12 @@ const OtherPlatformTab = ({tabData}) => {
 };
 
 export default OtherPlatformTab;
+
+OtherPlatformTab.prototype = {
+  tabData: PropTypes.arrayOf({
+    id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    heading: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+    description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  })
+}
 

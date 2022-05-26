@@ -1,6 +1,7 @@
 import React from 'react';
 import FeaturesCard from "./FeaturesCard";
 import Image from "next/image";
+import PropTypes from "prop-types";
 
 const Features = ({featureData}) => {
   return (
@@ -15,4 +16,14 @@ const Features = ({featureData}) => {
 };
 
 export default Features;
+
+Features.prototype = {
+  featureData: PropTypes.arrayOf({
+    id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    image: PropTypes.node,
+    heading: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+    description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+    direction: PropTypes.string
+  })
+}
 

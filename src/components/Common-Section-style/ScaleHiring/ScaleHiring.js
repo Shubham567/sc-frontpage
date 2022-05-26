@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from "../../Button";
 import EffectAppearOnView from "../../Effects/EffectAppearOnView";
+import PropTypes from "prop-types";
 
 const ScaleHiring = ({title, requestDemo, calculateROI}) => {
 
@@ -26,3 +27,9 @@ const ScaleHiring = ({title, requestDemo, calculateROI}) => {
 };
 
 export default ScaleHiring;
+
+ScaleHiring.prototype = {
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  requestDemo: PropTypes.func,
+  calculateROI: PropTypes.func
+}

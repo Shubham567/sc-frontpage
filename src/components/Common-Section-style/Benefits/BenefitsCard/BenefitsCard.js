@@ -6,7 +6,7 @@ import EffectAppearOnView from "../../../Effects/EffectAppearOnView";
 const BenefitsCard = ({image, description}) => {
   return (
     <EffectAppearOnView>
-      <div className="m-12 w-64">
+      <div className="m-4 p-4 md:m-12 w-64">
         <div className="flex justify-center items-center">
           {
             image && image

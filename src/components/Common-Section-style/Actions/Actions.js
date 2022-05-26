@@ -1,6 +1,7 @@
 import React from 'react';
 import ActionCard from "./ActionCard";
 import EffectAppearOnView from "../../Effects/EffectAppearOnView";
+import PropTypes from "prop-types";
 
 const Actions = ({actionData}) => {
   return (
@@ -17,4 +18,13 @@ const Actions = ({actionData}) => {
 };
 
 export default Actions;
+
+Actions.prototype = {
+  actionData: PropTypes.arrayOf({
+    id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    heading: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+    buttonLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+    actionHandler: PropTypes.func
+  })
+}
 
