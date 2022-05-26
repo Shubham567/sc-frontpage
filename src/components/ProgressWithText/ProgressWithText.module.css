@@ -3,8 +3,8 @@
 }
 
 .text:after{
-    mix-blend-mode: difference;
-    color: rgb(0, 255, 255);
+    mix-blend-mode: hard-light;
+    color: #fff;
     content: attr(progress-value);
 }
 
@@ -13,12 +13,12 @@
 }
 
 .progress::-moz-progress-bar {
-    background: rgb(255, 30, 0);
+    background: #F28705;
     border-radius: 2px;
 }
 
 /* For Chrome or Safari */
 .progress::-webkit-progress-value {
-    background: rgb(255, 30, 0);
+    background: #F28705;
     border-radius: 2px;
 }

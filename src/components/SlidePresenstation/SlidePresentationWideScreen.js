@@ -14,7 +14,7 @@ const SlidePresentationWideScreen = ({data,...props}) => {
 
 
   return (
-    <div className="flex w-full justify-center items-center gap-6" >
+    <div className="flex w-full justify-center items-center gap-6 lg:gap-24" >
       <ul role="presentation" className="flex flex-col gap-8">
         {/* Controls */}
         {
@@ -24,11 +24,11 @@ const SlidePresentationWideScreen = ({data,...props}) => {
               <div className="flex items-center gap-6"
                    onClick={toggleCurrentActiveIndexTo(index)} role="button"
                    aria-label={dataPoint.title} aria-pressed={isActiveItem}>
-                <div className="flex text-secondary">
+                <div className="flex text-secondary text-2xl">
                   {dataPoint.icon}
                 </div>
                 <div className="flex" >
-                  <h4 className={clsx("tracking-wider",
+                  <h4 className={clsx("tracking-wider text-lg",
                     {
                       "font-semibold text-dark " : isActiveItem,
                       "text-gray-dark" : !isActiveItem
@@ -42,7 +42,7 @@ const SlidePresentationWideScreen = ({data,...props}) => {
         }
       </ul>
       <div className="flex max-w-lg">
-        <Card fluid className="flex flex-col gap-4 px-10 py-6">
+        <Card fluid className="flex flex-col gap-4 px-6 py-6">
           {/*  Content Viewer section */}
           <AnimatePresence exitBeforeEnter>
             { data[currentActiveIndex].image &&
