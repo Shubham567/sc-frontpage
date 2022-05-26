@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 import clsx from "clsx";
+import EffectAppearOnView from "../../Effects/EffectAppearOnView";
 
 const Advantage = () => {
   return (
@@ -22,8 +23,12 @@ const Advantage = () => {
             <div key={item.id} style={{boxShadow: "7px 10px 10px rgba(0, 0, 0, 0.25)"}} className={
               clsx("xl:w-1/5 md:w-1/4 p-6 rounded-lg m-2 bg-white absolute", position[index].x, position[index].y)
             }>
-              <h4 className="font-medium text-2xl mb-4">{item.title}</h4>
-              <p className="font-normal tracking-wide text-md text-justify">{item.description}</p>
+              <EffectAppearOnView>
+                <h4 className="font-medium text-2xl mb-4">{item.title}</h4>
+              </EffectAppearOnView>
+              <EffectAppearOnView>
+                <p className="font-normal tracking-wide text-md text-justify">{item.description}</p>
+              </EffectAppearOnView>
             </div>
           ))
         }
@@ -52,8 +57,12 @@ const Advantage = () => {
               <div key={item.id} style={{boxShadow: "7px 10px 10px rgba(0, 0, 0, 0.25)"}} className={
                 clsx("w-2/3 sm:w-1/2 md:w-1/3 p-6 rounded-lg m-2 bg-white absolute", mobilePosition[index].x, mobilePosition[index].y)
               }>
-                <h4 className="font-medium text-2xl mb-4">{item.title}</h4>
-                <p className="font-normal tracking-wide text-md text-justify">{item.description}</p>
+               <EffectAppearOnView>
+                 <h4 className="font-medium text-2xl mb-4">{item.title}</h4>
+               </EffectAppearOnView>
+               <EffectAppearOnView>
+                 <p className="font-normal tracking-wide text-md text-justify">{item.description}</p>
+               </EffectAppearOnView>
               </div>
             ))
           }
