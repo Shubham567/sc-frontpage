@@ -7,9 +7,9 @@ const Advantage = () => {
   return (
     <div className="mt-24 mb-72 relative">
       <div className="flex justify-center items-center flex-col">
-        <h1 className="font-bold text-4xl text-primary text-center">SkillCounty Advantages</h1>
+        <h1 className="font-bold text-4xl tracking-wide text-primary text-center">SkillCounty Advantages</h1>
         <p style={{letterSpacing: "3.5px", wordSpacing: "5px"}}
-           className="pl-4 pr-4 text-center tracking-widest break-words font-normal text-sp mt-2">Accelerate Hiring,
+           className="pl-4 pr-4 text-center tracking-wide break-words font-normal text-sp mt-2">Accelerate Hiring,
           Scale Tasks & Hire Better</p>
       </div>
       <div className="mt-48 hidden xl:block h-full mb-12 w-full flex justify-center items-center relative">
@@ -24,10 +24,10 @@ const Advantage = () => {
               clsx("xl:w-1/5 md:w-1/4 p-6 rounded-lg m-2 bg-white absolute", position[index].x, position[index].y)
             }>
               <EffectAppearOnView>
-                <h4 className="font-medium text-2xl mb-4">{item.title}</h4>
+                <h4 className="font-medium text-xl mb-4">{item.title}</h4>
               </EffectAppearOnView>
               <EffectAppearOnView>
-                <p className="font-normal tracking-wide text-md text-justify">{item.description}</p>
+                <p className="font-normal text-md">{item.description}</p>
               </EffectAppearOnView>
             </div>
           ))
@@ -58,10 +58,10 @@ const Advantage = () => {
                 clsx("w-2/3 sm:w-1/2 md:w-1/3 p-6 rounded-lg m-2 bg-white absolute", mobilePosition[index].x, mobilePosition[index].y)
               }>
                <EffectAppearOnView>
-                 <h4 className="font-medium text-2xl mb-4">{item.title}</h4>
+                 <h4 className="font-medium md:text-xl text-lg mb-4">{item.title}</h4>
                </EffectAppearOnView>
                <EffectAppearOnView>
-                 <p className="font-normal tracking-wide text-md text-justify">{item.description}</p>
+                 <p className="font-normal text-md text-left">{item.description}</p>
                </EffectAppearOnView>
               </div>
             ))
@@ -82,18 +82,17 @@ const advantageData = [
   {
     id: 1,
     title: "Team Support",
-    description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, " +
-      "by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum.  or randomised words which don't look even slightly believable."
+    description: "Your hiring team has to work collaboratively to scale and bring in the best talent. With team support, you and your colleagues share the account and thus can share responsibilities of crafting & conducting assessments and then reviewing reports and metrics. "
   },
   {
     id: 2,
-    title: "Team Support",
-    description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum."
+    title: "Application Tracking System (ATS) Integration",
+    description: "SkillCounty offers strong APIs for integration. Some popular ATS are already integrated. But if you have a homegrown ATS and need help, SKillCounty Services can step in to ensure your workflows are seamless."
   },
   {
     id: 3,
-    title: "Team Support",
-    description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum."
+    title: "Custom Workflows Integrations",
+    description: "If there is existing enterprise technology that your company already uses, SkillCounty Services can help you integrate assessments to it. So whether it is slack, teams or something else entirely, you can build a workflow that works for your company."
   },
 ]
 

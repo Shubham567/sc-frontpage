@@ -13,10 +13,10 @@ const customerListData = [
 
 const CustomerList = props => {
   return (
-    <div className={clsx(styles.customerListContainer,"flex flex-col p-6 mt-8 mb-8 justify-center items-center gap-4")}>
+    <div className={clsx(styles.customerListContainer,"flex flex-col p-6 mt-8 mb-8 justify-center items-center gap-8")}>
       <div>
-        <h2 className={clsx("text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl text-center font-semibold text-dark",styles.mainTextShadow)}>
-          Join the list of our Happy Customers
+        <h2 className={clsx("text-lg text-primary sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center text-dark",styles.mainTextShadow)}>
+          Our Happy Customers
         </h2>
       </div>
       <div className="flex justify-evenly flex-wrap gap-5">

@@ -41,8 +41,8 @@ const SlidePresentationWideScreen = ({data,...props}) => {
           })
         }
       </ul>
-      <div className="flex max-w-lg">
-        <Card fluid className="flex flex-col gap-4 px-6 py-6">
+      <div className="flex max-w-xl">
+        <Card fluid className="flex flex-col gap-4 px-8 py-6">
           {/*  Content Viewer section */}
           <AnimatePresence exitBeforeEnter>
             { data[currentActiveIndex].image &&
