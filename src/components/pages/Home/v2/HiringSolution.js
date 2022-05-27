@@ -44,7 +44,7 @@ const HiringSolution = () => {
             image: null,
             content: <div>
               <h4 className="font-semibold mb-5 text-primary">
-                Assess candidate's problem solving, coding & design skills
+                Assess candidate&apos;s problem solving, coding & design skills
               </h4>
               <p>
                 SkillCounty brings together all the tools you need to assess technical skills like problem solving, coding and design. Furthermore, it can help you assess skills like planning, teamwork, execution, and communication.
