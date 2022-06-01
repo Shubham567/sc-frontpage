@@ -79,7 +79,7 @@ const breakPoint = 750;
 const AlternateSlidePresentationForHome = () => {
   const screen = useScreenSize();
   return (
-    <div className="flex justify-center items-center py-16" style={{minHeight: 600}}>
+    <div className="flex justify-center items-center pt-16" style={{minHeight: 600}}>
       {
         screen.width > breakPoint ? <AlternateSlidePresentationForHomeWideScreen data={data} /> : ""
       }

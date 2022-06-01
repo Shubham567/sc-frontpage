@@ -54,7 +54,7 @@ const DemoForm = () => {
           <div className="w-full">
             <form className="bg-white rounded px-6 pt-2  mb-4" onSubmit={handleFormSubmit}>
               <div className="mb-4">
-                <label className="block text-primary text-sm font-bold mb-2" htmlFor="demoFormName">
+                <label className="block text-primary text-sm mb-2" htmlFor="demoFormName">
                   Name
                 </label>
                 <input
@@ -62,7 +62,7 @@ const DemoForm = () => {
                   type="text" placeholder="Username" name="name" id="demoFormName" required/>
               </div>
               <div className="mb-4">
-                <label className="block text-primary text-sm font-bold mb-2" htmlFor="demoFormEmail">
+                <label className="block text-primary text-sm mb-2" htmlFor="demoFormEmail">
                   Email
                 </label>
                 <input
@@ -70,7 +70,7 @@ const DemoForm = () => {
                   type="email" placeholder="Email" name="email" id="demoFormEmail" required/>
               </div>
               <div className="">
-                <label className="block text-primary text-sm font-bold mb-2" htmlFor="demoFormMobileNumber">
+                <label className="block text-primary text-sm mb-2" htmlFor="demoFormMobileNumber">
                   Mobile Number
                 </label>
                 <input
@@ -78,12 +78,12 @@ const DemoForm = () => {
                   type="tel" placeholder="Mobile Number" name="mobileNumber" id="demoFormMobileNumber" required/>
               </div>
               <div className="mb-6">
-                <label className="block text-primary text-sm font-bold mb-2" htmlFor="demoFormMsg">
+                <label className="block text-primary text-sm mb-2" htmlFor="demoFormMsg">
                   Message
                 </label>
                 <textarea
                   className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                  type="tel" placeholder="Enter a message / request" name="message" id="demoFormMsg"/>
+                  type="tel" placeholder="Enter a message / request" name="message" id="demoFormMsg" />
                 <p className="text-red-500 text-xs italic">We ll contact you soon</p>
               </div>
               <div className="flex items-center gap-2 justify-end">

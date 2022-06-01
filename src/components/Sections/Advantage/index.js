@@ -21,13 +21,11 @@ const Advantage = () => {
         {
           advantageData.map((item,index) => (
             <div key={item.id} style={{boxShadow: "7px 10px 10px rgba(0, 0, 0, 0.25)"}} className={
-              clsx("xl:w-1/5 md:w-1/4 p-6 rounded-lg m-2 bg-white absolute", position[index].x, position[index].y)
+              clsx("xl:w-1/5 md:w-1/4 p-6 rounded-lg m-2 bg-white absolute text-gray-extra-dark", position[index].x, position[index].y)
             }>
               <EffectAppearOnView>
-                <h4 className="font-medium text-xl mb-4">{item.title}</h4>
-              </EffectAppearOnView>
-              <EffectAppearOnView>
-                <p className="font-normal text-md">{item.description}</p>
+                <h4 className="font-medium text-xl mb-4 text-primary">{item.title}</h4>
+                <p className="text-md">{item.description}</p>
               </EffectAppearOnView>
             </div>
           ))
@@ -59,8 +57,6 @@ const Advantage = () => {
               }>
                <EffectAppearOnView>
                  <h4 className="font-medium md:text-xl text-lg mb-4">{item.title}</h4>
-               </EffectAppearOnView>
-               <EffectAppearOnView>
                  <p className="font-normal text-md text-left">{item.description}</p>
                </EffectAppearOnView>
               </div>

@@ -8,8 +8,8 @@ import {MdAddCall,MdNaturePeople} from "react-icons/md";
 
 const HiringSolution = () => {
   return (
-    <div className="py-8">
-      <h2 className="p-8 text-primary text-center text-2xl md:text-3xl lg:text-4xl">
+    <div className="pt-36">
+      <h2 className="mb-24 text-primary text-center text-2xl md:text-3xl lg:text-4xl">
         Hiring Solutions
       </h2>
       <div className="mt-8">

@@ -12,7 +12,6 @@ const SlidePresentationWideScreen = ({data,...props}) => {
     setCurrentActiveIndex(index);
   }
 
-
   return (
     <div className="flex w-full justify-center items-center gap-6 lg:gap-24" >
       <ul role="presentation" className="flex flex-col gap-8">
@@ -24,7 +23,7 @@ const SlidePresentationWideScreen = ({data,...props}) => {
               <div className="flex items-center gap-6"
                    onClick={toggleCurrentActiveIndexTo(index)} role="button"
                    aria-label={dataPoint.title} aria-pressed={isActiveItem}>
-                <div className="flex text-secondary text-2xl">
+                <div className="flex text-secondary text-4xl">
                   {dataPoint.icon}
                 </div>
                 <div className="flex" >

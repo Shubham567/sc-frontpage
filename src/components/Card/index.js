@@ -6,9 +6,9 @@ const Card = React.forwardRef( ({ children,component, fluid,className,...props},
   const RenderComp = component || "div";
   return (
     <RenderComp className={clsx(
-      "flex bg-white shadow-xl text-gray-extra-dark p-4 rounded-xl border-1 border-gray-light",
+      "flex bg-white text-gray-extra-dark p-4 rounded-xl border-1 border-gray-light",
       {"w-full": fluid},
-      className)
+      className, "shadow-xl", )
     }
                 ref={forwardRef}
                 {...props}>

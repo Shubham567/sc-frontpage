@@ -1,6 +1,8 @@
 {
   "name": "sc-frontpage",
   "version": "0.1.0",
+  "license": "UNLICENSED",
+  "author": "Shubham Shekhar",
   "private": true,
   "scripts": {
     "dev": "next dev",

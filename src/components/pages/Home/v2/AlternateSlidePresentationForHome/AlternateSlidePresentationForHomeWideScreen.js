@@ -8,7 +8,7 @@ const AlternateSlidePresentationForHome = ({data,...props}) => {
 
   return (
     <div>
-      <div role="presentation" className="flex gap-4 lg:gap-52 items-center">
+      <div role="presentation" className="flex gap-4 lg:gap-40 items-center">
 
         <div className="flex max-w-md">
           <div className="flex flex-col w-full gap-6">
@@ -18,7 +18,7 @@ const AlternateSlidePresentationForHome = ({data,...props}) => {
                return <div role="button" onClick={dumpActiveItem(i)} key={di.title} className={clsx("text-primary shadow p-4 border-primary border rounded-lg transition-all",
                  {
                    "bg-primary text-white": isActiveItem,
-                   "bg-white text-primary hover:bg-secondary hover:text-white hover:border-secondary": !isActiveItem
+                   "bg-white text-primary hover:bg-primary-light hover:border-primary-light": !isActiveItem
                  })}>
                   {di.title}
                 </div>

@@ -15,7 +15,7 @@ const SlidePresentationSmallScreen = ({data,...props}) => {
                                collapsibleComponent={dp.content}
                                heading={
                                  <div className="flex gap-x-2.5 items-center">
-                                   <div className="text-secondary">
+                                   <div className="text-secondary font-4xl">
                                      {dp.icon}
                                    </div>
                                    <div>

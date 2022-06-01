@@ -25,6 +25,7 @@ module.exports = {
       "red": "#EA4335",
       "white" : "#fff",
       "primary": "#204474",
+      "primary-light" : "#caeeff",
       "secondary" : "#F28705",
       "alternate" : "",
       "dark" : "#16243F",
