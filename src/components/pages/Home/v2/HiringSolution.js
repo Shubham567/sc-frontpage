@@ -6,6 +6,14 @@ import {GiStack, GiTechnoHeart} from "react-icons/gi";
 import {RiBuilding4Line,RiShoppingBag2Fill, RiMedalFill} from "react-icons/ri";
 import {MdAddCall,MdNaturePeople} from "react-icons/md";
 
+import bulkHiringImage from "/assets/home/bulkHiring.png"
+import callCenterImage from "/assets/home/callCenterHiring.png"
+import campusHiringImage from "/assets/home/campusHiring.png"
+import entranceExamImage from "/assets/home/entranceExams.png"
+import professionalHiringImage from "/assets/home/professionalHiring.png"
+import technicalHiringImage from "/assets/home/technicalHiring.png"
+import Image from "next/image";
+
 const HiringSolution = () => {
   return (
     <div className="pt-36">
@@ -17,7 +25,7 @@ const HiringSolution = () => {
           {
             title: "Professional Hiring",
             icon: <RiShoppingBag2Fill />,
-            image: null,
+            image: <Image src={professionalHiringImage} width={735} height={434} alt="professional hiring at skillcounty"/>,
             content: <div>
               <h4 className="font-semibold mb-5 text-primary">
                 Hire professionals who will help your firm succeed.
@@ -29,7 +37,7 @@ const HiringSolution = () => {
           }, {
             title: "Bulk Hiring Services",
             icon: <GiStack />,
-            image: null,
+            image: <Image src={bulkHiringImage} width={774} height={434} alt="bulk hiring at skillcounty"/>,
             content: <div>
               <h4 className="font-semibold mb-5 text-primary">
                 Hire on a large scale, affordably and fast
@@ -41,7 +49,7 @@ const HiringSolution = () => {
           },{
             title: "Technical Hiring",
             icon: <GiTechnoHeart />,
-            image: null,
+            image: <Image src={technicalHiringImage} width={753} height={434} alt="technical hiring at skillcounty"/>,
             content: <div>
               <h4 className="font-semibold mb-5 text-primary">
                 Assess candidate&apos;s problem solving, coding & design skills
@@ -53,7 +61,7 @@ const HiringSolution = () => {
           },{
             title: "Campus Hiring",
             icon: <RiBuilding4Line/>,
-            image: null,
+            image: <Image src={campusHiringImage} width={774} height={434} alt="professional hiring at skillcounty"/>,
             content: <div>
               <h4 className="font-semibold mb-5 text-primary">
                 Fuel your growth by discovering the brightest new talent.
@@ -65,7 +73,7 @@ const HiringSolution = () => {
           },{
             title: "Call Center Hiring",
             icon: <MdAddCall />,
-            image: null,
+            image: <Image src={callCenterImage} width={753} height={434} alt="professional hiring at skillcounty"/>,
             content: <div>
               <h4 className="font-semibold mb-5 text-primary">
                 Assess communication skills and problem solving ability to find the best frontline talent
@@ -77,7 +85,7 @@ const HiringSolution = () => {
           }, {
             title: "Entrance Exams",
             icon: <RiMedalFill />,
-            image: null,
+            image: <Image src={entranceExamImage} width={753} height={434} alt="professional hiring at skillcounty"/>,
             content: <div>
               <h4 className="font-semibold mb-5 text-primary">
                 Assess hundreds of candidates by conducting entrance exams
@@ -86,7 +94,8 @@ const HiringSolution = () => {
                 Entrance exams enable colleges to find the best prospects for a program by objectively assessing potential beyond past academic outcomes. With SkillCounty, colleges can conduct large scale examinations across multiple locations and for a wide range of skills that matter.
               </p>
             </div>
-          },{
+          },
+          {
             title: "College Placement Cell",
             icon: <MdNaturePeople />,
             image: null,

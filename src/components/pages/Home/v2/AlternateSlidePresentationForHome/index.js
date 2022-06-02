@@ -19,11 +19,11 @@ const data = [
 
         ].map(item => {
           return <div key={item.text} className="w-full flex justify-between items-center gap-4">
-            <div>
+            <div className="flex w-1/2">
               {item.text}
             </div>
             <div>
-              <EffectProgressBarIncrement targetValue={item.targetValue}/>
+              <EffectProgressBarIncrement targetValue={item.targetValue} className="w-1/2"/>
             </div>
           </div>
         })

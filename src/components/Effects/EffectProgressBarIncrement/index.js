@@ -7,7 +7,7 @@ const EffectProgressBarIncrement = React.memo(({ targetValue ,max=100,...props})
   const [currentValue, activationRef] = useIncrementUpto(targetValue);
   console.log("MaxVal",targetValue,currentValue);
   return (
-    <ProgressWithText ref={activationRef} value={currentValue} max={max}/>
+    <ProgressWithText ref={activationRef} value={currentValue} max={max} {...props}/>
   );
 });
 

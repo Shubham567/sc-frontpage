@@ -15,7 +15,7 @@ const ProgressWithText = React.forwardRef(({ max = 100,value,...props}, ref) => 
 
   return (
     <div className="relative">
-      <progress ref={ref} max={max} value={value} className={clsx("w-full h-8", styles.progress)}/>
+      <progress ref={ref} max={max} value={value} className={clsx("h-8", styles.progress)}/>
       <span ref={elementRef} className={clsx("absolute left-3 top-1", styles.text)}></span>
     </div>
   );
