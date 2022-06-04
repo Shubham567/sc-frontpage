@@ -20,7 +20,7 @@ const OtherPlatformTab = ({tabData}) => {
 
 export default OtherPlatformTab;
 
-OtherPlatformTab.prototype = {
+OtherPlatformTab.propTypes = {
   tabData: PropTypes.arrayOf({
     id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     heading: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),

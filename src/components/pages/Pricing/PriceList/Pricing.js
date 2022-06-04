@@ -1,6 +1,7 @@
 import React from 'react';
 import PricingCard from "./PricingCard";
 import {useSelector} from "react-redux";
+import PropTypes from "prop-types";
 
 const Pricing = ({pricingCardData}) => {
   const isMonthlySubscription = useSelector((state) => state.toggleReducer.monthlySubscription);
@@ -13,13 +14,28 @@ const Pricing = ({pricingCardData}) => {
             <PricingCard key={item.id} {...item} />
           ))
         }
-        {/*<PricingCard/>*/}
-        {/*<PricingCard />*/}
-        {/*<PricingCard pro />*/}
-        {/*<PricingCard />*/}
       </div>
     </div>
   );
 };
 
 export default Pricing;
+
+Pricing.propTypes = {
+  pricingCardData: PropTypes.arrayOf({
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    type: PropTypes.string,
+    topSubHeading: PropTypes.string,
+    priceMonth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    priceYear: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    heading: PropTypes.string,
+    subHeading: PropTypes.string,
+    features: PropTypes.arrayOf({
+      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+      disabled: PropTypes.bool,
+      title: PropTypes.string,
+      tooltipHeading: PropTypes.string,
+      tooltipDescription: PropTypes.string
+    })
+  })
+};

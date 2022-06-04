@@ -28,9 +28,9 @@ const PricingMainPage = () => {
         <section>
           <Pricing pricingCardData={pricingCardData}/>
         </section>
-        {/*<section>*/}
-        {/*  <Feature />*/}
-        {/*</section>*/}
+        <section>
+          <Feature featuresData={featuresData} topTableTitle={topTableTitle} />
+        </section>
         <section>
           <OnTopBgTrapez/>
         </section>
@@ -44,6 +44,8 @@ const PricingMainPage = () => {
 };
 
 export default PricingMainPage;
+
+
 
 const pricingCardData = [
   {
@@ -323,6 +325,160 @@ const pricingCardData = [
         tooltipDescription: "Assessment is here..."
       },
     ]
+  }
+];
+
+const topTableTitle = [
+  {
+    id: 1,
+    title: "Features"
+  },
+  {
+    id: 2,
+    title: "Free"
+  },
+  {
+    id: 3,
+    title: "Basic"
+  },
+  {
+    id: 4,
+    title: "Pro"
+  },
+  {
+    id: 5,
+    title: "Enterprise"
+  }
+];
+
+const featuresData = [
+  {
+    id: 1,
+    dataKey :  "Code pair",
+    free: {
+      title: "5 Month Max"
+    },
+    basic: {
+      title: "Basic Plans"
+    },
+    pro: {
+      title: "Pro Plans"
+    },
+    enterprise : {
+      title: "Enterprise plans"
+    }
+  },
+  {
+    id: 2,
+    dataKey :  "Code pair",
+    free: {
+      title: "5 Month Max"
+    },
+    basic: {
+      title: "Basic Plans"
+    },
+    pro: {
+      title: "Pro Plans"
+    },
+    enterprise : {
+      title: "Enterprise plans"
+    }
+  },
+  {
+    id: 3,
+    dataKey :  "Code pair",
+    free: {
+      title: "5 Month Max"
+    },
+    basic: {
+      title: "Basic Plans"
+    },
+    pro: {
+      title: "Pro Plans"
+    },
+    enterprise : {
+      title: "Enterprise plans"
+    }
+  },
+  {
+    id: 4,
+    dataKey :  "Code pair",
+    free: {
+      title: "5 Month Max"
+    },
+    basic: {
+      title: "Basic Plans"
+    },
+    pro: {
+      title: "Pro Plans"
+    },
+    enterprise : {
+      title: "Enterprise plans"
+    }
+  },
+  {
+    id: 5,
+    dataKey :  "Code pair",
+    free: {
+      title: "5 Month Max"
+    },
+    basic: {
+      title: "Basic Plans"
+    },
+    pro: {
+      title: "Pro Plans"
+    },
+    enterprise : {
+      title: "Enterprise plans"
+    }
+  },
+  {
+    id: 6,
+    dataKey :  "Code pair",
+    free: {
+      title: "5 Month Max"
+    },
+    basic: {
+      title: "Basic Plans"
+    },
+    pro: {
+      title: "Pro Plans"
+    },
+    enterprise : {
+      title: "Enterprise plans"
+    }
+  },
+  {
+    id: 7,
+    dataKey :  "Code pair",
+    free: {
+      title: "5 Month Max"
+    },
+    basic: {
+      title: "Basic Plans"
+    },
+    pro: {
+      title: "Pro Plans"
+    },
+    enterprise : {
+      title: "Enterprise plans"
+    }
+  },
+  {
+    id: 8,
+    dataKey :  "Code pair",
+    free: {
+      title: "5 Month Max"
+    },
+    basic: {
+      title: "Basic Plans"
+    },
+    pro: {
+      title: "Pro Plans"
+    },
+    enterprise : {
+      title: "Enterprise plans"
+    }
   }
 ]
 

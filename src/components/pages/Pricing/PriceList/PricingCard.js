@@ -6,10 +6,12 @@ import ToolTip from "../../../ToolTip";
 import PricingTopBg from "../../../svgs/PricingTopBg";
 import clsx from "clsx";
 import {useSelector} from "react-redux";
+import PropTypes from "prop-types";
 
 const PricingCard = ({id, type, topSubHeading, priceMonth, priceYear, heading, subHeading, features}) => {
   const isMonthlySubscription = useSelector((state) => state.toggleReducer.monthlySubscription);
   console.log(isMonthlySubscription);
+
   return (
     <div className={"w-full relative sm:w-1/2 md:w-1/3 xl:w-1/5 bg-white m-6 rounded-xl overflow-hidden"}
          style={{boxShadow: "4px 4px 16px rgba(0, 0, 0, 0.2)"}}>
@@ -41,27 +43,31 @@ const PricingCard = ({id, type, topSubHeading, priceMonth, priceYear, heading, s
           </div>
         </div>
       </div>
-      <div className="p-4 h-full flex flex-col justify-between pt-48 pt-0">
+      <div className="p-4 h-full flex flex-col justify-between pt-48">
         <div className="mb-6">
           <EffectAppearOnView><h3 className="text-2xl font-bold">{heading && heading}</h3></EffectAppearOnView>
-          <EffectAppearOnView><p className="text-xl font-medium mb-4">{subHeading && subHeading}</p></EffectAppearOnView>
+          <EffectAppearOnView><p className="text-xl font-medium mb-4">{subHeading && subHeading}</p>
+          </EffectAppearOnView>
           {
             features.map((item) => (
-              <EffectAppearOnView key={item.id}><div className="mt-2 flex items-center text-lg"><ToolTip
-                tooltipHeading={item.tooltipHeading} iconsStyle={"text-primary"} disabled={item?.disabled}
-                tooltipDescription={item.tooltipDescription}/> &nbsp; <span className={clsx("ml-2",item?.disabled ? "text-gray" : "text-dark")}>{item?.title}</span></div></EffectAppearOnView>
+              <EffectAppearOnView key={item.id}>
+                <div className="mt-2 flex items-center text-lg"><ToolTip
+                  tooltipHeading={item.tooltipHeading} iconsStyle={"text-primary"} disabled={item?.disabled}
+                  tooltipDescription={item.tooltipDescription}/> &nbsp; <span
+                  className={clsx("ml-2", item?.disabled ? "text-gray" : "text-dark")}>{item?.title}</span></div>
+              </EffectAppearOnView>
             ))
           }
 
         </div>
         <div className="w-full flex justify-between flex-wrap items-center p-2">
           {/*<EffectAppearOnViews>*/}
-          <p className="text-primary text-base cursor-pointer font-medium">
+          <a href={`#features?${type?.toLowerCase()}`} className="text-primary text-base cursor-pointer font-medium">
             View Details
-          </p>
-            <Button className="pl-6 pr-6" color="primary" variant="contained" size="md" rounded={false}>
-              Buy Now
-            </Button>
+          </a>
+          <Button className="pl-6 pr-6" color="primary" variant="contained" size="md" rounded={false}>
+            Buy Now
+          </Button>
           {/*</EffectAppearOnViews>*/}
         </div>
       </div>
@@ -70,3 +76,20 @@ const PricingCard = ({id, type, topSubHeading, priceMonth, priceYear, heading, s
 };
 
 export default PricingCard;
+
+PricingCard.propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  type: PropTypes.string,
+  topSubHeading: PropTypes.string,
+  priceMonth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  priceYear: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  heading: PropTypes.string,
+  subHeading: PropTypes.string,
+  features: PropTypes.arrayOf({
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    disabled: PropTypes.bool,
+    title: PropTypes.string,
+    tooltipHeading: PropTypes.string,
+    tooltipDescription: PropTypes.string
+  })
+};

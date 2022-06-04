@@ -26,7 +26,7 @@ const BenefitsCard = ({image, description}) => {
 
 export default BenefitsCard;
 
-BenefitsCard.prototype = {
+BenefitsCard.propTypes = {
   image: PropTypes.node,
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
 }
