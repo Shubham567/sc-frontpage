@@ -28,7 +28,7 @@ const ScaleHiring = ({title, requestDemo, calculateROI}) => {
 
 export default ScaleHiring;
 
-ScaleHiring.prototype = {
+ScaleHiring.propTypes = {
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   requestDemo: PropTypes.func,
   calculateROI: PropTypes.func

@@ -17,7 +17,7 @@ const Features = ({featureData}) => {
 
 export default Features;
 
-Features.prototype = {
+Features.propTypes = {
   featureData: PropTypes.arrayOf({
     id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     image: PropTypes.node,

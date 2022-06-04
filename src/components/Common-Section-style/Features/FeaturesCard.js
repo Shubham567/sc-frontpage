@@ -26,7 +26,7 @@ const FeaturesCard = ({direction, heading, image, description}) => {
 
 export default FeaturesCard;
 
-FeaturesCard.prototype = {
+FeaturesCard.propTypes = {
   direction: PropTypes.string,
   heading: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),

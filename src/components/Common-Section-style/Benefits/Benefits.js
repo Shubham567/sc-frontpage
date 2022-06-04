@@ -17,7 +17,7 @@ const Benefits = ({benefitsData}) => {
 
 export default Benefits;
 
-Benefits.prototype = {
+Benefits.propTypes = {
   benefitsData: PropTypes.arrayOf({
     id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     image: PropTypes.node,

@@ -19,7 +19,7 @@ const Actions = ({actionData}) => {
 
 export default Actions;
 
-Actions.prototype = {
+Actions.propTypes = {
   actionData: PropTypes.arrayOf({
     id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     heading: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),

@@ -22,7 +22,7 @@ const ActionCard = ({heading, buttonLabel, actionHandler}) => {
 
 export default ActionCard;
 
-ActionCard.prototype = {
+ActionCard.propTypes = {
   heading: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   buttonLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   actionHandler: PropTypes.func
