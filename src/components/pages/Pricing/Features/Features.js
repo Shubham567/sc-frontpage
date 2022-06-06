@@ -2,6 +2,7 @@ import React from 'react';
 import SingleFeature from "./SingleFeature";
 import PropTypes from "prop-types";
 import CheckBoxIcon from "../../../svgs/CheckBoxIcon";
+import EffectAppearOnView from "../../../Effects/EffectAppearOnView";
 
 const Feature = ({featuresData, topTableTitle}) => {
   return (
@@ -27,15 +28,33 @@ const Feature = ({featuresData, topTableTitle}) => {
                 featuresData.map(item => (
                   <tr key={item.id} className="odd:bg-white even:bg-gray-bg">
                     <th style={{margin: "1rem"}}
-                        className="m-4 border-4 border-white font-bold text-left p-2">{item.dataKey && item.dataKey}</th>
+                        className="m-4 border-4 border-white font-bold text-left p-2"><EffectAppearOnView>
+                      {item.dataKey && item.dataKey}
+                    </EffectAppearOnView></th>
                     <td style={{margin: "1rem"}}
-                        className="text-left border-4 border-white p-2">{item.free.title && item.free.title}</td>
+                        className="text-left border-4 border-white p-2">
+                      <EffectAppearOnView>
+                        {item.free.title && item.free.title}
+                      </EffectAppearOnView>
+                    </td>
                     <td style={{margin: "1rem"}}
-                        className="text-left border-4 border-white p-2">{item.basic.title && item.basic.title}</td>
+                        className="text-left border-4 border-white p-2">
+                      <EffectAppearOnView>
+                        {item.basic.title && item.basic.title}
+                      </EffectAppearOnView>
+                    </td>
                     <td style={{margin: "1rem"}}
-                        className="text-left border-4 border-white p-2">{item.pro.title && item.pro.title}</td>
+                        className="text-left border-4 border-white p-2">
+                      <EffectAppearOnView>
+                        {item.pro.title && item.pro.title}
+                      </EffectAppearOnView>
+                    </td>
                     <td style={{margin: "1rem"}}
-                        className="text-left border-4 border-white p-2">{item.enterprise.title && item.enterprise.title}</td>
+                        className="text-left border-4 border-white p-2">
+                      <EffectAppearOnView>
+                        {item.enterprise.title && item.enterprise.title}
+                      </EffectAppearOnView>
+                    </td>
                   </tr>
                 ))
               }
