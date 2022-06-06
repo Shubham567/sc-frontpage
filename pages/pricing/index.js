@@ -29,7 +29,7 @@ const PricingMainPage = () => {
           <Pricing pricingCardData={pricingCardData}/>
         </section>
         <section>
-          <Feature featuresData={featuresData} topTableTitle={topTableTitle} />
+          <Feature featuresData={featuresData} topTableTitle={topTableTitle}/>
         </section>
         <section>
           <OnTopBgTrapez/>
@@ -44,7 +44,6 @@ const PricingMainPage = () => {
 };
 
 export default PricingMainPage;
-
 
 
 const pricingCardData = [
@@ -128,7 +127,7 @@ const pricingCardData = [
     type: "Basic",
     topSubHeading: "",
     priceMonth: 49,
-    priceYear: 49*11,
+    priceYear: 49 * 11,
     heading: "Getting there",
     subHeading: "Everything in free plus . . .",
     features: [
@@ -196,7 +195,7 @@ const pricingCardData = [
     type: "Pro",
     topSubHeading: "*MOST POPULAR",
     priceMonth: 99,
-    priceYear: 99*11,
+    priceYear: 99 * 11,
     heading: "Striking Success",
     subHeading: "Basic plan plus . . .",
     features: [
@@ -354,130 +353,338 @@ const topTableTitle = [
 const featuresData = [
   {
     id: 1,
-    dataKey :  "Code pair",
+    dataKey: "Assessments",
     free: {
-      title: "5 Month Max"
+      title: "2"
     },
     basic: {
-      title: "Basic Plans"
+      title: "Unlimited"
     },
     pro: {
-      title: "Pro Plans"
+      title: "Unlimited"
     },
-    enterprise : {
-      title: "Enterprise plans"
+    enterprise: {
+      title: "Unlimited"
     }
   },
   {
     id: 2,
-    dataKey :  "Code pair",
+    dataKey: "Candidates Per Month",
     free: {
-      title: "5 Month Max"
+      title: "25"
     },
     basic: {
-      title: "Basic Plans"
+      title: "300"
     },
     pro: {
-      title: "Pro Plans"
+      title: "1000"
     },
-    enterprise : {
-      title: "Enterprise plans"
+    enterprise: {
+      title: "Customizable"
     }
   },
   {
     id: 3,
-    dataKey :  "Code pair",
+    dataKey: "Company Library",
     free: {
-      title: "5 Month Max"
+      title: "Yes"
     },
     basic: {
-      title: "Basic Plans"
+      title: "Yes"
     },
     pro: {
-      title: "Pro Plans"
+      title: "Yes"
     },
-    enterprise : {
-      title: "Enterprise plans"
+    enterprise: {
+      title: "Yes"
     }
   },
   {
     id: 4,
-    dataKey :  "Code pair",
+    dataKey: "SkillCount Question Library",
     free: {
-      title: "5 Month Max"
+      title: "Limited Access"
     },
     basic: {
-      title: "Basic Plans"
+      title: "Full Access"
     },
     pro: {
-      title: "Pro Plans"
+      title: "Full Access"
     },
-    enterprise : {
-      title: "Enterprise plans"
+    enterprise: {
+      title: "Full Access"
     }
   },
   {
     id: 5,
-    dataKey :  "Code pair",
+    dataKey: "SkillCounty Test Library",
     free: {
-      title: "5 Month Max"
+      title: "No"
     },
     basic: {
-      title: "Basic Plans"
+      title: "Yes"
     },
     pro: {
-      title: "Pro Plans"
+      title: "Yes"
     },
-    enterprise : {
-      title: "Enterprise plans"
+    enterprise: {
+      title: "Yes"
     }
   },
   {
     id: 6,
-    dataKey :  "Code pair",
+    dataKey: "Coding Tests",
     free: {
-      title: "5 Month Max"
+      title: "Yes"
     },
     basic: {
-      title: "Basic Plans"
+      title: "Yes"
     },
     pro: {
-      title: "Pro Plans"
+      title: "Yes"
     },
-    enterprise : {
-      title: "Enterprise plans"
+    enterprise: {
+      title: "Yes"
     }
   },
   {
     id: 7,
-    dataKey :  "Code pair",
+    dataKey: "Live-Pair Coding Interviews",
     free: {
-      title: "5 Month Max"
+      title: "5"
     },
     basic: {
-      title: "Basic Plans"
+      title: "20"
     },
     pro: {
-      title: "Pro Plans"
+      title: "Unlimited"
     },
-    enterprise : {
-      title: "Enterprise plans"
+    enterprise: {
+      title: "Unlimited"
     }
   },
   {
     id: 8,
-    dataKey :  "Code pair",
+    dataKey: "Audio-Video Per Month",
     free: {
-      title: "5 Month Max"
+      title: "125mins"
     },
     basic: {
-      title: "Basic Plans"
+      title: "500mins"
     },
     pro: {
-      title: "Pro Plans"
+      title: "2000mins"
     },
-    enterprise : {
-      title: "Enterprise plans"
+    enterprise: {
+      title: "Customizable"
+    }
+  },
+  {
+    id: 9,
+    dataKey: "Account level storage limit on file attachments Per Month",
+    free: {
+      title: "limit 100MB per month"
+    },
+    basic: {
+      title: "Limit 1GB"
+    },
+    pro: {
+      title: "10GB"
+    },
+    enterprise: {
+      title: "Customizable"
+    }
+  },
+  {
+    id: 10,
+    dataKey: "Concurrent Users",
+    free: {
+      title: "5"
+    },
+    basic: {
+      title: "50"
+    },
+    pro: {
+      title: "200"
+    },
+    enterprise: {
+      title: "Customizable"
+    }
+  },
+  {
+    id: 11,
+    dataKey: "Team",
+    free: {
+      title: "No"
+    },
+    basic: {
+      title: "No"
+    },
+    pro: {
+      title: "3 Members"
+    },
+    enterprise: {
+      title: "Customizable"
+    }
+  },
+  {
+    id: 12,
+    dataKey: "Candidate Data Retention",
+    free: {
+      title: "15 Days"
+    },
+    basic: {
+      title: "1 Month"
+    },
+    pro: {
+      title: "3 Months"
+    },
+    enterprise: {
+      title: "Customizable"
+    }
+  },
+  {
+    id: 13,
+    dataKey: "Custom Coding Questions",
+    free: {
+      title: "No"
+    },
+    basic: {
+      title: "No"
+    },
+    pro: {
+      title: "No"
+    },
+    enterprise: {
+      title: "Yes"
+    }
+  },
+  {
+    id: 14,
+    dataKey: "Scheduling",
+    free: {
+      title: "Yes"
+    },
+    basic: {
+      title: "Yes"
+    },
+    pro: {
+      title: "Yes"
+    },
+    enterprise: {
+      title: "Yes"
+    }
+  },
+  {
+    id: 15,
+    dataKey: "Proctoring",
+    free: {
+      title: "No"
+    },
+    basic: {
+      title: "Image"
+    },
+    pro: {
+      title: "Image & Screen"
+    },
+    enterprise: {
+      title: "Image & Screen"
+    }
+  },
+  {
+    id: 16,
+    dataKey: "Screen Proctoring",
+    free: {
+      title: "No"
+    },
+    basic: {
+      title: "No"
+    },
+    pro: {
+      title: "Yes"
+    },
+    enterprise: {
+      title: "Yes"
+    }
+  },
+  {
+    id: 17,
+    dataKey: "Download Excel Report",
+    free: {
+      title: "Yes"
+    },
+    basic: {
+      title: "Yes"
+    },
+    pro: {
+      title: "Yes"
+    },
+    enterprise: {
+      title: "Yes"
+    }
+  },
+  {
+    id: 18,
+    dataKey: "Download Candidate Report",
+    free: {
+      title: "Yes"
+    },
+    basic: {
+      title: "Yes"
+    },
+    pro: {
+      title: "Yes"
+    },
+    enterprise: {
+      title: "Yes"
+    }
+  },
+  {
+    id: 19,
+    dataKey: "Support",
+    free: {
+      title: "Email"
+    },
+    basic: {
+      title: "Email"
+    },
+    pro: {
+      title: "Email, Call"
+    },
+    enterprise: {
+      title: "Email, Call"
+    }
+  },
+  {
+    id: 20,
+    dataKey: "Custom Integration",
+    free: {
+      title: "No"
+    },
+    basic: {
+      title: "No"
+    },
+    pro: {
+      title: "Slack, Teams"
+    },
+    enterprise: {
+      title: "Slack, Teams, Customizable support for additional softwares"
+    }
+  },
+  {
+    id: 21,
+    dataKey: "Custom Imtegrations & API",
+    free: {
+      title: "No"
+    },
+    basic: {
+      title: "No"
+    },
+    pro: {
+      title: "No"
+    },
+    enterprise: {
+      title: "Yes"
     }
   }
 ]
