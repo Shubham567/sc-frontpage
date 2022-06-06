@@ -34,11 +34,11 @@ const Platform = () => {
       <main>
         <TopPlatformSection {...topRawData} hideBg={"invisible"} />
         <Benefits benefitsData={benefitsData} />
-        <Features featureData={featureData} />
+        <Features featureData={featureData1} />
         <ScaleHiring title={"Hire Affoardably At Scale"} requestDemo={requestDemo} calculateROI={calculateROI} />
-        <Features featureData={featureData} />
+        <Features featureData={featureData2} />
         <Actions actionData={actionData} />
-        <Features featureData={featureData} />
+        <Features featureData={featureData3} />
         <OtherPlatformTab tabData={tabData} />
       </main>
       <Footer />
@@ -81,20 +81,54 @@ const benefitsData = [
   },
 ];
 
-const featureData = [
+const featureData1 = [
   {
     id: 1,
-    image: <Image src="/images/young-businesswoman.png" width="700px" height="400px"/>,
-    heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium, sem et efficitur blandit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium, sem et efficitur blandit, mauris ex rutrum quam, non pharetra lectus arcu vitae quam. Maecenas pretium, sem et efficitur blandit, mauris ex rutrum quam, non pharetra lectus arcu vitae quam.",
-    direction: "flex-col xl:flex-row"
-  },
-  {
-    id: 2,
-    image: <Image src="/images/young-businesswoman.png" width="700px" height="400px"/>,
+    image: <Image src="/images/solutions/young-smiley-businessWomen.png" alt="Young smiley business women" width="700px" height="400px"/>,
     heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium, sem et efficitur blandit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium, sem et efficitur blandit, mauris ex rutrum quam, non pharetra lectus arcu vitae quam. Maecenas pretium, sem et efficitur blandit, mauris ex rutrum quam, non pharetra lectus arcu vitae quam.",
     direction: "flex-col xl:flex-row-reverse"
+  },
+  {
+    id: 2,
+    image: <Image src="/images/solutions/large-group-diverse-people.png" alt="large group diverse people" width="700px" height="400px"/>,
+    heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium, sem et efficitur blandit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium, sem et efficitur blandit, mauris ex rutrum quam, non pharetra lectus arcu vitae quam. Maecenas pretium, sem et efficitur blandit, mauris ex rutrum quam, non pharetra lectus arcu vitae quam.",
+    direction: "flex-col xl:flex-row"
+  }
+];
+
+const featureData2 = [
+  {
+    id: 1,
+    image: <Image src="/images/solutions/portrait-african-american.png" alt="Portrait african american" width="700px" height="400px"/>,
+    heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium, sem et efficitur blandit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium, sem et efficitur blandit, mauris ex rutrum quam, non pharetra lectus arcu vitae quam. Maecenas pretium, sem et efficitur blandit, mauris ex rutrum quam, non pharetra lectus arcu vitae quam.",
+    direction: "flex-col xl:flex-row-reverse"
+  },
+  {
+    id: 2,
+    image: <Image src="/images/solutions/contract-male-sunny-sand-career.png" alt="Contract male sunny sand career" width="700px" height="400px"/>,
+    heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium, sem et efficitur blandit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium, sem et efficitur blandit, mauris ex rutrum quam, non pharetra lectus arcu vitae quam. Maecenas pretium, sem et efficitur blandit, mauris ex rutrum quam, non pharetra lectus arcu vitae quam.",
+    direction: "flex-col xl:flex-row"
+  }
+];
+
+const featureData3 = [
+  {
+    id: 1,
+    image: <Image src="/images/solutions/free-time-students-bachelor-s-campus-life.png" alt="Free time students bachelor school/college camus life" width="700px" height="400px"/>,
+    heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium, sem et efficitur blandit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium, sem et efficitur blandit, mauris ex rutrum quam, non pharetra lectus arcu vitae quam. Maecenas pretium, sem et efficitur blandit, mauris ex rutrum quam, non pharetra lectus arcu vitae quam.",
+    direction: "flex-col xl:flex-row-reverse"
+  },
+  {
+    id: 2,
+    image: <Image src="/images/solutions/closeup-person-filling-out-questionary-form.png" alt="closeup person filling out questionary form" width="700px" height="400px"/>,
+    heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium, sem et efficitur blandit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium, sem et efficitur blandit, mauris ex rutrum quam, non pharetra lectus arcu vitae quam. Maecenas pretium, sem et efficitur blandit, mauris ex rutrum quam, non pharetra lectus arcu vitae quam.",
+    direction: "flex-col xl:flex-row"
   }
 ];
 
