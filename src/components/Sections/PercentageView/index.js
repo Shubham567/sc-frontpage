@@ -6,8 +6,8 @@ const EffectIncrement = dynamic(() => import('../../Effects/EffectIncrementUpto'
 
 const PercentageView = () => {
   return (
-    <div className={"tracking-wide bg-yellow w-full pt-12 pb-12 flex flex-wrap justify-evenly items-center relative"}>
-      <div className="bg-yellow w-24 h-8 absolute -top-4 right-4">
+    <div className={"tracking-wide bg-yellow w-screen pt-12 pb-12 flex flex-wrap justify-evenly items-center relative"}>
+      <div className="bg-yellow w-24 h-8 absolute -top-6 right-12">
         <div className="text-center -m-8 font-medium text-md">STATS</div>
       </div>
       <div  className={"m-8"}>

@@ -38,7 +38,7 @@ export default function Home() {
         <Intro/>
       </header>
 
-      <main>
+      <main className="w-screen">
 
         <section>
           <PercentageView />
