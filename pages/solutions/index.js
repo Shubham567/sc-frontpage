@@ -10,6 +10,7 @@ import OtherPlatformTab from "../../src/components/Common-Section-style/OtherPla
 import Footer from "../../src/components/Footer";
 import Image from "next/image";
 import ScaleHiring from "../../src/components/Common-Section-style/ScaleHiring/ScaleHiring";
+import TopSectionForSolution from "../../src/components/pages/Ssolutions/TopSection";
 
 const actionHandler = ({actionData}) => {
   console.log("Button Clicked")
@@ -32,7 +33,8 @@ const Platform = () => {
       </Head>
       <TopNav/>
       <main>
-        <TopPlatformSection {...topRawData} hideBg={"invisible"} />
+        {/*<TopPlatformSection {...topRawData} hideBg={"invisible"} />*/}
+        <TopSectionForSolution {...topRawData} />
         <Benefits benefitsData={benefitsData} />
         <Features featureData={featureData1} />
         <ScaleHiring title={"Hire Affoardably At Scale"} requestDemo={requestDemo} calculateROI={calculateROI} />
@@ -151,7 +153,7 @@ const tabData = [
 ];
 
 const topRawData = {
-  heading : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-  description: "Upgrade your hiring. Use SkillCounty Assessment Platform to hire the right candidates faster and more efficiently. "
+  heading : "Hiring Assessment Platform",
+  description: "Upgrade your hiring. Use SkillCounty Assessment Platform to hire the right candidates faster and more efficiently."
 }
 

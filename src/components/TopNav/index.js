@@ -44,9 +44,9 @@ const TopNav = props => {
         <div className="flex items-center gap-x-1">
           <div>
             {/*<Image src="/logo.svg"  alt="SkillCounty Logo" width={70} height={70}/>*/}
-            <ScLogo width={36} height={36} className="fill-dark"/>
+            <ScLogo width={36} height={36} className="fill-primary"/>
           </div>
-          <div className="tracking-wide text-dark text-2xl font-bold">
+          <div className="tracking-wide text-primary text-2xl font-bold">
             <Link href="/">SkillCounty</Link>
           </div>
         </div>
@@ -54,9 +54,9 @@ const TopNav = props => {
         <div className="flex gap-x-5 justify-end items-center">
           {
             screen.width > 768 &&
-            <div className="flex gap-x-5 font-medium text-dark text-bs">
+            <div className="flex gap-x-5">
               {
-                centralLinks.map(cl => <Link key={cl.link} href={cl.link}>{cl.name}</Link>)
+                centralLinks.map(cl => <Link key={cl.link} href={cl.link}><span className={clsx("cursor-pointer", (router?.pathname.includes(cl.link) ? "font-bold text-primary" : "font-normal text-dark"))}>{cl.name}</span></Link>)
               }
             </div>
           }
