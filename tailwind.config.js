@@ -28,7 +28,7 @@ module.exports = {
       "primary": "#204474",
       "primary-light" : "#caeeff",
       "secondary" : "#F28705",
-      "alternate" : "",
+      "alternate" : "#FFF2AD",
       "dark" : "#16243F",
     },
     extend: {

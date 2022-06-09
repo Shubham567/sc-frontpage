@@ -4,17 +4,19 @@ import BgTrapez from "../../svgs/BgTrapez";
 import Button from "../../Button";
 import {useDispatch} from "react-redux";
 import {actionSetHomeDemoRequestForm} from "../../../store/reducers/homeReducer/homeReducerActions";
+import clsx from "clsx";
 
 const OnTopBgTrapez = props => {
   const dispatch = useDispatch();
   const openModal = () => dispatch(actionSetHomeDemoRequestForm(true));
   return (
     <div className="w-full relative flex md:flex-row flex-col p-4 gap-16 items-center justify-center" style={{minHeight: 400, width: "100%"}}>
-      <BgTrapez className="absolute top-0 fill-primary" width="100%" height="100%" style={{zIndex: -2}}/>
+      <BgTrapez className={clsx("absolute top-0", props.bgFillColor || "fill-primary")} width="100%" height="100%" style={{zIndex: -2}}/>
+
 
       <div className="flex justify-center flex-col gap-3">
-        <h2 className="text-4xl text-center md:text-left text-white">Hire affordably at Scale</h2>
-        <h3 className="text-gray-light  text-center md:text-left">Getting better results at more affordable price, without any limits!<br/>
+        <h2 className={clsx("text-4xl text-center md:text-left", props.headColor || "text-white")}>Hire affordably at Scale</h2>
+        <h3 className={clsx("text-center md:text-left", props.contentColor || "text-gray-light")}>Getting better results at more affordable price, without any limits!<br/>
           Get started in under 5 mins*</h3>
 
       </div>
