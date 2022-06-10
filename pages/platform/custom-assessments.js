@@ -10,6 +10,7 @@ import OtherPlatformTab from "../../src/components/Common-Section-style/OtherPla
 import Footer from "../../src/components/Footer";
 import Image from "next/image";
 import OnTopBgTrapez from "../../src/components/pages/Home/OnTopBgTrapez";
+import DemoForm from "../../src/components/pages/Home/DemoForm";
 
 const Platform = () => {
   return (
@@ -24,6 +25,7 @@ const Platform = () => {
         <Features featureData={featureData} />
         <OnTopBgTrapez bgFillColor={"fill-orange-light"} headColor="text-dark" contentColor="text-primary"/>
         <OtherPlatformTab tabData={tabData} />
+        <DemoForm />
       </main>
       <Footer />
     </div>

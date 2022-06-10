@@ -10,9 +10,6 @@ import OtherPlatformTab from "../../src/components/Common-Section-style/OtherPla
 import Footer from "../../src/components/Footer";
 import Image from "next/image";
 
-const actionHandler = ({actionData}) => {
-  console.log("Button Clicked")
-}
 
 const Platform = () => {
   return (

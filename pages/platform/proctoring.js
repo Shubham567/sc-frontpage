@@ -9,6 +9,8 @@ import Actions from "../../src/components/Common-Section-style/Actions/Actions";
 import OtherPlatformTab from "../../src/components/Common-Section-style/OtherPlatformTab/OtherPlatformTab";
 import Footer from "../../src/components/Footer";
 import Image from "next/image";
+import OnTopBgTrapez from "../../src/components/pages/Home/OnTopBgTrapez";
+import DemoForm from "../../src/components/pages/Home/DemoForm";
 
 const actionHandler = ({actionData}) => {
   console.log("Button Clicked")
@@ -25,7 +27,9 @@ const Platform = () => {
       <main>
         <TopPlatformSection {...topRawData} />
         <Features featureData={featureData} />
+        <OnTopBgTrapez bgFillColor={"fill-orange-light"} headColor="text-dark" contentColor="text-primary"/>
         <OtherPlatformTab tabData={tabData} />
+        <DemoForm />
       </main>
       <Footer />
     </div>
