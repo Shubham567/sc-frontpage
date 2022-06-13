@@ -24,7 +24,7 @@ const Platform = () => {
       <TopNav/>
       <main>
         <TopPlatformSection {...topRawData} />
-        <Benefits benefitsData={benefitsData} />
+        {/*<Benefits benefitsData={benefitsData} />*/}
         <Features featureData={featureData} />
         <Actions actionData={actionData} />
         <OtherPlatformTab tabData={tabData} />
