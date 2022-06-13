@@ -1,63 +1,30 @@
-import MenuItems from "./MenuItems";
+import DropDown from "./index";
 
 export default {
-  component: MenuItems,
+  component: DropDown,
   title: "ui/Dropdown",
 }
 
-const menuItems = [
-  {
-    title: "Home",
-  },
-  {
-    title: "Services",
-    submenu: [
-      {
-        title: "web design",
-      },
-      {
-        title: "web development",
-        submenu: [
-          {
-            title: "Frontend",
-          },
-          {
-            title: "Backend",
-            submenu: [
-              {
-                title: "NodeJS",
-              },
-              {
-                title: "PHP",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        title: "SEO",
-      },
-    ],
-  },
-  {
-    title: "About",
-    submenu: [
-      {
-        title: "Who we are",
-      },
-      {
-        title: "Our values",
-      },
-    ],
-  },
-];
+const menuItems = {
+  title : "Parent Link",
+  menuItems : [
+    {
+      name: "Child 1",
+      href: "/someLink"
+    },
+    {
+      name: "Child 2",
+      onClick: () => alert("child 2")
+    },
+    {
+      name: "Child 3",
+      onClick: () => alert("child 3")
+    },
+  ]
+}
 
 const Template = (args) => <nav>
-  <ul className="flex gap-3">
-    {menuItems.map((menu, index) => {
-      return <MenuItems items={menu} key={index} depthLevel={0} {...args}/>;
-    })}
-  </ul>
+  <DropDown data={menuItems} />
 </nav>
 
 export const Default = Template.bind({});

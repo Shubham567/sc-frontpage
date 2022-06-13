@@ -13,7 +13,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@headlessui/react": "^1.5.0",
+    "@headlessui/react": "^1.6.4",
     "@mantine/hooks": "^4.1.3",
     "@mantine/next": "^4.1.3",
     "axios": "^0.27.2",
