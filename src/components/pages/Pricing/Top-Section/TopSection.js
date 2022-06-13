@@ -1,7 +1,15 @@
 import React, {useState} from 'react';
-import { IoToggle } from "react-icons/io5";
+import ToggleButton from "../../../ToggleButton";
+import {useDispatch} from "react-redux";
+import {actionSetMonthOrYear} from "../../../../store/reducers/toggleReducer/toggleReducerActions";
 
 const TopSection = () => {
+  const dispatch = useDispatch();
+
+  const toggleHandler = (toggleData) => {
+   dispatch(actionSetMonthOrYear(toggleData));
+  }
+
   return (
     <div className="w-full h-full p-4 flex justify-center items-center">
       <div className="text-4xl -mt-8 md:text-6xl text-primary font-normal text-center tracking-normal leading-snug">
@@ -11,7 +19,7 @@ const TopSection = () => {
         </p>
         <div className="flex items-center justify-center mt-8">
           <p className="mr-4 text-sm sm:text-base font-normal">Yearly</p>
-          <IoToggle/>
+          <ToggleButton isToggleOn={toggleHandler} />
           <p className="ml-4 text-sm sm:text-base font-normal">Monthly</p>
         </div>
       </div>

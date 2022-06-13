@@ -26,7 +26,7 @@ const CollapsibleCard = (
   }
 
   return (
-    <div className={"flex min-w-full md:min-w-0 m-4 text-dark justify-center items-center md:max-w-sm"}>
+    <div className={"flex w-full md:min-w-0 md:ml-4 md:mr-4 mt-4 mb-4 text-dark justify-center items-center md:max-w-sm"}>
       <Card className="h-full shadow-md" fluid>
         {/*<EffectAppearOnView>*/}
         <div onClick={collapseHandler} className={clsx("w-full md:min-w-full md:max-w-full p-2 rounded-md", bgHeading)}>

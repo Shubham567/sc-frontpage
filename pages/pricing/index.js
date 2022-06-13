@@ -60,64 +60,64 @@ const pricingCardData = [
         id: 1,
         disabled: false,
         title: "2 Assessment",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Assessment",
+        tooltipDescription: "No of Active assessments at any time."
       },
       {
         id: 2,
         disabled: false,
         title: "25 Candidates per month",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Candidates Per Month",
+        tooltipDescription: "Maximum number of candidates"
       },
       {
         id: 3,
         disabled: false,
         title: "Limited Question Library Access",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "SkillCount Question Library",
+        tooltipDescription: "Global expert curated question library for your use. Can be searched/imported directly into your test."
       },
       {
         id: 4,
         disabled: false,
         title: "Company Library",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Company Library",
+        tooltipDescription: "Separate question library for your org. Keeps record of all the question created by you for further use."
       },
       {
         id: 5,
         disabled: false,
         title: "Create unlimited questions",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Create Questions",
+        tooltipDescription: "Ability to create your own questions."
       },
       {
         id: 6,
         disabled: false,
         title: "All question types",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "SkillCounty Test Library",
+        tooltipDescription: "Pre-designed expert curated Tests for direct use. We keep adding multiple fields/streams. "
       },
       {
         id: 7,
         disabled: false,
         title: "125 min AV question",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Audio-Video Per Month",
+        tooltipDescription: "Cummulative amount of Audio Video minutes allocated for audio video questions per month"
       },
       {
         id: 8,
         disabled: false,
         title: "Upto 5 concurrent users",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Concurrent Users",
+        tooltipDescription: "Maximum number of candidates which can take test simultaneously."
       },
       {
         id: 9,
         disabled: false,
         title: "5 Code Pair Assessment",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Live-Pair Coding Interviews",
+        tooltipDescription: "Coding interview using our live code sharing library, with built in exectution and other useful features such as question import and notepad."
       },
     ]
   },
@@ -135,57 +135,57 @@ const pricingCardData = [
         id: 1,
         disabled: false,
         title: "Unlimited Assessments",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Assessment",
+        tooltipDescription: "No of Active assessments at any time."
       },
       {
         id: 2,
         disabled: false,
         title: "300 Candidates per month",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Candidates Per Month",
+        tooltipDescription: "Maximum number of candidates"
       },
       {
         id: 3,
         disabled: false,
         title: "Full Question Library Access",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "SkillCount Question Library",
+        tooltipDescription: "Global expert curated question library for your use. Can be searched/imported directly into your test."
       },
       {
         id: 4,
         disabled: false,
         title: "500 mins AV question per month",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Audio-Video Per Month",
+        tooltipDescription: "Cummulative amount of Audio Video minutes allocated for audio video questions per month"
       },
       {
         id: 5,
         disabled: false,
         title: "Upto 50 concurrent users",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Concurrent Users",
+        tooltipDescription: "Maximum number of candidates which can take test simultaneously."
       },
       {
         id: 6,
         disabled: true,
         title: "Image based Proctoring",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Proctoring",
+        tooltipDescription: "Allows you to monitor each candidate activities during tests."
       },
       {
         id: 7,
         disabled: true,
         title: "Priority Email Support",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Support",
+        tooltipDescription: "Customer support"
       },
       {
         id: 8,
         disabled: true,
         title: "20 Live Pair interview",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Live-Pair Coding Interviews",
+        tooltipDescription: "Coding interview using our live code sharing library, with built in exectution and other useful features such as question import and notepad."
       },
     ]
   },
@@ -203,50 +203,50 @@ const pricingCardData = [
         id: 1,
         disabled: false,
         title: "Image & Screen Proctoring",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Proctoring",
+        tooltipDescription: "Allows you to monitor each candidate activities during tests."
       },
       {
         id: 2,
         disabled: false,
         title: "Team Access (3 members)",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Team",
+        tooltipDescription: "Team management and multiple user access for organization account."
       },
       {
         id: 3,
         disabled: false,
         title: "1000 candidates per month",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Candidates Per Month",
+        tooltipDescription: "Maximum number of candidates"
       },
       {
         id: 4,
         disabled: false,
         title: "3 month data retention",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Candidate Data Retention",
+        tooltipDescription: "Store candidate data for a certain period of time."
       },
       {
         id: 5,
         disabled: true,
         title: "Priority Call Support",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Support",
+        tooltipDescription: "Customer Support"
       },
       {
         id: 6,
         disabled: true,
         title: "Upto 200 concurrent users",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Concurrent Users",
+        tooltipDescription: "Maximum number of candidates which can take test simultaneously."
       },
       {
         id: 7,
         disabled: true,
         title: "2000 mins AV question / month",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Audio-Video Per Month",
+        tooltipDescription: "Cummulative amount of Audio Video minutes allocated for audio video questions per month."
       },
     ]
   },
@@ -264,64 +264,64 @@ const pricingCardData = [
         id: 1,
         disabled: false,
         title: "Unlimited Candidates",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Live-Pair Coding Interviews",
+        tooltipDescription: "Coding interview using our live code sharing library, with built in execution and other useful features such as question import and notepad."
       },
       {
         id: 2,
         disabled: false,
         title: "Concurrent users scaling",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Concurrent Users",
+        tooltipDescription: "Maximum number of candidates which can take test simultaneously."
       },
       {
         id: 3,
         disabled: false,
         title: "API integration",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Custom Integrations on demand & API access",
+        tooltipDescription: "Custom integration such as ATS, API access and webhooks as per your need."
       },
       {
         id: 4,
         disabled: false,
         title: "Custom Workflow integration",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Workflow Integration",
+        tooltipDescription: "Direct integration to your company workflow"
       },
       {
         id: 5,
         disabled: false,
         title: "Additional support",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "Support",
+        tooltipDescription: "Customer support"
       },
       {
         id: 6,
         disabled: true,
         title: "All question types",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        tooltipHeading: "SkillCount Question Library",
+        tooltipDescription: "Global expert curated question library for your use. Can be searched/imported directly into your test."
       },
       {
         id: 7,
         disabled: true,
-        title: "125 min AV question",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        title: "Customizable AV question",
+        tooltipHeading: "Audio-Video Per Month",
+        tooltipDescription: "Cummulative amount of Audio Video minutes allocated for audio video questions per month"
       },
       {
         id: 8,
         disabled: true,
-        title: "Upto 5 concurrent users",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        title: "Upto 200 concurrent users and customizable",
+        tooltipHeading: "Concurrent Users",
+        tooltipDescription: "Maximum number of candidates which can take test simultaneously."
       },
       {
         id: 9,
         disabled: true,
-        title: "5 Code Pair Assessment",
-        tooltipHeading: "2 Assessment",
-        tooltipDescription: "Assessment is here..."
+        title: "Unlimited Code Pair Interviews",
+        tooltipHeading: "Live-Pair Coding Interviews",
+        tooltipDescription: "Coding interview using our live code sharing library, with built in exectution and other useful features such as question import and notepad."
       },
     ]
   }

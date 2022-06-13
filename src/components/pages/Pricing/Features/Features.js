@@ -2,6 +2,7 @@ import React from 'react';
 import SingleFeature from "./SingleFeature";
 import PropTypes from "prop-types";
 import CheckBoxIcon from "../../../svgs/CheckBoxIcon";
+import EffectAppearOnView from "../../../Effects/EffectAppearOnView";
 
 const Feature = ({featuresData, topTableTitle}) => {
   return (

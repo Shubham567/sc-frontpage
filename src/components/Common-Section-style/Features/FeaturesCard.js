@@ -14,9 +14,9 @@ const FeaturesCard = ({direction, heading, image, description}) => {
           }
         </div>
         <div className="w-full p-4 xl:w-1/2 flex justify-center items-center">
-          <div className="xl:p-12 xl:pl-32 xl:pr-32">
-            <h2 className="font-bold text-justify text-2xl text-dark">{heading && heading}</h2>
-            <p className="text-justify text-dark text-md mt-4">{description && description}</p>
+          <div className="xl:p-12 xl:pl-24 xl:pr-24">
+            <h2 className="font-bold text-justify sm:text-4xl text-2xl text-primary">{heading && heading}</h2>
+            <p className="text-justify text-dark text-base sm:text-xl mt-4">{description && description}</p>
           </div>
         </div>
       </div>
