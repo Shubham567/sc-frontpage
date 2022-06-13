@@ -34,9 +34,9 @@ const PricingMainPage = () => {
         <section>
           <OnTopBgTrapez/>
         </section>
-        <section className="mt-24">
-          <OtherPlatformTab tabData={tabData}/>
-        </section>
+        {/*<section className="mt-24">*/}
+        {/*  <OtherPlatformTab tabData={tabData}/>*/}
+        {/*</section>*/}
       </main>
       <Footer/>
     </div>

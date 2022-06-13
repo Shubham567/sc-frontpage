@@ -9,9 +9,11 @@ import Actions from "../../src/components/Common-Section-style/Actions/Actions";
 import OtherPlatformTab from "../../src/components/Common-Section-style/OtherPlatformTab/OtherPlatformTab";
 import Footer from "../../src/components/Footer";
 import Image from "next/image";
+import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
+import {router} from "next/client";
 
 const actionHandler = ({actionData}) => {
-  console.log("Button Clicked")
+  router.push("/pricing").then();
 }
 
 const Platform = () => {
@@ -23,11 +25,12 @@ const Platform = () => {
       </Head>
       <TopNav/>
       <main>
-        <TopPlatformSection {...topRawData} />
+        {/*<TopPlatformSection {...topRawData} />*/}
+        <TopSectionNew {...topRawData} />
         {/*<Benefits benefitsData={benefitsData} />*/}
         <Features featureData={featureData} />
         <Actions actionData={actionData} />
-        <OtherPlatformTab tabData={tabData} />
+        {/*<OtherPlatformTab tabData={tabData} />*/}
       </main>
       <Footer />
     </div>
@@ -39,16 +42,11 @@ export default Platform;
 const actionData = [
   {
     id: 1,
-    heading: "Lorem ipsum dolor sit amet Lorem ipsum ",
-    buttonLabel: "Button",
+    heading: <div>Build the best teams with the <span className="font-bold text-4xl">most affordable</span> solution
+    </div>,
+    buttonLabel: "Check Pricing",
     actionHandler: actionHandler
   },
-  {
-    id: 2,
-    heading: "Lorem ipsum dolor sit amet Lorem ipsum ",
-    buttonLabel: "Button",
-    actionHandler: actionHandler
-  }
 ];
 
 
@@ -88,8 +86,10 @@ const tabData = [
 ];
 
 const topRawData = {
-  heading : "Hundred of expert designed questions covering a wide range of skills",
-  description: "Craft high quality assessments from SkillCounty’s extensive library of expert designed questions or deploy your own experts to create your private library."
+  heading: "Question library",
+  description: "Craft high quality assessments from SkillCounty’s extensive library of expert designed questions or deploy your own experts to create your private library.",
+  descriptionTitle: "Hundred of expert designed questions covering a wide range of skills",
+  image: <Image src="/images/platform/book-library.png" height="680px" width="710px"/>,
+  imagePosition: "right-16 top-4"
 }
-
 

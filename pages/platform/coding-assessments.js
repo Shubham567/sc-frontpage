@@ -10,6 +10,7 @@ import OtherPlatformTab from "../../src/components/Common-Section-style/OtherPla
 import Footer from "../../src/components/Footer";
 import Image from "next/image";
 import OnTopBgTrapez from "../../src/components/pages/Home/OnTopBgTrapez";
+import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
 
 const Platform = () => {
   return (
@@ -20,10 +21,11 @@ const Platform = () => {
       </Head>
       <TopNav/>
       <main>
-        <TopPlatformSection {...topRawData} />
+        {/*<TopPlatformSection {...topRawData} />*/}
+        <TopSectionNew {...topRawData} />
         <Features featureData={featureData} />
         <OnTopBgTrapez bgFillColor={"fill-orange-light"} headColor="text-dark" contentColor="text-primary"/>
-        <OtherPlatformTab tabData={tabData} />
+        {/*<OtherPlatformTab tabData={tabData} />*/}
       </main>
       <Footer />
     </div>
@@ -69,8 +71,11 @@ const tabData = [
 ];
 
 const topRawData = {
-  heading : "Find the best software engineers using coding assessments, hackathons and remote coding & design interviews",
-  description: "With SkillCounty, you can conduct coding assessments, hackathons, remote coding interviews and remote design interviews. You can assess technical skills along with important adjacent skills that software engineers require like  planning, teamwork, execution, and communication."
+  heading: "Coding Assessments and Interviews",
+  description: "With SkillCounty, you can conduct coding assessments, hackathons, remote coding interviews and remote design interviews. You can assess technical skills along with important adjacent skills that software engineers require like  planning, teamwork, execution, and communication.",
+  descriptionTitle: "Find the best software engineers using coding assessments, hackathons and remote coding & design interviews",
+  image: <Image src="/images/platform/Coding Interviews.png" alt="proctoring based image" height="632px" width="948px"/>,
+  imagePosition: "top-16 md:top-32"
 }
 
 

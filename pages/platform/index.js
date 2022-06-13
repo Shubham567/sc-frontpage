@@ -11,14 +11,18 @@ import Footer from "../../src/components/Footer";
 import Image from "next/image";
 import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
 import ScaleHiring from "../../src/components/Common-Section-style/ScaleHiring/ScaleHiring";
+import {router} from "next/client";
+import OnTopBgTrapez from "../../src/components/pages/Home/OnTopBgTrapez";
 
 const actionHandler = ({actionData}) => {
   console.log("Button Clicked")
 }
 
 const requestDemo = () => {
+  router.push("/platform/proctoring").then();
 };
-const calculateROI = () => {
+const getStarted = () => {
+  router.push("/pricing").then();
 };
 
 const Platform = () => {
@@ -34,12 +38,13 @@ const Platform = () => {
         <TopSectionNew {...topRawData} />
         {/*<Benefits benefitsData={benefitsData} />*/}
         <Features featureData={featureData}/>
-        <ScaleHiring
-          title={"Hire Affoardably At Scale"}
-          description="Decrease your time to hire and increase your hiring pool with a platform that offers the value in the market"
-          requestDemo={requestDemo}
-          calculateROI={calculateROI}
-        />
+        {/*<ScaleHiring*/}
+        {/*  title={"Hire Affoardably At Scale"}*/}
+        {/*  description="Decrease your time to hire and increase your hiring pool with a platform that offers the value in the market"*/}
+        {/*  requestDemo={requestDemo}*/}
+        {/*  calculateROI={getStarted}*/}
+        {/*/>*/}
+        <OnTopBgTrapez bgFillColor={"fill-orange-light"} headColor="text-dark" contentColor="text-primary"/>
         {/*<Actions actionData={actionData} />*/}
         <OtherPlatformTab tabData={tabData}/>
       </main>
@@ -125,7 +130,9 @@ const tabData = [
 
 const topRawData = {
   heading: "Customizable assessments",
-  description: "Create assessments from scratch or use the SkillCounty Premium library to mix and match questions to assess different skills in one assessment."
+  description: "",
+  descriptionTitle: "Create assessments from scratch or use the SkillCounty Premium library to mix and match questions to assess different skills in one assessment.",
+  image: <Image src="/images/platform/hand-and-pen.png" height="834px" width="890px"/>
 }
 
 

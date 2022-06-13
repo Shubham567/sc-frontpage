@@ -9,6 +9,7 @@ import Actions from "../../src/components/Common-Section-style/Actions/Actions";
 import OtherPlatformTab from "../../src/components/Common-Section-style/OtherPlatformTab/OtherPlatformTab";
 import Footer from "../../src/components/Footer";
 import Image from "next/image";
+import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
 
 const actionHandler = ({actionData}) => {
   console.log("Button Clicked")
@@ -23,9 +24,10 @@ const Platform = () => {
       </Head>
       <TopNav/>
       <main>
-        <TopPlatformSection {...topRawData} />
+        {/*<TopPlatformSection {...topRawData} />*/}
+        <TopSectionNew {...topRawData} />
         <Features featureData={featureData} />
-        <OtherPlatformTab tabData={tabData} />
+        {/*<OtherPlatformTab tabData={tabData} />*/}
       </main>
       <Footer />
     </div>
@@ -71,8 +73,10 @@ const tabData = [
 ];
 
 const topRawData = {
-  heading : "Expert crafted role specific assessments",
-  description: "Save yourself time by selecting pre-designed assessments that cover all the important skills required the specific role you are looking to fill."
+  heading: "Assessment Marketplace",
+  description: "Save yourself time by selecting pre-designed assessments that cover all the important skills required the specific role you are looking to fill",
+  descriptionTitle: "Expert crafted role specific assessments",
+  image: <Image src="/images/platform/hands-holding-shopping-cart.png" height="821px" width="868px"/>
 }
 
 

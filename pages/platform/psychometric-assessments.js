@@ -9,6 +9,7 @@ import Actions from "../../src/components/Common-Section-style/Actions/Actions";
 import OtherPlatformTab from "../../src/components/Common-Section-style/OtherPlatformTab/OtherPlatformTab";
 import Footer from "../../src/components/Footer";
 import Image from "next/image";
+import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
 
 
 const Platform = () => {
@@ -20,9 +21,10 @@ const Platform = () => {
       </Head>
       <TopNav/>
       <main>
-        <TopPlatformSection {...topRawData} />
+        {/*<TopPlatformSection {...topRawData} />*/}
+        <TopSectionNew {...topRawData} />
         <Features featureData={featureData} />
-        <OtherPlatformTab tabData={tabData} />
+        {/*<OtherPlatformTab tabData={tabData} />*/}
       </main>
       <Footer />
     </div>
@@ -68,8 +70,12 @@ const tabData = [
 ];
 
 const topRawData = {
-  heading : "Go beyond skills and assess company-fit by getting more into a candidate’s personality",
-  description: "Align skills, culture and motivation for hiring the best and setting them up for success."
+  heading: "Psychometric Assessments",
+  description: "Align skills, culture and motivation for hiring the best and setting them up for success",
+  descriptionTitle: "Go beyond skills and assess company-fit by getting more into a candidate’s personality",
+  image: <Image src="/images/platform/thinking-adult-man.png" height="747px" width="946px"/>,
+  imagePosition: "top-20"
 }
+
 
 

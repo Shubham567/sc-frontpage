@@ -8,6 +8,7 @@ import OtherPlatformTab from "../../src/components/Common-Section-style/OtherPla
 import Footer from "../../src/components/Footer";
 import Image from "next/image";
 import betterWayImage from "/assets/platforms/Better-way-to-screen-applicants.png";
+import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
 
 
 const Platform = () => {
@@ -19,9 +20,10 @@ const Platform = () => {
       </Head>
       <TopNav/>
       <main>
-        <TopPlatformSection {...topRawData} />
+        {/*<TopPlatformSection {...topRawData} />*/}
+        <TopSectionNew {...topRawData} />
         <Features featureData={featureData} />
-        <OtherPlatformTab tabData={tabData} />
+        {/*<OtherPlatformTab tabData={tabData} />*/}
       </main>
       <Footer />
     </div>
@@ -67,8 +69,12 @@ const tabData = [
 ];
 
 const topRawData = {
-  heading : "Accelerate hiring with one way audio and video interviews",
-  description: "Skip scheduling woes, save time and unambiguously access communication skills and more using asynchronous interviews."
+  heading: "One way Interviews or Asynchronous Interviews",
+  description: "Skip scheduling woes, save time and unambiguously access communication skills and more using asynchronous interviews",
+  descriptionTitle: "Accelerate hiring with one way audio and video interviews",
+  image: <Image src="/images/platform/one-way-interview.png" height="614px" width="908px"/>,
+  imagePosition: "top-24 sm:top-28"
 }
+
 
 

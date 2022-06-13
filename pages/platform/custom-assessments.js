@@ -11,6 +11,7 @@ import Footer from "../../src/components/Footer";
 import Image from "next/image";
 import OnTopBgTrapez from "../../src/components/pages/Home/OnTopBgTrapez";
 import DemoForm from "../../src/components/pages/Home/DemoForm";
+import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
 
 const Platform = () => {
   return (
@@ -21,10 +22,11 @@ const Platform = () => {
       </Head>
       <TopNav/>
       <main>
-        <TopPlatformSection {...topRawData} />
+        {/*<TopPlatformSection {...topRawData} />*/}
+        <TopSectionNew {...topRawData} />
         <Features featureData={featureData} />
         <OnTopBgTrapez bgFillColor={"fill-orange-light"} headColor="text-dark" contentColor="text-primary"/>
-        <OtherPlatformTab tabData={tabData} />
+        {/*<OtherPlatformTab tabData={tabData} />*/}
         <DemoForm />
       </main>
       <Footer />
@@ -71,8 +73,10 @@ const tabData = [
 ];
 
 const topRawData = {
-  heading : "Accelerate hiring with one way audio and video interviews",
-  description: "Skip scheduling woes, save time and unambiguously access communication skills and more using asynchronous interviews."
+  heading: "Customizable assessments",
+  description: "",
+  descriptionTitle: "Create assessments from scratch or use the SkillCounty Premium library to mix and match questions to assess different skills in one assessment.",
+  image: <Image src="/images/platform/hand-and-pen.png" height="834px" width="890px"/>
 }
 
 

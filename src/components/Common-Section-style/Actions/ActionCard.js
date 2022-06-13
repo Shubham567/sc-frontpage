@@ -5,9 +5,9 @@ import EffectAppearOnView from "../../Effects/EffectAppearOnView";
 
 const ActionCard = ({heading, buttonLabel, actionHandler}) => {
   return (
-      <div className="m-4 w-full sm:w-1/2 xl:w-1/3 p-4">
+      <div className="m-4 w-full sm:w-1/2 p-4">
         <div>
-          <h1 className="font-bold text-center text-3xl text-dark">
+          <h1 className="font-normal text-center text-4xl text-dark">
             {
               heading && heading
             }

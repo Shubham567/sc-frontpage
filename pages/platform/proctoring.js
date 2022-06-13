@@ -11,6 +11,7 @@ import Footer from "../../src/components/Footer";
 import Image from "next/image";
 import OnTopBgTrapez from "../../src/components/pages/Home/OnTopBgTrapez";
 import DemoForm from "../../src/components/pages/Home/DemoForm";
+import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
 
 const actionHandler = ({actionData}) => {
   console.log("Button Clicked")
@@ -25,10 +26,11 @@ const Platform = () => {
       </Head>
       <TopNav/>
       <main>
-        <TopPlatformSection {...topRawData} />
+        {/*<TopPlatformSection {...topRawData} />*/}
+        <TopSectionNew {...topRawData} />
         <Features featureData={featureData} />
         <OnTopBgTrapez bgFillColor={"fill-orange-light"} headColor="text-dark" contentColor="text-primary"/>
-        <OtherPlatformTab tabData={tabData} />
+        {/*<OtherPlatformTab tabData={tabData} />*/}
         <DemoForm />
       </main>
       <Footer />
@@ -90,8 +92,10 @@ const tabData = [
 ];
 
 const topRawData = {
-  heading : "Drive quality assessments with advanced proctoring capabilities",
-  description: "Ensure integrity of the assessment by tracking & recording candidate activity and setting up a controlled test environment."
+  heading: "Sophisticated Proctoring",
+  description: "Ensure integrity of the assessment by tracking & recording candidate activity and setting up a controlled test environment",
+  descriptionTitle: "Drive quality assessments with advanced proctoring capabilities",
+  image: <Image src="/images/platform/proctoring.png" alt="proctoring based image" height="819px" width="958px"/>
 }
 
 

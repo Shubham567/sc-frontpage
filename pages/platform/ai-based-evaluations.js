@@ -10,6 +10,7 @@ import Image from "next/image";
 import OnTopBgTrapez from "../../src/components/pages/Home/OnTopBgTrapez";
 import DemoForm from "../../src/components/pages/Home/DemoForm";
 import insightfulImage from "/assets/platforms/Insightful-auto-graded-reports.png";
+import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
 
 const Platform = () => {
   return (
@@ -20,8 +21,9 @@ const Platform = () => {
       </Head>
       <TopNav/>
       <main>
-        <TopPlatformSection {...topRawData} />
-        <Features featureData={featureData} />
+        {/*<TopPlatformSection {...topRawData} />*/}
+        <TopSectionNew {...topRawData} />
+        {/*<Features featureData={featureData} />*/}
         <OnTopBgTrapez bgFillColor={"fill-orange-light"} headColor="text-dark" contentColor="text-primary"/>
         <OtherPlatformTab tabData={tabData} />
         <DemoForm />
@@ -70,8 +72,10 @@ const tabData = [
 ];
 
 const topRawData = {
-  heading : "Power your hiring process with AI based evaluation and insightful assessment reports ",
-  description: "Save time by relying on automatic AI based evaluations that auto grade answers to both objective and subjective questions"
+  heading: "AI based Evaluations",
+  description: "Save time by relying on automatic AI based evaluations that auto grade answers to both objective and subjective questions",
+  descriptionTitle: "Power your hiring process with AI based evaluation and insightful assessment reports ",
+  image: <Image src="/images/platform/business-presentation-pointing.png" height="934px" width="929px"/>,
+  imagePosition: "top-16 md:top-8"
 }
-
 

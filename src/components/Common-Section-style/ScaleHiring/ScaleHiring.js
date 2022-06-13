@@ -23,7 +23,7 @@ const ScaleHiring = ({title, requestDemo, calculateROI, description}) => {
             <Button onClick={requestDemo} rounded className="bg-secondary text-white text-xl hover:bg-orange ease-in-out duration-300 font-medium pl-8 pr-8 pt-2 pb-2 rounded-full">Request Demo</Button>
           </div>
           <div className="mt-4">
-            <Button onClick={calculateROI} rounded className="text-xl font-medium hover:bg-yellow ease-in-out duration-300 pl-8 pr-8 pt-2 pb-2 rounded-full text-dark border-2 border-dark">Calculate ROI</Button>
+            <Button onClick={calculateROI} rounded className="text-xl font-medium hover:bg-yellow ease-in-out duration-300 pl-8 pr-8 pt-2 pb-2 rounded-full text-dark border-2 border-dark">Get Started</Button>
           </div>
         </div>
       </div>
