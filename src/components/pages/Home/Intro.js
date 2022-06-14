@@ -48,11 +48,13 @@ const Intro = () => {
           </div>
 
           <div className="mt-5 flex items-center">
-              <div className={"font-medium text-dark mr-4"}>Get Started</div>
+            <div className={"font-medium text-dark mr-4"}><Link href={"https://app.skillcounty.com/subscribe/start-trial"}>Get Started</Link></div>
               <div>
-                <IconButton aria-label="get-started"  className={"rounded-full border-4 font-black cursor-pointer p-2/3 border-yellow bg-transparent"}>
-                  <IoIosArrowRoundForward className="text-4xl font-black"/>
-                </IconButton>
+                <Link href={"https://app.skillcounty.com/subscribe/start-trial"} passHref>
+                  <IconButton aria-label="get-started"  className={"rounded-full border-4 font-black cursor-pointer p-2/3 border-yellow bg-transparent"}>
+                    <IoIosArrowRoundForward className="text-4xl font-black"/>
+                  </IconButton>
+                </Link>
               </div>
               {/*<Button size="lg" variant="outlined" rounded color="primary">*/}
               {/*  Get Started*/}
@@ -69,17 +71,18 @@ const Intro = () => {
           {/*// The Interactive comp goes here*/}
           {/*<TestDemoTop />*/}
            <Image src="/images/cool-girl.png" layout="fill" objectFit="contain" />
-          <div className="flex w-2/5 h-full flex-col">
-            <p className="mt-8 text-md md:text-2xl font-normal mb-2">Calculate  ROI</p>
-            <div className="flex">
-              <div className="ml-12">
-                <Image src="/images/arrowIcon.png" width="71px" height="59px" />
-              </div>
-              <button className="mt-4 ml-2">
-                <Image src="/images/roiIcon.png" width="80px" height="80px" />
-              </button>
-            </div>
-          </div>
+          {/* Uncomment to enable ROI calculator button */}
+          {/*<div className="flex w-2/5 h-full flex-col">*/}
+          {/*  <p className="mt-8 text-md md:text-2xl font-normal mb-2">Calculate  ROI</p>*/}
+          {/*  <div className="flex">*/}
+          {/*    <div className="ml-12">*/}
+          {/*      <Image src="/images/arrowIcon.png" width="71px" height="59px" />*/}
+          {/*    </div>*/}
+          {/*    <button className="mt-4 ml-2">*/}
+          {/*      <Image src="/images/roiIcon.png" width="80px" height="80px" />*/}
+          {/*    </button>*/}
+          {/*  </div>*/}
+          {/*</div>*/}
         </div>
 
       </div>
