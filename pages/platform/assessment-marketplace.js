@@ -40,14 +40,14 @@ export default Platform;
 const featureData = [
   {
     id: 1,
-    image: <Image src="/images/young-businesswoman.png" width="700px" height="400px"/>,
+    image: <Image src="/images/platform/pre-designed-assessment-for-wide-range.png" width="700px" height="400px"/>,
     heading: "Pre-designed assessments for a wide range of roles",
     description: "SkillCounty’s Assessment Marketplace offers a number of assessments for a variety of roles. So whether you are looking for a Java engineer, engineering manager, sales associate or customer service representative, we have got you covered.",
     direction: "flex-col xl:flex-row"
   },
   {
     id: 2,
-    image: <Image src="/images/young-businesswoman.png" width="700px" height="400px"/>,
+    image: <Image src="/images/platform/start-your-evaluation-process.png" width="700px" height="400px"/>,
     heading: "Start your evaluation process right away",
     description: "It takes less than 2 mins. Go to SkillCounty's Assessment MarketPlace, search for assessments for the specific role you are recruiting for, choose an assessment that meets your needs and start inviting candidates to take the assessment. That's all you need to get this ball rolling.",
     direction: "flex-col xl:flex-row-reverse"

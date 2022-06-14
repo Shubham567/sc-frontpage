@@ -10,7 +10,8 @@ import OtherPlatformTab from "../../src/components/Common-Section-style/OtherPla
 import Footer from "../../src/components/Footer";
 import Image from "next/image";
 import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
-
+import cultureFit from "/assets/platforms/Hire-the-best-fit for-your-culture.png";
+import findTheMotivation from "/assets/platforms/Find the motivation.png";
 
 const Platform = () => {
   return (
@@ -37,14 +38,14 @@ export default Platform;
 const featureData = [
   {
     id: 1,
-    image: <Image src="/images/young-businesswoman.png" width="700px" height="400px"/>,
+    image: <Image src={cultureFit} alt="Hire the best fit for your culture" width="700px" height="400px"/>,
     heading: "Hire the best fit for your culture!",
     description: "Assesses how a candidate’s values and behaviors align with your company’s  values and behaviors, so you can evaluate if this candidate is set up for success in the role you are about to offer them.",
     direction: "flex-col xl:flex-row"
   },
   {
     id: 2,
-    image: <Image src="/images/young-businesswoman.png" width="700px" height="400px"/>,
+    image: <Image src={findTheMotivation} alt="Find the motivation" width="700px" height="400px"/>,
     heading: "Find the motivation",
     description: "Once you zero-in on the potential candidates, finding out what motivates them is critical to the offer process. SkillCounty offers assessments to gauge the extent to which your candidates' expectations align with your job offer. This helps you craft an offer that resonates with the candidates and also gauge what it will take to retain them in future.",
     direction: "flex-col xl:flex-row-reverse"
@@ -73,8 +74,8 @@ const topRawData = {
   heading: "Psychometric Assessments",
   description: "Align skills, culture and motivation for hiring the best and setting them up for success",
   descriptionTitle: "Go beyond skills and assess company-fit by getting more into a candidate’s personality",
-  image: <Image src="/images/platform/thinking-adult-man.png" height="747px" width="946px"/>,
-  imagePosition: "top-20"
+  image: <Image src="/images/platform/thinking-adult-man.png" alt="thinking adult man" height="747px" width="946px"/>,
+  imagePosition: "top-28"
 }
 
 

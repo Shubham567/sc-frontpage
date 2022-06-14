@@ -10,6 +10,7 @@ import Image from "next/image";
 import OnTopBgTrapez from "../../src/components/pages/Home/OnTopBgTrapez";
 import DemoForm from "../../src/components/pages/Home/DemoForm";
 import insightfulImage from "/assets/platforms/Insightful-auto-graded-reports.png";
+import saveNotes from "/assets/platforms/Save notes on a candidate or in a single click shortlist or reject.png"
 import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
 
 const Platform = () => {
@@ -23,7 +24,7 @@ const Platform = () => {
       <main>
         {/*<TopPlatformSection {...topRawData} />*/}
         <TopSectionNew {...topRawData} />
-        {/*<Features featureData={featureData} />*/}
+        <Features featureData={featureData} />
         <OnTopBgTrapez bgFillColor={"fill-orange-light"} headColor="text-dark" contentColor="text-primary"/>
         <OtherPlatformTab tabData={tabData} />
         <DemoForm />
@@ -46,7 +47,7 @@ const featureData = [
   },
   {
     id: 2,
-    image: <Image src="/images/young-businesswoman.png" alt="" width="700px" height="400px"/>,
+    image: <Image src={saveNotes} alt="Save notes on a candidate or in a single click shortlist or reject" width="700px" height="400px"/>,
     heading: "Save notes on a candidate or in a single click shortlist or reject",
     description: "SkillCounty’s assessment reports enable hiring processes and workflows. You can override auto-graded scores, save notes on a candidate, shortlist or reject candidates or manually attach grades on specific skills.",
     direction: "flex-col xl:flex-row-reverse"

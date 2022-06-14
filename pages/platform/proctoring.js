@@ -12,6 +12,9 @@ import Image from "next/image";
 import OnTopBgTrapez from "../../src/components/pages/Home/OnTopBgTrapez";
 import DemoForm from "../../src/components/pages/Home/DemoForm";
 import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
+import preventImpersonation from "/assets/platforms/prevent-impersonation-via-screenshot.png";
+import additionalPlagiarismProtection from "/assets/platforms/additional-plagiarism-protection-measures.png";
+import restrictIPAddress from "/assets/platforms/Restrict IP address for fair test taking.png";
 
 const actionHandler = ({actionData}) => {
   console.log("Button Clicked")
@@ -28,8 +31,9 @@ const Platform = () => {
       <main>
         {/*<TopPlatformSection {...topRawData} />*/}
         <TopSectionNew {...topRawData} />
-        <Features featureData={featureData} />
+        <Features featureData={featureData1} />
         <OnTopBgTrapez bgFillColor={"fill-orange-light"} headColor="text-dark" contentColor="text-primary"/>
+        <Features featureData={featureData2} />
         {/*<OtherPlatformTab tabData={tabData} />*/}
         <DemoForm />
       </main>
@@ -56,20 +60,37 @@ const actionData = [
 ];
 
 
-const featureData = [
+const featureData1 = [
   {
     id: 1,
-    image: <Image src="/images/young-businesswoman.png" width="700px" height="400px"/>,
-    heading: "Copy -paste tracking to curb plagiarism",
+    image: <Image src="/images/platform/copy-paste-tracking.png" alt="Copy - paste tracking to curb plagiarism" width="700px" height="400px"/>,
+    heading: "Copy - paste tracking to curb plagiarism",
     description: "SkillCounty tracks any copy paste activity that the candidate does in or out of the assessment. Even the text that is copy-pasted is stored and made available as part of the assessment report. Copy-paste can also be disabled for a more stringent setup.",
-    direction: "flex-col xl:flex-row"
+    direction: "flex-col-reverse xl:flex-row"
   },
   {
     id: 2,
-    image: <Image src="/images/young-businesswoman.png" width="700px" height="400px"/>,
+    image: <Image src={preventImpersonation} alt="Prevent impersonation via screenshot and candidate snapshot capture" width="700px" height="400px"/>,
     heading: "Prevent impersonation via screenshot and candidate snapshot capture",
     description: "SkillCounty takes snapshots of the candidate along with screenshots of the candidate’s device at random intervals. These images are used to report instances of a candidate not being in the frame, other people being in the frame, impersonation or even plagiarism.",
-    direction: "flex-col xl:flex-row-reverse"
+    direction: "flex-col-reverse xl:flex-row-reverse"
+  }
+];
+
+const featureData2 = [
+  {
+    id: 1,
+    image: <Image src={additionalPlagiarismProtection} alt="Additional Plagiarism Protection Measures" width="455px" height="493px"/>,
+    heading: "Additional Plagiarism Protection Measures",
+    description: "Exit full screen restrictions, time away from tab tracker, tab switch count, and more deter or detect unfair tactics used by some candidates to ace their assessments.",
+    direction: "flex-col-reverse xl:flex-row"
+  },
+  {
+    id: 2,
+    image: <Image src={restrictIPAddress} alt="Restrict IP address for fair test taking" width="700px" height="400px"/>,
+    heading: "Restrict IP address for fair test taking",
+    description: "SkillCounty Assessments can be made to restrict IP addresses based on location. This feature is especially useful during campus recruitment or bulk recruiting drives where the candidate has to take the test from a specific location. ",
+    direction: "flex-col-reverse xl:flex-row-reverse"
   }
 ];
 
@@ -95,7 +116,8 @@ const topRawData = {
   heading: "Sophisticated Proctoring",
   description: "Ensure integrity of the assessment by tracking & recording candidate activity and setting up a controlled test environment",
   descriptionTitle: "Drive quality assessments with advanced proctoring capabilities",
-  image: <Image src="/images/platform/proctoring.png" alt="proctoring based image" height="819px" width="958px"/>
+  image: <Image src="/images/platform/proctoring.png" alt="proctoring based image" height="819px" width="900px"/>,
+  imagePosition: "top-12"
 }
 
 

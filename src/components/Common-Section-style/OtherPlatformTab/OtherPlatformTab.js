@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 const OtherPlatformTab = ({tabData}) => {
   return (
-    <div className="mt-8 ml-2 mr-2 sm:ml-8 sm:mr-8 flex justify-center items-center relative">
+    <div className="mt-28 ml-2 mr-2 sm:ml-8 sm:mr-8 flex justify-center items-center relative">
       <div className="flex justify-center items-center flex-wrap">
         {
           tabData?.map((item) => (<TabCard key={item.id} {...item} />))

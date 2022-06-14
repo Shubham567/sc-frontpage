@@ -11,6 +11,8 @@ import Footer from "../../src/components/Footer";
 import Image from "next/image";
 import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
 // import {router} from "next/client";
+import varietyOfQuestions from "/assets/platforms/Variety of Questions for a variety of roles.png";
+import ownLibrary from "/assets/platforms/A library of your own.png"
 
 const actionHandler = ({actionData}) => {
   // router.push("/pricing").then();
@@ -53,14 +55,14 @@ const actionData = [
 const featureData = [
   {
     id: 1,
-    image: <Image src="/images/young-businesswoman.png" width="700px" height="400px"/>,
+    image: <Image src={varietyOfQuestions} alt="Variety of Questions for a variety of roles" width="700px" height="400px"/>,
     heading: "Variety of Questions for a variety of roles",
     description: "SkillCounty’s Premium library has hundreds of questions that cover a wide range of skills & roles. These questions have been designed by subject matter experts. These experts continuously curate this library to ensure the best quality questions find a home there and leaked questions are pruned out. ",
     direction: "flex-col xl:flex-row"
   },
   {
     id: 2,
-    image: <Image src="/images/young-businesswoman.png" width="700px" height="400px"/>,
+    image: <Image src={ownLibrary} alt="A library of your own" width="700px" height="400px"/>,
     heading: "A library of your own! ",
     description: "If you have a team of specialists, you can develop your own pool of questions and save them in your private library.\n",
     direction: "flex-col xl:flex-row-reverse"
@@ -89,7 +91,7 @@ const topRawData = {
   heading: "Question library",
   description: "Craft high quality assessments from SkillCounty’s extensive library of expert designed questions or deploy your own experts to create your private library.",
   descriptionTitle: "Hundred of expert designed questions covering a wide range of skills",
-  image: <Image src="/images/platform/book-library.png" height="680px" width="710px"/>,
-  imagePosition: "right-16 top-4"
+  image: <Image src="/images/platform/book-library.png" height="610px" width="580px"/>,
+  imagePosition: "md:right-28 right-8 top-8 sm:top-16 md:top-28"
 }
 

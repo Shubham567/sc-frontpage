@@ -26,7 +26,7 @@ const Platform = () => {
         <TopSectionNew {...topRawData} />
         <Features featureData={featureData} />
         <OnTopBgTrapez bgFillColor={"fill-orange-light"} headColor="text-dark" contentColor="text-primary"/>
-        {/*<OtherPlatformTab tabData={tabData} />*/}
+        <OtherPlatformTab tabData={tabData} />
         <DemoForm />
       </main>
       <Footer />
@@ -40,16 +40,16 @@ export default Platform;
 const featureData = [
   {
     id: 1,
-    image: <Image src="/images/young-businesswoman.png" width="700px" height="400px"/>,
-    heading: "Accelerate the hiring process.",
-    description: "With SkillCounty’s one way interviews, there is no need to scan schedules for a common slot. Candidates can record and submit their answers to your questions at their pace and time. So, in just a matter of minutes, you can schedule several one-way interviews and then review the answers at your own pace.  This is such an easy way to scale the hiring team and assess soft skills without the need to undertake expensive and effort intensive in-person interviews.",
+    image: <Image src="/images/platform/types-of-assessments.png" alt="Make your own assessments" width="700px" height="400px"/>,
+    heading: "Make your own assessments ",
+    description: "Create an assessment from the ground up using a wide variety of question types like MCQ, MSQ, Open ended, audio/video based, passage based and more, to examine the technical and other abilities of the candidates. \n",
     direction: "flex-col xl:flex-row"
   },
   {
     id: 2,
-    image: <Image src="/images/young-businesswoman.png" width="700px" height="400px"/>,
-    heading: "Better way to assess soft skills",
-    description: "There are certain roles where soft skills like communication & presentation skills are extremely important. For example sales, teaching, management and customer service roles.  With SkillCounty’s one way interviews, you can cast a wider net and truly assess these skills in the early stages of the hiring process, thereby bringing high quality candidates to the later more effort intensive and expensive stages. ",
+    image: <Image src="/images/platform/create-assessment.png" alt="Create assessments within minutes!" width="700px" height="400px"/>,
+    heading: "Create assessments within minutes!",
+    description: "Create an assessment that contains questions from both your experts and our experts using SkillCounty's premium questions and assessment collection, and you'll have a full-fledged assessment in minutes. ",
     direction: "flex-col xl:flex-row-reverse"
   }
 ];
@@ -74,8 +74,8 @@ const tabData = [
 
 const topRawData = {
   heading: "Customizable assessments",
-  description: "",
-  descriptionTitle: "Create assessments from scratch or use the SkillCounty Premium library to mix and match questions to assess different skills in one assessment.",
+  descriptionTitle: "Customize assessments for the right fit ",
+  description: "Create assessments from scratch or use the SkillCounty Premium library to mix and match questions to assess different skills in one assessment.",
   image: <Image src="/images/platform/hand-and-pen.png" height="834px" width="890px"/>
 }
 
