@@ -12,18 +12,18 @@ import Image from "next/image";
 import ScaleHiring from "../../src/components/Common-Section-style/ScaleHiring/ScaleHiring";
 import TopSectionForSolution from "../../src/components/pages/Ssolutions/TopSection";
 import OnTopBgTrapez from "../../src/components/pages/Home/OnTopBgTrapez";
-import {router} from "next/client";
+// import {router} from "next/client";
 
 const actionHandler = ({actionData}) => {
-  router.push("/pricing").then();
+  // router.push("/pricing").then();
 }
 
 const requestDemo = () => {
- router.push("/platform/proctoring").then();
+ // router.push("/platform/proctoring").then();
 }
 
 const getStarted = () => {
-  router.push("/pricing").then();
+  // router.push("/pricing").then();
 }
 
 const Platform = () => {

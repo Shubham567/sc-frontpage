@@ -11,7 +11,7 @@ const TopSectionForSolution = ({heading, description}) => {
           <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-normal text-primary">
             {
               heading?.split(" ").map((item, i) => (
-                !(i === 0) ? item + " " : <span className="font-bold">{item + " "}</span>
+                !(i === 0) ? <span key={i}>{item + " "}</span> : <span key={i} className="font-bold">{item + " "}</span>
               ))
             }
           </h1>

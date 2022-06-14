@@ -10,10 +10,10 @@ import OtherPlatformTab from "../../src/components/Common-Section-style/OtherPla
 import Footer from "../../src/components/Footer";
 import Image from "next/image";
 import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
-import {router} from "next/client";
+// import {router} from "next/client";
 
 const actionHandler = ({actionData}) => {
-  router.push("/pricing").then();
+  // router.push("/pricing").then();
 }
 
 const Platform = () => {
