@@ -12,6 +12,7 @@ import DemoForm from "../../src/components/pages/Home/DemoForm";
 import insightfulImage from "/assets/platforms/Insightful-auto-graded-reports.png";
 import saveNotes from "/assets/platforms/Save notes on a candidate or in a single click shortlist or reject.png"
 import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
+import constants from "../../src/Constants/Constants"
 
 const Platform = () => {
   return (
@@ -26,7 +27,7 @@ const Platform = () => {
         <TopSectionNew {...topRawData} />
         <Features featureData={featureData} />
         <OnTopBgTrapez bgFillColor={"fill-orange-light"} headColor="text-dark" contentColor="text-primary"/>
-        <OtherPlatformTab tabData={tabData} />
+        <OtherPlatformTab pageInfo={constants.AIBasedEvaluations} />
         <DemoForm />
       </main>
       <Footer />
@@ -76,7 +77,7 @@ const topRawData = {
   heading: "AI based Evaluations",
   description: "Save time by relying on automatic AI based evaluations that auto grade answers to both objective and subjective questions",
   descriptionTitle: "Power your hiring process with AI based evaluation and insightful assessment reports ",
-  image: <Image src="/images/platform/business-presentation-pointing.png" height="934px" width="929px"/>,
+  image: <Image src="/images/platform/business-presentation-pointing.png" alt="business presentation pointing ppt" height="934px" width="929px"/>,
   imagePosition: "top-16 md:top-8"
 }
 

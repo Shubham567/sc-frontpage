@@ -12,6 +12,7 @@ import Image from "next/image";
 import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
 import cultureFit from "/assets/platforms/Hire-the-best-fit for-your-culture.png";
 import findTheMotivation from "/assets/platforms/Find the motivation.png";
+import constants from "../../src/Constants/Constants";
 
 const Platform = () => {
   return (
@@ -25,7 +26,7 @@ const Platform = () => {
         {/*<TopPlatformSection {...topRawData} />*/}
         <TopSectionNew {...topRawData} />
         <Features featureData={featureData} />
-        {/*<OtherPlatformTab tabData={tabData} />*/}
+        <OtherPlatformTab pageInfo={constants.psychometricAssessments} />
       </main>
       <Footer />
     </div>

@@ -22,6 +22,8 @@ const centralLinks = [
 
 const sideMenuItems = [
   {name: "Home", link: "/"},
+  {name: "Platform", link: "/platform"},
+  {name: "Solutions", link: "/solutions"},
   {name: "Pricing", link: "/pricing"},
 ]
 
@@ -64,7 +66,7 @@ const TopNav = props => {
             screen.width > breakPoint ?
               <>
                 <div className={"font-normal ml-8 text-dark text-bs"}>
-                  <Link href='#'>Try Yourself</Link>
+                  <Link href='/subscribe/start-trial'>Try Yourself</Link>
                 </div>
                 <Button onClick={() => router.replace('https://app.skillcounty.com/auth')} variant="contained"
                         color="primary" className="py-1.5 px-5">Login</Button>

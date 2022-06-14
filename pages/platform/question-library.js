@@ -12,11 +12,9 @@ import Image from "next/image";
 import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
 // import {router} from "next/client";
 import varietyOfQuestions from "/assets/platforms/Variety of Questions for a variety of roles.png";
-import ownLibrary from "/assets/platforms/A library of your own.png"
+import ownLibrary from "/assets/platforms/A library of your own.png";
+import constants from "../../src/Constants/Constants";
 
-const actionHandler = ({actionData}) => {
-  // router.push("/pricing").then();
-}
 
 const Platform = () => {
   return (
@@ -32,7 +30,7 @@ const Platform = () => {
         {/*<Benefits benefitsData={benefitsData} />*/}
         <Features featureData={featureData} />
         <Actions actionData={actionData} />
-        {/*<OtherPlatformTab tabData={tabData} />*/}
+        <OtherPlatformTab pageInfo={constants.questionLibrary} />
       </main>
       <Footer />
     </div>
@@ -47,7 +45,6 @@ const actionData = [
     heading: <div>Build the best teams with the <span className="font-bold text-4xl">most affordable</span> solution
     </div>,
     buttonLabel: "Check Pricing",
-    actionHandler: actionHandler
   },
 ];
 
@@ -91,7 +88,7 @@ const topRawData = {
   heading: "Question library",
   description: "Craft high quality assessments from SkillCounty’s extensive library of expert designed questions or deploy your own experts to create your private library.",
   descriptionTitle: "Hundred of expert designed questions covering a wide range of skills",
-  image: <Image src="/images/platform/book-library.png" height="610px" width="580px"/>,
-  imagePosition: "md:right-28 right-8 top-8 sm:top-16 md:top-28"
+  image: <Image src="/images/platform/book-library.png" alt="collection of books" height="510px" width="480px"/>,
+  imagePosition: "md:right-40 right-8 top-8 sm:top-16 md:top-28"
 }
 

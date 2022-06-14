@@ -2,8 +2,15 @@ import React from 'react';
 import Button from "../../Button";
 import PropTypes from "prop-types";
 import EffectAppearOnView from "../../Effects/EffectAppearOnView";
+import {useRouter} from "next/router";
 
-const ActionCard = ({heading, buttonLabel, actionHandler}) => {
+const ActionCard = ({heading, buttonLabel}) => {
+  const router = useRouter();
+
+  const actionHandler = () => {
+    router.push('/subscribe/start-trial').then();
+  }
+
   return (
       <div className="m-4 w-full sm:w-1/2 p-4">
         <div>
@@ -25,5 +32,4 @@ export default ActionCard;
 ActionCard.propTypes = {
   heading: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   buttonLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  actionHandler: PropTypes.func
 }

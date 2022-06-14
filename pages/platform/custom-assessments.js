@@ -12,6 +12,7 @@ import Image from "next/image";
 import OnTopBgTrapez from "../../src/components/pages/Home/OnTopBgTrapez";
 import DemoForm from "../../src/components/pages/Home/DemoForm";
 import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
+import constants from "../../src/Constants/Constants";
 
 const Platform = () => {
   return (
@@ -26,7 +27,7 @@ const Platform = () => {
         <TopSectionNew {...topRawData} />
         <Features featureData={featureData} />
         <OnTopBgTrapez bgFillColor={"fill-orange-light"} headColor="text-dark" contentColor="text-primary"/>
-        <OtherPlatformTab tabData={tabData} />
+        <OtherPlatformTab pageInfo={constants.customAssessments} />
         <DemoForm />
       </main>
       <Footer />
@@ -76,7 +77,7 @@ const topRawData = {
   heading: "Customizable assessments",
   descriptionTitle: "Customize assessments for the right fit ",
   description: "Create assessments from scratch or use the SkillCounty Premium library to mix and match questions to assess different skills in one assessment.",
-  image: <Image src="/images/platform/hand-and-pen.png" height="834px" width="890px"/>
+  image: <Image src="/images/platform/hand-and-pen.png" alt="hand with a pen" height="834px" width="890px"/>
 }
 
 

@@ -9,6 +9,7 @@ import Footer from "../../src/components/Footer";
 import Image from "next/image";
 // import betterWayImage from "/assets/platforms/Better-way-to-screen-applicants.png";
 import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
+import constants from "../../src/Constants/Constants";
 
 const Platform = () => {
   return (
@@ -22,7 +23,7 @@ const Platform = () => {
         {/*<TopPlatformSection {...topRawData} />*/}
         <TopSectionNew {...topRawData} />
         <Features featureData={featureData} />
-        {/*<OtherPlatformTab tabData={tabData} />*/}
+        <OtherPlatformTab pageInfo={constants.oneWayInterviewsOrAsynchronousInterviews} />
       </main>
       <Footer />
     </div>
@@ -71,7 +72,7 @@ const topRawData = {
   heading: "One way Interviews or Asynchronous Interviews",
   description: "Skip scheduling woes, save time and unambiguously access communication skills and more using asynchronous interviews",
   descriptionTitle: "Accelerate hiring with one way audio and video interviews",
-  image: <Image src="/images/platform/one-way-interview.png" height="614px" width="908px"/>,
+  image: <Image src="/images/platform/one-way-interview.png" alt="one way interview" height="614px" width="908px"/>,
   imagePosition: "top-24 sm:top-28"
 }
 

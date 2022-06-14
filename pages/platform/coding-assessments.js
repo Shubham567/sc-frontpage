@@ -11,7 +11,8 @@ import Footer from "../../src/components/Footer";
 import Image from "next/image";
 import OnTopBgTrapez from "../../src/components/pages/Home/OnTopBgTrapez";
 import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
-import codingLibrary from "/assets/platforms/Comprehensive library of coding-design questions.png"
+import codingLibrary from "/assets/platforms/Comprehensive library of coding-design questions.png";
+import constants from "../../src/Constants/Constants";
 
 const Platform = () => {
   return (
@@ -26,7 +27,7 @@ const Platform = () => {
         <TopSectionNew {...topRawData} />
         <Features featureData={featureData} />
         <OnTopBgTrapez bgFillColor={"fill-orange-light"} headColor="text-dark" contentColor="text-primary"/>
-        {/*<OtherPlatformTab tabData={tabData} />*/}
+        <OtherPlatformTab pageInfo={constants.codingAssessmentsAndInterviews} />
       </main>
       <Footer />
     </div>

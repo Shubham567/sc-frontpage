@@ -30,7 +30,7 @@ const RightSide = ({image, imagePosition}) => {
       <div className="absolute w-1/2 -z-20 -translate-x-1/2 left-1/2 h-screen bg-yellow">
 
       </div>
-      <div className={clsx("absolute mt-8 sm:mt-6 md:mt-4 xl:mt-2 -z-10 right-0 top-1/2 -translate-y-1/5", imagePosition && imagePosition)}>
+      <div className={clsx("absolute mt-8 sm:mt-6 md:mt-4 xl:mt-2 -z-10", imagePosition)}>
         {
           image
         }

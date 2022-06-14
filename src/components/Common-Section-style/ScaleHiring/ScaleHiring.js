@@ -2,8 +2,18 @@ import React from 'react';
 import Button from "../../Button";
 import EffectAppearOnView from "../../Effects/EffectAppearOnView";
 import PropTypes from "prop-types";
+import {useRouter} from "next/router";
 
-const ScaleHiring = ({title, requestDemo, calculateROI, description}) => {
+const ScaleHiring = ({title, description}) => {
+  const router = useRouter();
+
+  const requestDemo = () => {
+
+  }
+
+  const getStarted = () => {
+    router.push('/subscribe/start-trial').then();
+  }
 
   return (
     <EffectAppearOnView>
@@ -23,7 +33,7 @@ const ScaleHiring = ({title, requestDemo, calculateROI, description}) => {
             <Button onClick={requestDemo} rounded className="bg-secondary text-white text-xl hover:bg-orange ease-in-out duration-300 font-medium pl-8 pr-8 pt-2 pb-2 rounded-full">Request Demo</Button>
           </div>
           <div className="mt-4">
-            <Button onClick={calculateROI} rounded className="text-xl font-medium hover:bg-yellow ease-in-out duration-300 pl-8 pr-8 pt-2 pb-2 rounded-full text-dark border-2 border-dark">Get Started</Button>
+            <Button onClick={getStarted} rounded className="text-xl font-medium hover:bg-yellow ease-in-out duration-300 pl-8 pr-8 pt-2 pb-2 rounded-full text-dark border-2 border-dark">Get Started</Button>
           </div>
         </div>
       </div>
@@ -36,6 +46,4 @@ export default ScaleHiring;
 ScaleHiring.propTypes = {
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  requestDemo: PropTypes.func,
-  calculateROI: PropTypes.func,
 }

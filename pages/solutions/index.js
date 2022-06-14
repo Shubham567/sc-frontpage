@@ -12,19 +12,8 @@ import Image from "next/image";
 import ScaleHiring from "../../src/components/Common-Section-style/ScaleHiring/ScaleHiring";
 import TopSectionForSolution from "../../src/components/pages/Ssolutions/TopSection";
 import OnTopBgTrapez from "../../src/components/pages/Home/OnTopBgTrapez";
+import {useRouter} from "next/router";
 // import {router} from "next/client";
-
-const actionHandler = ({actionData}) => {
-  // router.push("/pricing").then();
-}
-
-const requestDemo = () => {
- // router.push("/platform/proctoring").then();
-}
-
-const getStarted = () => {
-  // router.push("/pricing").then();
-}
 
 const Platform = () => {
   return (
@@ -39,7 +28,7 @@ const Platform = () => {
         <TopSectionForSolution {...topRawData} />
         {/*<Benefits benefitsData={benefitsData} />*/}
         <Features featureData={featureData1}/>
-        <ScaleHiring title={"Hire Affoardably At Scale"} requestDemo={requestDemo} calculateROI={getStarted}/>
+        <ScaleHiring title={"Hire Affoardably At Scale"}/>
         <Features featureData={featureData2}/>
         <Actions actionData={actionData}/>
         <Features featureData={featureData3}/>
@@ -59,24 +48,24 @@ const actionData = [
     heading: <div>Build the best teams with the <span className="font-bold text-4xl">most affordable</span> solution
     </div>,
     buttonLabel: "Check Pricing",
-    actionHandler: actionHandler
+    // actionHandler: actionHandler
   },
 ];
 
 const benefitsData = [
   {
     id: 1,
-    image: <Image src="/images/platform/random.png" width="158px" height="81px"/>,
+    image: <Image src="/images/platform/random.png" alt="random" width="158px" height="81px"/>,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium, sem et efficitur blandit."
   },
   {
     id: 2,
-    image: <Image src="/images/platform/random.png" width="158px" height="81px"/>,
+    image: <Image src="/images/platform/random.png" alt="random"  width="158px" height="81px"/>,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium, sem et efficitur blandit."
   },
   {
     id: 3,
-    image: <Image src="/images/platform/random.png" width="158px" height="81px"/>,
+    image: <Image src="/images/platform/random.png" alt="random"  width="158px" height="81px"/>,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium, sem et efficitur blandit."
   },
 ];

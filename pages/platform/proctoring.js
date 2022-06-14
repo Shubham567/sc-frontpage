@@ -15,6 +15,7 @@ import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSec
 import preventImpersonation from "/assets/platforms/prevent-impersonation-via-screenshot.png";
 import additionalPlagiarismProtection from "/assets/platforms/additional-plagiarism-protection-measures.png";
 import restrictIPAddress from "/assets/platforms/Restrict IP address for fair test taking.png";
+import constants from "../../src/Constants/Constants"
 
 const actionHandler = ({actionData}) => {
   console.log("Button Clicked")
@@ -34,7 +35,7 @@ const Platform = () => {
         <Features featureData={featureData1} />
         <OnTopBgTrapez bgFillColor={"fill-orange-light"} headColor="text-dark" contentColor="text-primary"/>
         <Features featureData={featureData2} />
-        {/*<OtherPlatformTab tabData={tabData} />*/}
+        <OtherPlatformTab pageInfo={constants.proctoring} />
         <DemoForm />
       </main>
       <Footer />

@@ -14,12 +14,6 @@ const actionHandler = ({actionData}) => {
   console.log("Button Clicked")
 }
 
-const requestDemo = () => {
-  // router.push("/platform/proctoring").then();
-};
-const getStarted = () => {
-  // router.push("/pricing").then();
-};
 
 const MainPlatform = () => {
   return (
@@ -42,7 +36,7 @@ const MainPlatform = () => {
         {/*/>*/}
         <OnTopBgTrapez bgFillColor={"fill-orange-light"} headColor="text-dark" contentColor="text-primary"/>
         {/*<Actions actionData={actionData} />*/}
-        <OtherPlatformTab tabData={tabData}/>
+        {/*<OtherPlatformTab tabData={tabData}/>*/}
       </main>
       <Footer/>
     </div>
@@ -99,7 +93,7 @@ const featureData = [
   },
   {
     id: 2,
-    image: <Image alt="random" src="/images/platform/create-assessment.png" width="700px" height="400px"/>,
+    image: <Image src="/images/platform/create-assessment.png" alt="Create assessments within minutes" width="700px" height="400px"/>,
     heading: "Create assessments within minutes!",
     description: "Create a test that contains questions from both your experts and our experts using SkillCounty's premium questions and test collection, and you'll have a full-fledged assessment in minutes.",
     direction: "flex-col-reverse xl:flex-row-reverse"
