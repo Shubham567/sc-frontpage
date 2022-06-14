@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 import clsx from "clsx";
 
 
-const Button = React.memo(React.forwardRef(({className,variant,color,children,size,rounded, ...props},fwdRef) => {
+const Button = React.forwardRef(({className,variant,color,children,size,rounded, ...props},fwdRef) => {
 
 
   const commonStyles = (variant === "contained" || variant === "outlined") ?
     "flex justify-center align-center shadow-lg transition-all active:translate-y-1 active:shadow-none"
     : "px-1";
 
-  const textStyles = variant ? (variant === "contained" ? "text-white" : `${color && `text-${color}`} hover:text-white`) : "text-inherit";
+  const textStyles = variant ? (variant === "contained" ? "text-white" : `${color && `text-${color}`}`) : "text-inherit";
   const bgStyles = variant ? variant === "outlined" ? `bg-white hover:bg-${color || "dark"}` : color ? `bg-${color}` :  "bg-dark" : "" //in case of no variant;
-  const borderStyles = variant === "outlined" && (color ? `border-2 border-${color} hover:text-white` : "border-2")
+  const borderStyles = variant === "outlined" && (color ? `border-2 border-${color} hover:text-${color}` : "border-2")
   const sizeStyles =  (variant === "contained" || variant === "outlined") ?
      size === "md" || !size ? "px-4 py-2"  :
        size === "sm" ? "px-3 py-1" :
@@ -47,7 +47,7 @@ const Button = React.memo(React.forwardRef(({className,variant,color,children,si
       {children}
     </button>
   );
-}));
+});
 
 Button.displayName = "Button";
 

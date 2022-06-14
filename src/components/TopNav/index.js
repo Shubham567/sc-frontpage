@@ -13,18 +13,50 @@ import IconButton from "../IconButton";
 import {IoMdMenu} from "react-icons/io"
 import SideMenu from "../SideMenu";
 import {useRouter} from "next/router";
+import DropDown from "../DropDown";
 
 const centralLinks = [
-  {name: "Platform", link: "/platform"},
-  {name: "Solutions", link: "/solutions"},
-  {name: "Pricing", link: "/pricing"},
+  {name: "Platform", menuItems : [
+      {
+        name: "Customizable Assessments",
+        href:"/platform/custom-assessments"
+      },
+      {
+        name: "AI based Evaluations",
+        href:"/platform/ai-based-evaluation"
+      },
+      {
+        name: "Coding Assessments",
+        href:"/platform/coding-assessments"
+      },
+      {
+        name: "One way interviews",
+        href:"/platform/one-way-interviews"
+      },
+      {
+        name: "Proctoring",
+        href:"/platform/proctoring"
+      },
+      {
+        name: "Psychometric Assessments",
+        href:"/platform/psychometric-assessments"
+      },
+      {
+        name: "Question Library",
+        href:"/platform/question-library"
+      },
+      {
+        name: "Assessment MarketPlace",
+        href:"/platform/assessment-marketplace"
+      },
+    ]},
+  {name: "Solutions", href: "/solutions"},
+  {name: "Pricing", href: "/pricing"},
 ]
 
 const sideMenuItems = [
-  {name: "Home", link: "/"},
-  {name: "Platform", link: "/platform"},
-  {name: "Solutions", link: "/solutions"},
-  {name: "Pricing", link: "/pricing"},
+  {name: "Home", href: "/"},
+  {name: "Pricing", href: "/pricing"},
 ]
 
 const breakPoint = 768;
@@ -56,17 +88,20 @@ const TopNav = props => {
         <div className="flex gap-x-5 justify-end items-center">
           {
             screen.width > 768 &&
-            <div className="flex gap-x-5">
+            <div className="flex gap-x-5 font-medium text-dark text-bs">
               {
-                centralLinks.map(cl => <Link key={cl.link} href={cl.link}><span className={clsx("cursor-pointer", (router?.pathname.includes(cl.link) ? "font-bold text-primary" : "font-normal text-dark"))}>{cl.name}</span></Link>)
+                centralLinks.map(cl =>
+                  cl.menuItems ? <DropDown key={cl.name} data={cl} topBtnProps={{style:{fontWeight: 500}}} /> :
+                  <Link key={cl.href} href={cl.href}>{cl.name}</Link>
+                )
               }
             </div>
           }
           {
             screen.width > breakPoint ?
               <>
-                <div className={"font-normal ml-8 text-dark text-bs"}>
-                  <Link href='/subscribe/start-trial'>Try Yourself</Link>
+                <div className={"font-semibold ml-8 text-dark text-bs "}>
+                  <Link href='https://app.skillcounty.com/subscribe/start-trial'>Sign Up for Free</Link>
                 </div>
                 <Button onClick={() => router.replace('https://app.skillcounty.com/auth')} variant="contained"
                         color="primary" className="py-1.5 px-5">Login</Button>
@@ -79,13 +114,36 @@ const TopNav = props => {
         </div>
       </div>
       <SideMenu open={openSideMenu} onClose={toggleSideMenu}>
-        <div className="flex flex-col text-primary p-2">
+        <div className="flex flex-col text-primary p-2 gap-2">
           {
             sideMenuItems.map(menuItem => <div key={menuItem.name}>
-              <Link href={menuItem.link}>
+              <Link href={menuItem.href}>
                 {menuItem.name}
               </Link>
             </div>)
+          }
+          {
+            centralLinks.map(centralItem => {
+              if(centralItem.menuItems){
+                return <div className="flex flex-col">
+                  <div>
+                    <span className="text-gray-dark">
+                      {centralItem.name}
+                    </span>
+                  </div>
+                  <div className="flex flex-col pl-2">
+                    {
+                      centralItem.menuItems.map(mi => <Link href={mi.href} key={mi.name}>
+                        {mi.name}
+                      </Link>)
+                    }
+                  </div>
+                </div>
+              }
+              else {
+
+              }
+            })
           }
         </div>
       </SideMenu>

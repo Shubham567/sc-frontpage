@@ -5,6 +5,7 @@ import Button from "../../Button";
 import {useDispatch} from "react-redux";
 import {actionSetHomeDemoRequestForm} from "../../../store/reducers/homeReducer/homeReducerActions";
 import clsx from "clsx";
+import Link from "next/link";
 
 const OnTopBgTrapez = props => {
   const dispatch = useDispatch();
@@ -22,7 +23,9 @@ const OnTopBgTrapez = props => {
       </div>
       <div className="flex gap-4">
         <Button variant="outlined" onClick={openModal} color="primary">Request Demo</Button>
-        <Button color="secondary" variant="contained">Get Started</Button>
+        <Link href={"https://app.skillcounty.com/subscribe/start-trial"} passHref>
+          <Button color="secondary" variant="contained">Get Started</Button>
+        </Link>
       </div>
     </div>// interpl.ai
   );

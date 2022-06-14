@@ -7,6 +7,7 @@ import PricingTopBg from "../../../svgs/PricingTopBg";
 import clsx from "clsx";
 import {useSelector} from "react-redux";
 import PropTypes from "prop-types";
+import Link from "next/link";
 
 const PricingCard = ({id, type, topSubHeading, priceMonth, priceYear, heading, subHeading, features}) => {
   const isMonthlySubscription = useSelector((state) => state.toggleReducer.monthlySubscription);
@@ -65,9 +66,11 @@ const PricingCard = ({id, type, topSubHeading, priceMonth, priceYear, heading, s
           <a href={`#features?${type?.toLowerCase()}`} className="text-primary text-base cursor-pointer font-medium">
             View Details
           </a>
-          <Button className="pl-6 pr-6" color="primary" variant="contained" size="md" rounded={false}>
-            Buy Now
-          </Button>
+          <Link href={"https://app.skillcounty.com/subscribe/start-trial"} passHref>
+            <Button className="pl-6 pr-6" color="primary" variant="contained" size="md" rounded={false}>
+              Buy Now
+            </Button>
+          </Link>
           {/*</EffectAppearOnViews>*/}
         </div>
       </div>

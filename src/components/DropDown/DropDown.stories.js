@@ -6,7 +6,7 @@ export default {
 }
 
 const menuItems = {
-  title : "Parent Link",
+  name : "Parent Link",
   menuItems : [
     {
       name: "Child 1",
