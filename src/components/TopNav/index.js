@@ -16,40 +16,42 @@ import {useRouter} from "next/router";
 import DropDown from "../DropDown";
 
 const centralLinks = [
-  {name: "Platform", menuItems : [
+  {
+    name: "Platform", menuItems: [
       {
         name: "Customizable Assessments",
-        href:"/platform/custom-assessments"
+        href: "/platform/custom-assessments"
       },
       {
         name: "AI based Evaluations",
-        href:"/platform/ai-based-evaluation"
+        href: "/platform/ai-based-evaluations"
       },
       {
         name: "Coding Assessments",
-        href:"/platform/coding-assessments"
+        href: "/platform/coding-assessments"
       },
       {
         name: "One way interviews",
-        href:"/platform/one-way-interviews"
+        href: "/platform/one-way-interviews"
       },
       {
         name: "Proctoring",
-        href:"/platform/proctoring"
+        href: "/platform/proctoring"
       },
       {
         name: "Psychometric Assessments",
-        href:"/platform/psychometric-assessments"
+        href: "/platform/psychometric-assessments"
       },
       {
         name: "Question Library",
-        href:"/platform/question-library"
+        href: "/platform/question-library"
       },
       {
         name: "Assessment MarketPlace",
-        href:"/platform/assessment-marketplace"
+        href: "/platform/assessment-marketplace"
       },
-    ]},
+    ]
+  },
   {name: "Solutions", href: "/solutions"},
   {name: "Pricing", href: "/pricing"},
 ]
@@ -57,6 +59,7 @@ const centralLinks = [
 const sideMenuItems = [
   {name: "Home", href: "/"},
   {name: "Pricing", href: "/pricing"},
+  {name: "Solutions", href: "/solutions"},
 ]
 
 const breakPoint = 768;
@@ -66,7 +69,6 @@ const TopNav = props => {
   const [scroll] = useWindowScroll();
   const screen = useScreenSize();
   const router = useRouter();
-
 
   const [openSideMenu, toggleSideMenu] = useToggle(false, [false, true]);
 
@@ -88,11 +90,14 @@ const TopNav = props => {
         <div className="flex gap-x-5 justify-end items-center">
           {
             screen.width > 768 &&
-            <div className="flex gap-x-5 font-medium text-dark text-bs">
+            <div className="flex gap-x-5 text-bs">
               {
                 centralLinks.map(cl =>
-                  cl.menuItems ? <DropDown key={cl.name} data={cl} topBtnProps={{style:{fontWeight: 500}}} /> :
-                  <Link key={cl.href} href={cl.href}>{cl.name}</Link>
+                  cl.menuItems ?
+                    <DropDown key={cl.name} data={cl} activeTab={"/platform"} topBtnProps={{style: {fontWeight: 500}}}
+                              router={router}/> :
+                    <Link key={cl.href} href={cl.href}><span
+                      className={clsx(router?.pathname?.includes(cl.href) ? "font-bold cursor-pointer" : "font-normal cursor-pointer")}>{cl.name}</span></Link>
                 )
               }
             </div>
@@ -124,7 +129,7 @@ const TopNav = props => {
           }
           {
             centralLinks.map(centralItem => {
-              if(centralItem.menuItems){
+              if (centralItem.menuItems) {
                 return <div className="flex flex-col">
                   <div>
                     <span className="text-gray-dark">
@@ -139,8 +144,7 @@ const TopNav = props => {
                     }
                   </div>
                 </div>
-              }
-              else {
+              } else {
 
               }
             })
