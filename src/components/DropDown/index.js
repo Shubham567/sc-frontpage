@@ -41,8 +41,8 @@ const DropDown = ({data,topBtnProps, activeTab, ...props}) => {
                     }
                     }
                     className={classNames(
-                      `${router.pathname?.includes(mi.href) ? 'text-gray-700' : 'text-gray'}`,
-                      'block px-4 py-2 text-sm hover:text-secondary'
+                      `${router.pathname?.includes(mi.href) ? 'text-secondary' : 'text-gray-extra-dark'}`,
+                      'block px-4 py-2 text-sm hover:text-primary'
                     )}
                   >
                     {

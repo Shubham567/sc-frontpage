@@ -5,8 +5,6 @@ import Link from "next/link";
 import Button from "../Button";
 import {useToggle, useWindowScroll} from "@mantine/hooks";
 import clsx from "clsx";
-
-
 import styles from "./TopNav.module.css";
 import useScreenSize from "../../hooks/useScreenSize";
 import IconButton from "../IconButton";
@@ -14,6 +12,7 @@ import {IoMdMenu} from "react-icons/io"
 import SideMenu from "../SideMenu";
 import {useRouter} from "next/router";
 import DropDown from "../DropDown";
+import {Toaster} from "react-hot-toast";
 
 const centralLinks = [
   {
@@ -118,6 +117,16 @@ const TopNav = props => {
           }
         </div>
       </div>
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          success: {
+            theme: {
+              primary: "#5ee3a8"
+            }
+          }
+        }}
+      ></Toaster>
       <SideMenu open={openSideMenu} onClose={toggleSideMenu}>
         <div className="flex flex-col text-primary p-2 gap-2">
           {

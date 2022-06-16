@@ -33,11 +33,11 @@ const PricingCard = ({id, type, topSubHeading, priceMonth, priceYear, heading, s
                 isMonthlySubscription ? (
                   priceMonth === "Free" ? <p>Free<sup className="text-base font-light">/forever</sup></p> : priceMonth ?
                     <p><span className="text-xl">$</span>{priceMonth}<sup className="text-base font-normal">/Month</sup>
-                    </p> : <a href="mailto:contact@skillcounty.com" className="text-base flex cursor-pointer font-light">Contact Us</a>
+                    </p> : <a href="contact" className="text-base flex cursor-pointer font-light">Contact Us</a>
                 ) : (
                   priceYear === "Free" ? <p>Free<sup className="text-base font-light">/forever</sup></p> : priceYear ?
                     <p><span className="text-xl">$</span>{priceYear}<sup className="text-base font-normal">/Year</sup>
-                    </p> : <a href="mailto:contact@skillcounty.com" className="text-base flex cursor-pointer font-light">Contact Us</a>
+                    </p> : <a href="contact" className="text-base flex cursor-pointer font-light">Contact Us</a>
                 )
               }
             </h2>
