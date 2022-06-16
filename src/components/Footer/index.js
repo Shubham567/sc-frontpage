@@ -16,10 +16,6 @@ const sections = [
         name: "Campus Placement",
         link: ""
       },
-      {
-        name: "Campus Placement",
-        link: ""
-      },
     ]
   },
   {
@@ -52,15 +48,15 @@ const sections = [
     links: [
       {
         name: "Feedback",
-        link: ""
+        link: "/contact"
       },
       {
         name: "contact@skillcounty.com",
-        link: ""
+        link: "mailto:contact@skillcounty.com"
       },
       {
         name: "About Us",
-        link: ""
+        link: "/about-us"
       },
     ]
   },
