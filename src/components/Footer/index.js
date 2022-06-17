@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Link from "next/link";
 import {IoLogoFacebook, IoLogoInstagram, IoLogoTwitter, IoLogoYoutube} from "react-icons/io";
 import IconButton from "../IconButton";
 import Image from "next/image";
+import {useMatomo} from "@datapunt/matomo-tracker-react";
 
 const sections = [
   {
@@ -91,6 +92,12 @@ const socialLinks  = [
 ]
 
 const Footer = () => {
+  const {trackPageView} = useMatomo();
+
+  useEffect(() => {
+    trackPageView();
+  }, [])
+
   return (
     <footer role="navigation" aria-label="useful links" style={{backgroundImage: "url(/images/footer-background.png)"}} className="bg-cover mt-8 flex flex-col text-primary relative">
       {/*<FooterGrayTriangles className="absolute bottom-0 left-0 w-full h-full -z-10" />*/}

@@ -4,7 +4,6 @@ import React from "react";
 import CustomerList from "../src/components/pages/Home/CustomerList";
 import OnTopBgTrapez from "../src/components/pages/Home/OnTopBgTrapez";
 import Footer from "../src/components/Footer";
-import {useDispatch} from "react-redux";
 import HiringAssessment from "../src/components/Sections/HiringAssessmentPortal";
 import PercentageView from "../src/components/Sections/PercentageView";
 import Advantage from "../src/components/Sections/Advantage";
@@ -14,7 +13,7 @@ import HiringSolution from "../src/components/pages/Home/v2/HiringSolution";
 
 
 export default function Home() {
-  const dispatch = useDispatch();
+
 
   return (
     <div className="relative">

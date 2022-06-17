@@ -7,13 +7,12 @@ import withRedux from "next-redux-wrapper";
 import store from '../src/store';
 import DemoForm from "../src/components/pages/Home/DemoForm";
 
-import { createInstance, MatomoProvider } from "@datapunt/matomo-tracker-react";
+import {createInstance, MatomoProvider} from "@datapunt/matomo-tracker-react";
 import useMatomoPageViewTracker from "../src/hooks/useMatomoPageViewTracker";
 import matomoConfig from "../src/Constants/matomoConfig";
 
-const matomoInstance = createInstance(matomoConfig);
-
 function MyApp({ Component, pageProps }) {
+  const matomoInstance = createInstance(matomoConfig);
   useMatomoPageViewTracker();
   return <Provider store={store} >
     <MatomoProvider value={matomoInstance}>

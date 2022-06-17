@@ -1,7 +1,6 @@
 const matomoConfig = {
   urlBase: "https://skillcounty.matomo.cloud/",
-  srcUrl: "https://cdn.matomo.cloud/skillcounty.matomo.cloud/matomo.js",
-  disabled: true,
+  disabled: process.env.NODE_ENV !== 'production',
   siteId: 7,
   heartBeat: {
     active: true,
@@ -15,5 +14,7 @@ const matomoConfig = {
     setRequestMethod: "POST",
   }
 }
+
+
 
 export default matomoConfig;
