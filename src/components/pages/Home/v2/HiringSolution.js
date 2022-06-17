@@ -1,10 +1,9 @@
 import React from 'react';
 import SlidePresentation from "../../../SlidePresenstation";
 // import {IoBag} from "react-icons/io";
-
 import {GiStack, GiTechnoHeart} from "react-icons/gi";
-import {RiBuilding4Line,RiShoppingBag2Fill, RiMedalFill} from "react-icons/ri";
-import {MdAddCall,MdNaturePeople} from "react-icons/md";
+import {RiBuilding4Line, RiMedalFill, RiShoppingBag2Fill} from "react-icons/ri";
+import {MdAddCall, MdNaturePeople} from "react-icons/md";
 
 import bulkHiringImage from "/assets/home/bulkHiring.png"
 import callCenterImage from "/assets/home/callCenterHiring.png"
@@ -12,6 +11,7 @@ import campusHiringImage from "/assets/home/campusHiring.png"
 import entranceExamImage from "/assets/home/entranceExams.png"
 import professionalHiringImage from "/assets/home/professionalHiring.png"
 import technicalHiringImage from "/assets/home/technicalHiring.png"
+import placementCellImage from "/assets/home/campus-placement.png"
 import Image from "next/image";
 
 const HiringSolution = () => {
@@ -98,7 +98,7 @@ const HiringSolution = () => {
           {
             title: "College Placement Cell",
             icon: <MdNaturePeople />,
-            image: null,
+            image: <Image src={placementCellImage} width={753} height={434} alt="College Placement Cell assessment and competition"/>,
             content: <div>
               <h4 className="font-semibold mb-5 text-primary">
                 Conduct mock placement assessments to help your student prepare and excel

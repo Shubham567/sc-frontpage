@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
-import * as ReactDOM from "react-dom";
 import clsx from "clsx";
 import dynamic from "next/dynamic";
 

@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import ScLogo from "../svgs/ScLogo";
 import Link from "next/link";
 import Button from "../Button";

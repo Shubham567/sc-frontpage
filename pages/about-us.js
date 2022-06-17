@@ -3,9 +3,7 @@ import appDetails from "../config/appDetails";
 import Head from "next/head";
 import React from "react";
 import OnTopBgTrapez from "../src/components/pages/Home/OnTopBgTrapez";
-import TopEllipses from "../src/components/svgs/TopEllipses";
 import Footer from "../src/components/Footer";
-import DemoForm from "../src/components/pages/Home/DemoForm";
 
 
 export default function RefundPolicyPage() {
@@ -31,7 +29,7 @@ export default function RefundPolicyPage() {
           </p>
         </div>
       </main>
-      
+
 
       <OnTopBgTrapez />
       <Footer />

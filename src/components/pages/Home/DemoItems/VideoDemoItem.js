@@ -2,8 +2,6 @@ import React, {useEffect, useState} from 'react';
 import {motion, useAnimation} from "framer-motion";
 import clsx from "clsx";
 import DemoReport from "./DemoReport";
-import PdfFile from "../../../svgs/PdfFile";
-import CustomReportIcon from "../../../svgs/CustomReportIcon";
 import Image from "next/image";
 import interviewImage from "../../../../../assets/interview.png";
 import PlayIcon from "../../../svgs/PlayIcon";

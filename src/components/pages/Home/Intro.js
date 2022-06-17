@@ -1,14 +1,11 @@
 import React from 'react';
-import CallToActionBtn from "../../Button/CallToActionBtn";
 import styles from "./intro.module.css";
 import clsx from "clsx";
 import Image from "next/image";
-import TestDemoTop from "./TestDemoTop";
 import Link from "next/link";
-import { IoIosArrowRoundForward } from "react-icons/io";
+import {IoIosArrowRoundForward} from "react-icons/io";
 
 import commonStyles from "./Home.module.css";
-import Button from "../../Button";
 import {useDispatch} from "react-redux";
 import {actionSetHomeDemoRequestForm} from "../../../store/reducers/homeReducer/homeReducerActions";
 import IconButton from "../../IconButton";
@@ -70,7 +67,13 @@ const Intro = () => {
         <div className="flex mt-8 lg:bg-transparent items-center justify-end w-full lg:w-1/2 h-96 top-0 lg:h-full absolute lg:right-0 lg:top-0" >
           {/*// The Interactive comp goes here*/}
           {/*<TestDemoTop />*/}
-           <Image src="/images/cool-girl.png" layout="fill" objectFit="contain" />
+           <Image src="/images/cool-girl.png"
+                  layout="fill"
+                  objectFit="contain"
+                  alt="SkillCounty has the best and most affordable assessment products & tools in the market."
+                  priority
+                  unoptimized
+           />
           {/* Uncomment to enable ROI calculator button */}
           {/*<div className="flex w-2/5 h-full flex-col">*/}
           {/*  <p className="mt-8 text-md md:text-2xl font-normal mb-2">Calculate  ROI</p>*/}

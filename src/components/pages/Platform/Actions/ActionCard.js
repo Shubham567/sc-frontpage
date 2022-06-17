@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from "../../../Button";
 import PropTypes from "prop-types";
-import EffectAppearOnView from "../../../Effects/EffectAppearOnView";
 
 const ActionCard = ({heading, buttonLabel, actionHandler}) => {
   return (

@@ -1,6 +1,5 @@
 import React from 'react';
 import FeaturesCard from "./FeaturesCard";
-import Image from "next/image";
 import PropTypes from "prop-types";
 
 const Features = ({featureData}) => {

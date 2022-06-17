@@ -3,7 +3,6 @@ import Head from "next/head";
 import appDetails from "../../config/appDetails";
 import TopNav from "../../src/components/TopNav";
 import Features from "../../src/components/Common-Section-style/Features/Features";
-import OtherPlatformTab from "../../src/components/Common-Section-style/OtherPlatformTab/OtherPlatformTab";
 import Footer from "../../src/components/Footer";
 import Image from "next/image";
 import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";

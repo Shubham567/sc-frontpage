@@ -8,13 +8,11 @@ import QuestionTags from "../src/components/pages/Home/QuestionTags";
 import OnTopBgTrapez from "../src/components/pages/Home/OnTopBgTrapez";
 import HowToUse from "../src/components/pages/Home/HowToUse";
 import OnSolidBg from "../src/components/pages/Home/OnSolidBg";
-import SectionWithCardsAndButtons from "../src/components/pages/Home/SectionWithCardsAndButtons";
 import TopEllipses from "../src/components/svgs/TopEllipses";
 import Footer from "../src/components/Footer";
 import UseCases from "../src/components/pages/Home/UseCases";
 import Button from "../src/components/Button";
 import ThreeCards from "../src/components/ThreeCards";
-import DemoForm from "../src/components/pages/Home/DemoForm";
 import {useDispatch} from "react-redux";
 import {actionSetHomeDemoRequestForm} from "../src/store/reducers/homeReducer/homeReducerActions";
 import ImageBesideText from "../src/components/ImageBesideText";
@@ -106,7 +104,7 @@ export default function Home() {
 
       <OnTopBgTrapez />
       <Footer />
-      
+
     </div>
   )
 }

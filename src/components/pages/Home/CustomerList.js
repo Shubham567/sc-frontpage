@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import clsx from "clsx";
 import styles from "./CustomerList.module.css";
 import Image from "next/image";
@@ -7,8 +6,7 @@ import Image from "next/image";
 const customerListData = [
   {name : "Merck", image : "/images/brands/merckLogo.png", alt : "Merck is our customer", height: 60, width : 180},
   {name : "Maruti", image : "/images/brands/marutiLogo.png", alt : "Maruti Suzuki",  height: 70, width : 70},
-  {name : "Merck", image : "/images/brands/merckLogo.png", alt : "Merck is our customer", height: 60, width : 180},
-  {name : "Maruti", image : "/images/brands/marutiLogo.png", alt : "Maruti Suzuki",  height: 70, width : 70},
+  {name : "Sunbright Manpower", image : "/images/brands/sun-bright-manpower-logo.png", alt : "Sunbright Manpower", height: 70, width : 150},
 ]
 
 const CustomerList = props => {

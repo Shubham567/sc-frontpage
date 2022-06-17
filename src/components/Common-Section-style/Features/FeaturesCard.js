@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from "next/image"
 import clsx from "clsx";
 import PropTypes from "prop-types";
 import EffectAppearOnView from "../../Effects/EffectAppearOnView";

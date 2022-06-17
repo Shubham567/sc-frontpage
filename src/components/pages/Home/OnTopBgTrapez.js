@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import BgTrapez from "../../svgs/BgTrapez";
 import Button from "../../Button";
 import {useDispatch} from "react-redux";

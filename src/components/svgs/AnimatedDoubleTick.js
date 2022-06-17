@@ -1,7 +1,7 @@
 import * as React from "react"
+import {useEffect} from "react"
 import {motion, useAnimation} from "framer-motion";
-import { useIntersection } from '@mantine/hooks';
-import {useEffect} from "react";
+import {useIntersection} from '@mantine/hooks';
 
 const icon = {
   hidden: {

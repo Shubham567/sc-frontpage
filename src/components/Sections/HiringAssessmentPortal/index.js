@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from "next/image"
 import CollapsibleCard from "../../CollapsibleCard";
-import EffectAppearOnView from "../../Effects/EffectAppearOnView";
 
 const HiringAssessment = () => {
   return (

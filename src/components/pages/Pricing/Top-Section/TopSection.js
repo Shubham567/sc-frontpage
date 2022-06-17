@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import ToggleButton from "../../../ToggleButton";
 import {useDispatch} from "react-redux";
 import {actionSetMonthOrYear} from "../../../../store/reducers/toggleReducer/toggleReducerActions";

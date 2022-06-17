@@ -1,6 +1,5 @@
 import React from 'react';
 import BenefitsCard from "./BenefitsCard/BenefitsCard";
-import Image from "next/image";
 import PropTypes from "prop-types";
 
 const Benefits = ({benefitsData}) => {

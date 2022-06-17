@@ -1,7 +1,6 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import useIncrementUpto from "../../../hooks/useIncrementUpto";
-
 
 
 const EffectIncrementUpto = ({wrapperComponent,maxIncrementDelay,children,targetValue,padStart = 2,padStartWith = "0",...props}) => {

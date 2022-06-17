@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { IoInformationCircleOutline } from "react-icons/io5";
 import clsx from "clsx";
 import PropTypes from "prop-types";
 import EffectAppearOnView from "../Effects/EffectAppearOnView";

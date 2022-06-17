@@ -2,17 +2,12 @@ import React from 'react';
 import Head from "next/head";
 import appDetails from "../../config/appDetails";
 import TopNav from "../../src/components/TopNav";
-import TopPlatformSection from "../../src/components/pages/Platform/TopSection/TopSection";
-import Benefits from "../../src/components/Common-Section-style/Benefits/Benefits";
 import Features from "../../src/components/Common-Section-style/Features/Features";
 import Actions from "../../src/components/Common-Section-style/Actions/Actions";
-import OtherPlatformTab from "../../src/components/Common-Section-style/OtherPlatformTab/OtherPlatformTab";
 import Footer from "../../src/components/Footer";
 import Image from "next/image";
 import ScaleHiring from "../../src/components/Common-Section-style/ScaleHiring/ScaleHiring";
 import TopSectionForSolution from "../../src/components/pages/Ssolutions/TopSection";
-import OnTopBgTrapez from "../../src/components/pages/Home/OnTopBgTrapez";
-import {useRouter} from "next/router";
 // import {router} from "next/client";
 
 const Platform = () => {

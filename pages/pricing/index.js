@@ -2,14 +2,12 @@ import React from 'react';
 import Head from "next/head";
 import appDetails from "../../config/appDetails";
 import TopNav from "../../src/components/TopNav";
-import OtherPlatformTab from "../../src/components/Common-Section-style/OtherPlatformTab/OtherPlatformTab";
 import Footer from "../../src/components/Footer";
 import Image from "next/image";
 import OnTopBgTrapez from "../../src/components/pages/Home/OnTopBgTrapez";
 import Pricing from "../../src/components/pages/Pricing/PriceList/Pricing";
 import Feature from "../../src/components/pages/Pricing/Features/Features";
 import TopSection from "../../src/components/pages/Pricing/Top-Section/TopSection";
-import DemoForm from "../../src/components/pages/Home/DemoForm";
 
 const PricingMainPage = () => {
   return (
@@ -38,7 +36,7 @@ const PricingMainPage = () => {
         {/*<section className="mt-24">*/}
         {/*  <OtherPlatformTab tabData={tabData}/>*/}
         {/*</section>*/}
-        
+
       </main>
       <Footer/>
     </div>

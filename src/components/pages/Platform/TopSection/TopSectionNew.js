@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from "next/image";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 

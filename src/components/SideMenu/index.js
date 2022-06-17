@@ -1,9 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import BackDrop from "../../BackDrop";
 import {useClickOutside} from "@mantine/hooks";
 import {AnimatePresence, motion} from "framer-motion";
-import clsx from "clsx";
 
 const menuWidth = 220;
 const SideMenu = ({x = "left",open,onClose, children,...props}) => {

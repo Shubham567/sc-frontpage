@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import CollapsibleCard from "../CollapsibleCard";
 import EffectAppearOnView from "../Effects/EffectAppearOnView";
 

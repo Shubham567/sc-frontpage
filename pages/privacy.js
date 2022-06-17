@@ -5,7 +5,6 @@ import React from "react";
 import OnTopBgTrapez from "../src/components/pages/Home/OnTopBgTrapez";
 import TopEllipses from "../src/components/svgs/TopEllipses";
 import Footer from "../src/components/Footer";
-import DemoForm from "../src/components/pages/Home/DemoForm";
 
 
 export default function Privacy() {
@@ -145,7 +144,7 @@ export default function Privacy() {
           </div>
         </section>
       </main>
-      
+
 
       <OnTopBgTrapez />
       <Footer />

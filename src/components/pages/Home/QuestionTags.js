@@ -1,5 +1,4 @@
 import React, {useEffect, useRef, useState} from 'react';
-import PropTypes from 'prop-types';
 import {motion, useAnimation} from "framer-motion";
 // import ScTestDemoLogo from "../../svgs/ScTestDemoLogo";
 import Image from "next/image";
@@ -20,7 +19,6 @@ import css from "programming-languages-logos/src/css/css.svg";
 import useScreenSize from "../../../hooks/useScreenSize";
 import clsx from "clsx";
 import Button from "../../Button";
-
 
 
 const tags = [

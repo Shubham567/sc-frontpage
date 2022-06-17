@@ -2,7 +2,6 @@ import React from 'react';
 import Head from "next/head";
 import appDetails from "../../config/appDetails";
 import TopNav from "../../src/components/TopNav";
-import TopPlatformSection from "../../src/components/pages/Platform/TopSection/TopSection";
 import Features from "../../src/components/Common-Section-style/Features/Features";
 import OtherPlatformTab from "../../src/components/Common-Section-style/OtherPlatformTab/OtherPlatformTab";
 import Footer from "../../src/components/Footer";

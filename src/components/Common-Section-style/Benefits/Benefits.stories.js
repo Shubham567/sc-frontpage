@@ -1,6 +1,5 @@
 import Benefits from "./Benefits";
 import React from "react";
-import Features from "../Features/Features";
 import Image from "next/image";
 
 export default {

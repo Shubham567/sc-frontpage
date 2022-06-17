@@ -1,8 +1,4 @@
-import React, {useState} from 'react';
-import CollapsibleCard from "../src/components/CollapsibleCard";
-import { IoIosPhonePortrait } from "react-icons/io";
-import ProgressWithText from "../src/components/ProgressWithText";
-import EffectProgressBarIncrement from "../src/components/Effects/EffectProgressBarIncrement";
+import React from 'react';
 import EffectAppearOnView from "../src/components/Effects/EffectAppearOnView";
 import ThreeCards from "../src/components/ThreeCards";
 

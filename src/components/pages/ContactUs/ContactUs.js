@@ -1,12 +1,8 @@
 import React, {useState} from 'react';
 import Image from "next/image";
 import hiMonkey from "/assets/hi-monkey.png";
-import {IoLocationSharp} from "react-icons/io5";
-import {IoCallSharp} from "react-icons/io5";
-import {IoMail} from "react-icons/io5";
-import {AiOutlineUser} from "react-icons/ai";
-import {AiOutlineMail} from "react-icons/ai";
-import {AiOutlineMessage} from "react-icons/ai";
+import {IoCallSharp, IoLocationSharp, IoMail} from "react-icons/io5";
+import {AiOutlineMail, AiOutlineMessage, AiOutlineUser} from "react-icons/ai";
 import {BsTelephone} from "react-icons/bs";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -64,8 +60,8 @@ const ContactUs = () => {
                   className="p-2 mr-4 w-12 h-12 rounded-full border-yellow flex items-center justify-center border-2">
                   <IoLocationSharp className="text-3xl text-orange"/>
                 </div>
-                <div className="text-base text-justify text-dark">
-                  S759 Labs Technology LLP,
+                <div className="text-base text-dark">
+                  s759Labs Technology LLP,
                   C-5, Grafikon Paradise
                   NIBM Road,
                   Khondwa Bk,

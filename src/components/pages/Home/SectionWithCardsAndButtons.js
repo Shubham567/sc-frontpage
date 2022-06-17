@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import TwinCards from "../../TwinCards";
-import Button from "../../Button";
 import clsx from "clsx";
 
 const SectionWithCardsAndButtons = ({topCardHeading,topCardContent,overlayCardContent,mainHeading,mainContent,mainControls,reverse,...props}) => {

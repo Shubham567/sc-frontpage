@@ -1,5 +1,5 @@
-import {Fragment, useState} from 'react'
-import { Menu, Transition } from '@headlessui/react';
+import {Fragment} from 'react'
+import {Menu, Transition} from '@headlessui/react';
 import {useRouter} from "next/router";
 
 function classNames(...classes) {

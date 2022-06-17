@@ -5,7 +5,6 @@ import React from "react";
 import OnTopBgTrapez from "../src/components/pages/Home/OnTopBgTrapez";
 import TopEllipses from "../src/components/svgs/TopEllipses";
 import Footer from "../src/components/Footer";
-import DemoForm from "../src/components/pages/Home/DemoForm";
 
 
 export default function Home() {
@@ -628,7 +627,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      
+
 
       <OnTopBgTrapez />
       <Footer />

@@ -1,7 +1,12 @@
 import React, {useEffect, useRef} from 'react';
-import PropTypes from 'prop-types';
 
-import {BsFillPersonCheckFill, BsFillPersonPlusFill , BsNewspaper, BsFillFileEarmarkBarGraphFill, BsFillPatchCheckFill} from 'react-icons/bs';
+import {
+  BsFillFileEarmarkBarGraphFill,
+  BsFillPatchCheckFill,
+  BsFillPersonCheckFill,
+  BsFillPersonPlusFill,
+  BsNewspaper
+} from 'react-icons/bs';
 import {AiFillFolderAdd} from 'react-icons/ai';
 
 const iconSize = 100;

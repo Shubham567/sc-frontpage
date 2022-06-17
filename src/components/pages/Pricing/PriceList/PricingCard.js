@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from "next/image";
 import Button from "../../../Button";
 import EffectAppearOnView from "../../../Effects/EffectAppearOnView";
 import ToolTip from "../../../ToolTip";

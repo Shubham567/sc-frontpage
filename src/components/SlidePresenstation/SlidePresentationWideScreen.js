@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import PropTypes from 'prop-types';
 import Card from "../Card";
 import clsx from "clsx";
 import {AnimatePresence, motion} from "framer-motion";

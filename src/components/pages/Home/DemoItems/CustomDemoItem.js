@@ -4,7 +4,6 @@ import clsx from "clsx";
 import DemoReport from "./DemoReport";
 import PdfFile from "../../../svgs/PdfFile";
 import CustomReportIcon from "../../../svgs/CustomReportIcon";
-import pdfFile from "../../../svgs/PdfFile";
 
 const texts = {
   questionText: "Please do upload design portfolio here in pdf format",

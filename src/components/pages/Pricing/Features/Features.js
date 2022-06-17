@@ -1,8 +1,6 @@
 import React from 'react';
 import SingleFeature from "./SingleFeature";
 import PropTypes from "prop-types";
-import CheckBoxIcon from "../../../svgs/CheckBoxIcon";
-import EffectAppearOnView from "../../../Effects/EffectAppearOnView";
 import {useSelector} from "react-redux";
 import clsx from "clsx";
 

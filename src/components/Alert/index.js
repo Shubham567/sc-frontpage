@@ -4,7 +4,7 @@ import clsx from "clsx";
 import BackDrop from "../../BackDrop";
 import Card from "../Card";
 
-import { IoClose } from "react-icons/io5";
+import {IoClose} from "react-icons/io5";
 import useEscapeKey from "../../hooks/useEscapeKey";
 import {useClickOutside} from "@mantine/hooks";
 import Button from "../Button";

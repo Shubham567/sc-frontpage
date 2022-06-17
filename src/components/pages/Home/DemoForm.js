@@ -3,7 +3,7 @@ import Modal from "../../Modal";
 import Button from "../../Button";
 import {useDispatch, useSelector} from "react-redux";
 import {actionSetHomeDemoRequestForm} from "../../../store/reducers/homeReducer/homeReducerActions";
-import axios, {Axios} from "axios";
+import axios from "axios";
 import clsx from "clsx";
 
 const DemoForm = () => {

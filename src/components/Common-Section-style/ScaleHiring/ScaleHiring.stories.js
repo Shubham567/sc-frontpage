@@ -1,4 +1,3 @@
-
 import ScaleHiring from "./ScaleHiring";
 import React from 'react';
 

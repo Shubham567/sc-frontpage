@@ -1,5 +1,4 @@
 import React from 'react';
-import Card from "../../Card";
 import EffectAppearOnView from "../../Effects/EffectAppearOnView";
 import ArrowIcon from "../../svgs/ArrowIcon";
 import {useRouter} from "next/router";

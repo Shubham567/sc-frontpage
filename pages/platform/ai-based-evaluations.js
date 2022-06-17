@@ -2,13 +2,11 @@ import React from 'react';
 import Head from "next/head";
 import appDetails from "../../config/appDetails";
 import TopNav from "../../src/components/TopNav";
-import TopPlatformSection from "../../src/components/pages/Platform/TopSection/TopSection";
 import Features from "../../src/components/Common-Section-style/Features/Features";
 import OtherPlatformTab from "../../src/components/Common-Section-style/OtherPlatformTab/OtherPlatformTab";
 import Footer from "../../src/components/Footer";
 import Image from "next/image";
 import OnTopBgTrapez from "../../src/components/pages/Home/OnTopBgTrapez";
-import DemoForm from "../../src/components/pages/Home/DemoForm";
 import insightfulImage from "/assets/platforms/Insightful-auto-graded-reports.png";
 import saveNotes from "/assets/platforms/Save notes on a candidate or in a single click shortlist or reject.png"
 import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
@@ -28,7 +26,7 @@ const Platform = () => {
         <Features featureData={featureData} />
         <OnTopBgTrapez bgFillColor={"fill-orange-light"} headColor="text-dark" contentColor="text-primary"/>
         <OtherPlatformTab pageInfo={constants.AIBasedEvaluations} />
-        
+
       </main>
       <Footer />
     </div>

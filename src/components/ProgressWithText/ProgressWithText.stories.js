@@ -1,5 +1,4 @@
 import ProgressWithText from "./index";
-import styles from"./ProgressWithText.module.css"
 
 export default {
   title: "ui/ProgressWithText",
