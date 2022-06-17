@@ -37,12 +37,22 @@ class MyDocument extends Document {
           <link rel="manifest" href="/manifest.json"/>
           <meta name="msapplication-TileColor" content="#000"/>
           <meta name="msapplication-TileImage" content="/ms-icon-144x144.png"/>
+          {/* Social Media Links */}
           <meta name="theme-color" content="#ffffff"/>
+          <meta property="og:title" content={appDetails.title} />
+          <meta property="og:type" content="website" />
+          <meta property="og:image" content="/images/cool-girl.png" />
+          <meta property="og:description" content={appDetails.metaDescription} />
+
+          <meta name="twitter:title" content={appDetails.title} />
+          <meta name="twitter:description" content={appDetails.metaDescription} />
+          <meta name="twitter:image" content="/images/cool-girl.png" />
+          <meta name="twitter:card" content="summary_large_image" />
 
         </Head>
         <body>
-          <Main />
-          <NextScript />
+        <Main />
+        <NextScript />
         </body>
       </Html>
     )
