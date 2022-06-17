@@ -106,7 +106,7 @@ export default function Home() {
 
       <OnTopBgTrapez />
       <Footer />
-      <DemoForm />
+      
     </div>
   )
 }

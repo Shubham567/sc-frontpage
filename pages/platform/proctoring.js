@@ -36,7 +36,7 @@ const Platform = () => {
         <OnTopBgTrapez bgFillColor={"fill-orange-light"} headColor="text-dark" contentColor="text-primary"/>
         <Features featureData={featureData2} />
         <OtherPlatformTab pageInfo={constants.proctoring} />
-        <DemoForm />
+        
       </main>
       <Footer />
     </div>

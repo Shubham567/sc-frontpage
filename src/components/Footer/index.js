@@ -6,15 +6,23 @@ import Image from "next/image";
 
 const sections = [
   {
-    name: "Services",
+    name: "Product",
     links: [
       {
-        name: "Hiring Manager",
-        link: ""
+        name: "Coding Assessment",
+        link: "/platform/coding-assessments"
       },
       {
-        name: "Campus Placement",
-        link: ""
+        name: "One Way Interviews",
+        link: "/platform/one-way-interviews"
+      },
+      {
+        name: "Assessment Marketplace",
+        link: "/platform/assessment-marketplace"
+      },
+      {
+        name: "Question Library",
+        link: "/platform/question-library"
       },
     ]
   },
@@ -37,17 +45,17 @@ const sections = [
         name: "About us",
         link: "/about-us"
       },
-      {
-        name: "Sitemap",
-        link: ""
-      },
+      // {
+      //   name: "Sitemap",
+      //   link: ""
+      // },
     ]
   },
   {
     name: "Contact",
     links: [
       {
-        name: "Feedback",
+        name: "Contact & Feedback",
         link: "/contact"
       },
       {

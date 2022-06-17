@@ -28,7 +28,7 @@ const Platform = () => {
         <Features featureData={featureData} />
         <OnTopBgTrapez bgFillColor={"fill-orange-light"} headColor="text-dark" contentColor="text-primary"/>
         <OtherPlatformTab pageInfo={constants.customAssessments} />
-        <DemoForm />
+        
       </main>
       <Footer />
     </div>

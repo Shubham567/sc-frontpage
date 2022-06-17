@@ -145,7 +145,7 @@ export default function Privacy() {
           </div>
         </section>
       </main>
-      <DemoForm />
+      
 
       <OnTopBgTrapez />
       <Footer />

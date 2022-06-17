@@ -31,7 +31,7 @@ export default function RefundPolicyPage() {
           </p>
         </div>
       </main>
-      <DemoForm />
+      
 
       <OnTopBgTrapez />
       <Footer />

@@ -26,7 +26,7 @@ export default function RefundPolicyPage() {
           <p>Due to the nature of the service provided “NO REFUND”,“NO CANCELLATION” will be entertained once the Payment has been made</p>
         </div>
       </main>
-      <DemoForm />
+      
 
       <OnTopBgTrapez />
       <Footer />

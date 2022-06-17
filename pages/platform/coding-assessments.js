@@ -13,6 +13,7 @@ import OnTopBgTrapez from "../../src/components/pages/Home/OnTopBgTrapez";
 import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
 import codingLibrary from "/assets/platforms/Comprehensive library of coding-design questions.png";
 import constants from "../../src/Constants/Constants";
+import DemoForm from "../../src/components/pages/Home/DemoForm";
 
 const Platform = () => {
   return (
@@ -28,6 +29,7 @@ const Platform = () => {
         <Features featureData={featureData} />
         <OnTopBgTrapez bgFillColor={"fill-orange-light"} headColor="text-dark" contentColor="text-primary"/>
         <OtherPlatformTab pageInfo={constants.codingAssessmentsAndInterviews} />
+        
       </main>
       <Footer />
     </div>

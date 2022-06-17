@@ -9,6 +9,7 @@ import OnTopBgTrapez from "../../src/components/pages/Home/OnTopBgTrapez";
 import Pricing from "../../src/components/pages/Pricing/PriceList/Pricing";
 import Feature from "../../src/components/pages/Pricing/Features/Features";
 import TopSection from "../../src/components/pages/Pricing/Top-Section/TopSection";
+import DemoForm from "../../src/components/pages/Home/DemoForm";
 
 const PricingMainPage = () => {
   return (
@@ -37,6 +38,7 @@ const PricingMainPage = () => {
         {/*<section className="mt-24">*/}
         {/*  <OtherPlatformTab tabData={tabData}/>*/}
         {/*</section>*/}
+        
       </main>
       <Footer/>
     </div>
@@ -53,7 +55,7 @@ const pricingCardData = [
     topSubHeading: "",
     priceMonth: "Free",
     priceYear: "Free",
-    heading: "Warming up",
+    // heading: "Warming up",
     subHeading: "Top Features",
     features: [
       {
@@ -128,7 +130,7 @@ const pricingCardData = [
     topSubHeading: "",
     priceMonth: 49,
     priceYear: 49 * 11,
-    heading: "Getting there",
+    // heading: "Getting there",
     subHeading: "Everything in free plus . . .",
     features: [
       {
@@ -196,7 +198,7 @@ const pricingCardData = [
     topSubHeading: "*MOST POPULAR",
     priceMonth: 99,
     priceYear: 99 * 11,
-    heading: "Striking Success",
+    // heading: "Striking Success",
     subHeading: "Basic plan plus . . .",
     features: [
       {
@@ -257,7 +259,7 @@ const pricingCardData = [
     topSubHeading: "",
     priceMonth: "",
     priceYear: "",
-    heading: "Max Performance",
+    // heading: "Max Performance",
     subHeading: "Pro plan plus . . .",
     features: [
       {

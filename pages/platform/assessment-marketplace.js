@@ -11,6 +11,7 @@ import Footer from "../../src/components/Footer";
 import Image from "next/image";
 import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
 import constants from "../../src/Constants/Constants";
+import DemoForm from "../../src/components/pages/Home/DemoForm";
 
 const actionHandler = ({actionData}) => {
   console.log("Button Clicked")
@@ -29,6 +30,7 @@ const Platform = () => {
         <TopSectionNew {...topRawData} />
         <Features featureData={featureData} />
         <OtherPlatformTab pageInfo={constants.assessmentMarketPlace} />
+        
       </main>
       <Footer />
     </div>
