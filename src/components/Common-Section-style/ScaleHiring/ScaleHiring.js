@@ -8,11 +8,11 @@ const ScaleHiring = ({title, description}) => {
   const router = useRouter();
 
   const requestDemo = () => {
-
+    router.push("/contact").then();
   }
 
   const getStarted = () => {
-    router.push('/subscribe/start-trial').then();
+    router.replace('https://app.skillcounty.com/subscribe/start-trial').then();
   }
 
   return (

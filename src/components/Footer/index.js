@@ -54,10 +54,6 @@ const sections = [
         name: "contact@skillcounty.com",
         link: "mailto:contact@skillcounty.com"
       },
-      {
-        name: "About Us",
-        link: "/about-us"
-      },
     ]
   },
   {

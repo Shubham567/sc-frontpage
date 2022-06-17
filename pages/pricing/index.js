@@ -168,21 +168,21 @@ const pricingCardData = [
       },
       {
         id: 6,
-        disabled: true,
+        disabled: false,
         title: "Image based Proctoring",
         tooltipHeading: "Proctoring",
         tooltipDescription: "Allows you to monitor each candidate activities during tests."
       },
       {
         id: 7,
-        disabled: true,
+        disabled: false,
         title: "Priority Email Support",
         tooltipHeading: "Support",
         tooltipDescription: "Customer support"
       },
       {
         id: 8,
-        disabled: true,
+        disabled: false,
         title: "20 Live Pair interview",
         tooltipHeading: "Live-Pair Coding Interviews",
         tooltipDescription: "Coding interview using our live code sharing library, with built in exectution and other useful features such as question import and notepad."
@@ -229,21 +229,21 @@ const pricingCardData = [
       },
       {
         id: 5,
-        disabled: true,
+        disabled: false,
         title: "Priority Call Support",
         tooltipHeading: "Support",
         tooltipDescription: "Customer Support"
       },
       {
         id: 6,
-        disabled: true,
+        disabled: false,
         title: "Upto 200 concurrent users",
         tooltipHeading: "Concurrent Users",
         tooltipDescription: "Maximum number of candidates which can take test simultaneously."
       },
       {
         id: 7,
-        disabled: true,
+        disabled: false,
         title: "2000 mins AV question / month",
         tooltipHeading: "Audio-Video Per Month",
         tooltipDescription: "Cummulative amount of Audio Video minutes allocated for audio video questions per month."
@@ -297,28 +297,28 @@ const pricingCardData = [
       },
       {
         id: 6,
-        disabled: true,
+        disabled: false,
         title: "All question types",
         tooltipHeading: "SkillCount Question Library",
         tooltipDescription: "Global expert curated question library for your use. Can be searched/imported directly into your test."
       },
       {
         id: 7,
-        disabled: true,
+        disabled: false,
         title: "Customizable AV question",
         tooltipHeading: "Audio-Video Per Month",
         tooltipDescription: "Cummulative amount of Audio Video minutes allocated for audio video questions per month"
       },
       {
         id: 8,
-        disabled: true,
+        disabled: false,
         title: "Upto 200 concurrent users and customizable",
         tooltipHeading: "Concurrent Users",
         tooltipDescription: "Maximum number of candidates which can take test simultaneously."
       },
       {
         id: 9,
-        disabled: true,
+        disabled: false,
         title: "Unlimited Code Pair Interviews",
         tooltipHeading: "Live-Pair Coding Interviews",
         tooltipDescription: "Coding interview using our live code sharing library, with built in exectution and other useful features such as question import and notepad."

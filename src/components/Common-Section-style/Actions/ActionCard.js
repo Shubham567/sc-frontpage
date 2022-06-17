@@ -8,7 +8,7 @@ const ActionCard = ({heading, buttonLabel}) => {
   const router = useRouter();
 
   const actionHandler = () => {
-    router.push('/subscribe/start-trial').then();
+    router.push('/pricing').then();
   }
 
   return (

@@ -26,18 +26,23 @@ const CollapsibleCard = (
   }
 
   return (
-    <div className={"flex w-full md:min-w-0 md:ml-4 md:mr-4 mt-4 mb-4 text-dark justify-center items-center md:max-w-sm"}>
+    <div
+      className={"flex w-full md:min-w-0 md:ml-4 md:mr-4 mt-4 mb-4 text-dark justify-center items-center md:max-w-sm"}>
       <Card className="h-full shadow-md" fluid>
         {/*<EffectAppearOnView>*/}
         <div onClick={collapseHandler} className={clsx("w-full md:min-w-full md:max-w-full p-2 rounded-md", bgHeading)}>
-          <EffectAppearOnView>
-            <div className={clsx("w-full mb-2 md:block flex justify-center items-center", currentState)}>{topCollapsibleComponent && topCollapsibleComponent}</div>
-          </EffectAppearOnView>
+          {/*<EffectAppearOnView>*/}
+          <div
+            className={clsx("w-full mb-2 md:block flex justify-center items-center", currentState)}>{topCollapsibleComponent && topCollapsibleComponent}</div>
+          {/*</EffectAppearOnView>*/}
           <div className={"w-full flex items-center justify-between"}>
-            <EffectAppearOnView><div className={"font-semibold"}>{heading && heading}</div></EffectAppearOnView>
-            <EffectAppearOnView> <div className="cursor-pointer md:hidden">
-              {isCollapse ? closeIcon ? closeIcon : <IoIosArrowUp/> : openIcon ? openIcon : <IoIosArrowDown/>}
-            </div>
+            <EffectAppearOnView>
+              <div className={"font-semibold"}>{heading && heading}</div>
+            </EffectAppearOnView>
+            <EffectAppearOnView>
+              <div className="cursor-pointer md:hidden">
+                {isCollapse ? closeIcon ? closeIcon : <IoIosArrowUp/> : openIcon ? openIcon : <IoIosArrowDown/>}
+              </div>
             </EffectAppearOnView>
           </div>
           <EffectAppearOnView>
@@ -56,7 +61,7 @@ const CollapsibleCard = (
 
 CollapsibleCard.propTypes = {
   openIcon: PropTypes.node,
-  closeIcon:  PropTypes.node,
+  closeIcon: PropTypes.node,
   heading: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   topCollapsibleComponent: PropTypes.node,
   collapsibleComponent: PropTypes.node,

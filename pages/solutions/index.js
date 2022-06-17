@@ -28,7 +28,7 @@ const Platform = () => {
         <TopSectionForSolution {...topRawData} />
         {/*<Benefits benefitsData={benefitsData} />*/}
         <Features featureData={featureData1}/>
-        <ScaleHiring title={"Hire Affoardably At Scale"}/>
+        <ScaleHiring title={"Hire Affordably At Scale"}/>
         <Features featureData={featureData2}/>
         <Actions actionData={actionData}/>
         <Features featureData={featureData3}/>

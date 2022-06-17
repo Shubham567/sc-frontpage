@@ -5,13 +5,19 @@ import EffectAppearOnView from "../../../Effects/EffectAppearOnView";
 import ToolTip from "../../../ToolTip";
 import PricingTopBg from "../../../svgs/PricingTopBg";
 import clsx from "clsx";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import PropTypes from "prop-types";
 import Link from "next/link";
+import {actionSetFeaturesType} from "../../../../store/reducers/pricingFeatureReducer/pricingFeatureReducerActions";
 
 const PricingCard = ({id, type, topSubHeading, priceMonth, priceYear, heading, subHeading, features}) => {
+  const dispatch = useDispatch();
+
   const isMonthlySubscription = useSelector((state) => state.toggleReducer.monthlySubscription);
-  console.log(isMonthlySubscription);
+
+  const viewDetailsHandler = (pricingType) => {
+    dispatch(actionSetFeaturesType(pricingType));
+  }
 
   return (
     <div className={"w-full relative sm:w-1/2 md:w-1/3 xl:w-1/5 bg-white m-6 rounded-xl overflow-hidden"}
@@ -63,9 +69,9 @@ const PricingCard = ({id, type, topSubHeading, priceMonth, priceYear, heading, s
         </div>
         <div className="w-full flex justify-between flex-wrap items-center p-2">
           {/*<EffectAppearOnViews>*/}
-          <a href={`#features?${type?.toLowerCase()}`} className="text-primary text-base cursor-pointer font-medium">
-            View Details
-          </a>
+          <Link href={`#features`} >
+            <span onClick={() => viewDetailsHandler(type?.toLowerCase())} className="text-primary text-base cursor-pointer font-medium">View Details</span>
+          </Link>
           <Link href={"https://app.skillcounty.com/subscribe/start-trial"} passHref>
             <Button className="pl-6 pr-6" color="primary" variant="contained" size="md" rounded={false}>
               Buy Now
