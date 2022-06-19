@@ -106,7 +106,7 @@ const TopNav = props => {
                 <div className={"font-semibold ml-8 text-dark text-bs "}>
                   <Link href='https://app.skillcounty.com/subscribe/start-trial'>Sign Up for Free</Link>
                 </div>
-                <Button onClick={() => router.replace('https://app.skillcounty.com/auth')} variant="contained"
+                <Button onClick={() => router.replace('https://app.skillcounty.com')} variant="contained"
                         color="primary" className="py-1.5 px-5">Login</Button>
               </>
               :
