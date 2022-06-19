@@ -4,9 +4,11 @@ import styles from "./CustomerList.module.css";
 import Image from "next/image";
 
 const customerListData = [
-  {name : "Merck", image : "/images/brands/merckLogo.png", alt : "Merck is our customer", height: 60, width : 180},
-  {name : "Maruti", image : "/images/brands/marutiLogo.png", alt : "Maruti Suzuki",  height: 70, width : 70},
   {name : "Sunbright Manpower", image : "/images/brands/sun-bright-manpower-logo.png", alt : "Sunbright Manpower", height: 70, width : 150},
+  {name : "Maruti", image : "/images/brands/marutiLogo.png", alt : "Maruti Suzuki",  height: 70, width : 70},
+  {name : "Merck", image : "/images/brands/merckLogo.png", alt : "Merck is our customer", height: 60, width : 180},
+  {name : "Motherhood", image : "/images/brands/motherhood.png", alt : "Motherhood", height: 70, width : 150},
+  {name : "PrimeWays", image : "/images/brands/primeways.png", alt : "Primeways", height: 50, width : 170},
 ]
 
 const CustomerList = props => {
@@ -15,7 +17,7 @@ const CustomerList = props => {
       <h2 className={clsx("mb-12 text-lg text-primary sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center",styles.mainTextShadow)}>
         Our Happy Customers
       </h2>
-      <div className="flex justify-evenly flex-wrap gap-5">
+      <div className="flex justify-evenly flex-wrap gap-5 items-center">
         {
           customerListData.map(ci => <div  key={ci.name} className="p-5" width={ci.width} height={ci.height}>
             <Image src={ci.image} width={ci.width} height={ci.height} style={{zIndex: -1}} alt={ci.alt} />

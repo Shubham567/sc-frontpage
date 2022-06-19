@@ -9,7 +9,7 @@ import PropTypes from "prop-types";
 import Link from "next/link";
 import {actionSetFeaturesType} from "../../../../store/reducers/pricingFeatureReducer/pricingFeatureReducerActions";
 
-const PricingCard = ({id, type, topSubHeading, priceMonth, priceYear, heading, subHeading, features}) => {
+const PricingCard = ({id, type, topSubHeading, priceMonth, priceYear, heading, subHeading,redirectUrl,buyButtonText, features}) => {
   const dispatch = useDispatch();
 
   const isMonthlySubscription = useSelector((state) => state.toggleReducer.monthlySubscription);
@@ -37,11 +37,11 @@ const PricingCard = ({id, type, topSubHeading, priceMonth, priceYear, heading, s
               {
                 isMonthlySubscription ? (
                   priceMonth === "Free" ? <p>Free<sup className="text-base font-light">/forever</sup></p> : priceMonth ?
-                    <p><span className="text-xl">$</span>{priceMonth}<sup className="text-base font-normal">/Month</sup>
+                    <p><span className="text-xl">₹</span>{priceMonth}<sup className="text-base font-normal">/Month</sup>
                     </p> : <a href="contact" className="text-base flex cursor-pointer font-light">Contact Us</a>
                 ) : (
                   priceYear === "Free" ? <p>Free<sup className="text-base font-light">/forever</sup></p> : priceYear ?
-                    <p><span className="text-xl">$</span>{priceYear}<sup className="text-base font-normal">/Year</sup>
+                    <p><span className="text-xl">₹</span>{priceYear}<sup className="text-base font-normal">/Year</sup>
                     </p> : <a href="contact" className="text-base flex cursor-pointer font-light">Contact Us</a>
                 )
               }
@@ -71,9 +71,9 @@ const PricingCard = ({id, type, topSubHeading, priceMonth, priceYear, heading, s
           <Link href={`#features`} >
             <span onClick={() => viewDetailsHandler(type?.toLowerCase())} className="text-primary text-base cursor-pointer font-medium">View Details</span>
           </Link>
-          <Link href={"https://app.skillcounty.com/subscribe/start-trial"} passHref>
+          <Link href={ redirectUrl || "https://app.skillcounty.com/subscribe/start-trial"} passHref>
             <Button className="pl-6 pr-6" color="primary" variant="contained" size="md" rounded={false}>
-              Buy Now
+              {buyButtonText ||  "Buy Now"}
             </Button>
           </Link>
           {/*</EffectAppearOnViews>*/}

@@ -4,7 +4,9 @@ import Image from "next/image";
 import PropTypes from "prop-types";
 import constants from "../../../Constants/Constants";
 
+const disabled = true;
 const OtherPlatformTab = ({pageInfo}) => {
+
   const [selectedData, setSelectedData] = useState([]);
 
   useEffect(() => {
@@ -13,6 +15,10 @@ const OtherPlatformTab = ({pageInfo}) => {
       setSelectedData(array.sort(() => Math.random() - Math.random()).slice(0, 3));
     }
   }, [pageInfo]);
+
+  if(disabled){
+    return <></>
+  }
 
   return (
     <div className="mt-28 ml-2 mr-2 sm:ml-8 sm:mr-8 flex justify-center items-center relative">

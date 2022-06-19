@@ -53,6 +53,8 @@ const pricingCardData = [
     topSubHeading: "",
     priceMonth: "Free",
     priceYear: "Free",
+    redirectUrl: "https://app.skillcounty.com/subscribe/start-trial",
+    buyButtonText: "Sign up",
     // heading: "Warming up",
     subHeading: "Top Features",
     features: [
@@ -103,7 +105,7 @@ const pricingCardData = [
         disabled: false,
         title: "125 min AV question",
         tooltipHeading: "Audio-Video Per Month",
-        tooltipDescription: "Cummulative amount of Audio Video minutes allocated for audio video questions per month"
+        tooltipDescription: "Cumulative amount of Audio Video minutes allocated for audio video questions per month"
       },
       {
         id: 8,
@@ -117,7 +119,7 @@ const pricingCardData = [
         disabled: false,
         title: "5 Code Pair Assessment",
         tooltipHeading: "Live-Pair Coding Interviews",
-        tooltipDescription: "Coding interview using our live code sharing library, with built in exectution and other useful features such as question import and notepad."
+        tooltipDescription: "Coding interview using our live code sharing library, with built in execution and other useful features such as question import and notepad."
       },
     ]
   },
@@ -126,8 +128,9 @@ const pricingCardData = [
     id: 2,
     type: "Basic",
     topSubHeading: "",
-    priceMonth: 49,
-    priceYear: 49 * 11,
+    priceMonth: 4999,
+    priceYear: 4999 * 11,
+    redirectUrl: "https://app.skillcounty.com/subscribe/start-trial?planId=9557f370-febb-460b-9a1c-d8cb87760fe5",
     // heading: "Getting there",
     subHeading: "Everything in free plus . . .",
     features: [
@@ -157,7 +160,7 @@ const pricingCardData = [
         disabled: false,
         title: "500 mins AV question per month",
         tooltipHeading: "Audio-Video Per Month",
-        tooltipDescription: "Cummulative amount of Audio Video minutes allocated for audio video questions per month"
+        tooltipDescription: "Cumulative amount of Audio Video minutes allocated for audio video questions per month"
       },
       {
         id: 5,
@@ -185,7 +188,7 @@ const pricingCardData = [
         disabled: false,
         title: "20 Live Pair interview",
         tooltipHeading: "Live-Pair Coding Interviews",
-        tooltipDescription: "Coding interview using our live code sharing library, with built in exectution and other useful features such as question import and notepad."
+        tooltipDescription: "Coding interview using our live code sharing library, with built in execution and other useful features such as question import and notepad."
       },
     ]
   },
@@ -194,8 +197,9 @@ const pricingCardData = [
     id: 3,
     type: "Pro",
     topSubHeading: "*MOST POPULAR",
-    priceMonth: 99,
-    priceYear: 99 * 11,
+    priceMonth: 9999,
+    priceYear: 9999 * 11,
+    redirectUrl: "https://app.skillcounty.com/subscribe/start-trial?planId=5326f063-6d9b-4de2-9e91-c96ee7b32b82",
     // heading: "Striking Success",
     subHeading: "Basic plan plus . . .",
     features: [
@@ -246,7 +250,7 @@ const pricingCardData = [
         disabled: false,
         title: "2000 mins AV question / month",
         tooltipHeading: "Audio-Video Per Month",
-        tooltipDescription: "Cummulative amount of Audio Video minutes allocated for audio video questions per month."
+        tooltipDescription: "Cumulative amount of Audio Video minutes allocated for audio video questions per month."
       },
     ]
   },
@@ -258,6 +262,8 @@ const pricingCardData = [
     priceMonth: "",
     priceYear: "",
     // heading: "Max Performance",
+    buyButtonText: "Contact Us",
+    redirectUrl: "https://skillcounty.com/contact",
     subHeading: "Pro plan plus . . .",
     features: [
       {
@@ -307,7 +313,7 @@ const pricingCardData = [
         disabled: false,
         title: "Customizable AV question",
         tooltipHeading: "Audio-Video Per Month",
-        tooltipDescription: "Cummulative amount of Audio Video minutes allocated for audio video questions per month"
+        tooltipDescription: "Cumulative amount of Audio Video minutes allocated for audio video questions per month"
       },
       {
         id: 8,
@@ -321,7 +327,7 @@ const pricingCardData = [
         disabled: false,
         title: "Unlimited Code Pair Interviews",
         tooltipHeading: "Live-Pair Coding Interviews",
-        tooltipDescription: "Coding interview using our live code sharing library, with built in exectution and other useful features such as question import and notepad."
+        tooltipDescription: "Coding interview using our live code sharing library, with built in execution and other useful features such as question import and notepad."
       },
     ]
   }
@@ -467,13 +473,13 @@ const featuresData = [
     id: 8,
     dataKey: "Audio-Video Per Month",
     free: {
-      title: "125mins"
+      title: "125 mins"
     },
     basic: {
-      title: "500mins"
+      title: "500 mins"
     },
     pro: {
-      title: "2000mins"
+      title: "2000 mins"
     },
     enterprise: {
       title: "Customizable"
@@ -668,12 +674,12 @@ const featuresData = [
       title: "Slack, Teams"
     },
     enterprise: {
-      title: "Slack, Teams, Customizable support for additional softwares"
+      title: "Slack, Teams, Customizable support for additional platforms"
     }
   },
   {
     id: 21,
-    dataKey: "Custom Imtegrations & API",
+    dataKey: "Custom Integrations & API",
     free: {
       title: "No"
     },
@@ -688,22 +694,4 @@ const featuresData = [
     }
   }
 ]
-
-const tabData = [
-  {
-    id: 1,
-    heading: "Team Support",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium, sem et efficitur blandit, mauris ex rutrum quam, non pharetra lectus arcu vitae quam. Maecenas pretium, sem et efficitur blandit, mauris ex rutrum quam, non pharetra lectus arcu vitae quam.",
-  },
-  {
-    id: 2,
-    heading: "ATS Integration",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium, sem et efficitur blandit, mauris ex rutrum quam, non pharetra lectus arcu vitae quam. Maecenas pretium, sem et efficitur blandit, mauris ex rutrum quam, non pharetra lectus arcu vitae quam.",
-  },
-  {
-    id: 3,
-    heading: "Workspace",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium, sem et efficitur blandit, mauris ex rutrum quam, non pharetra lectus arcu vitae quam. Maecenas pretium, sem et efficitur blandit, mauris ex rutrum quam, non pharetra lectus arcu vitae quam.",
-  }
-];
 
