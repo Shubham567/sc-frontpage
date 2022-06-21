@@ -7,7 +7,7 @@ import React from "react";
 class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html lang="en-US">
         <Head>
           {/* Do NOT add title tag in this file*/}
 
