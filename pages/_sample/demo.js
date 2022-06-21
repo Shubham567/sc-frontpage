@@ -1,6 +1,6 @@
 import React from 'react';
-import EffectAppearOnView from "../src/components/Effects/EffectAppearOnView";
-import ThreeCards from "../src/components/ThreeCards";
+import EffectAppearOnView from "../../src/components/Effects/EffectAppearOnView";
+import ThreeCards from "../../src/components/ThreeCards";
 
 const arr = [2,12,31,312,3,1]
 arr.length = 10;

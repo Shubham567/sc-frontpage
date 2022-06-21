@@ -10,14 +10,14 @@ import OnTopBgTrapez from "../../src/components/pages/Home/OnTopBgTrapez";
 import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
 import codingLibrary from "/assets/platforms/Comprehensive library of coding-design questions.png";
 import constants from "../../src/Constants/Constants";
+import CommonHead from "../../src/components/CommonHead";
 
 const Platform = () => {
   return (
     <div>
-      <Head>
-        <title>{appDetails.title}</title>
-        <meta name="description" content={appDetails.metaDescription} />
-      </Head>
+      <CommonHead title="Coding Assessments"
+                  metaDescription="Hire with evidence & build great teams using SkillCounty Assessment Platform to hire technical talent from anywhere. SkillCounty gives you an edge to identify, and hire great developers at scale and affordably."
+      />
       <TopNav/>
       <main>
         {/*<TopPlatformSection {...topRawData} />*/}

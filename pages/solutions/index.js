@@ -8,15 +8,13 @@ import Footer from "../../src/components/Footer";
 import Image from "next/image";
 import ScaleHiring from "../../src/components/Common-Section-style/ScaleHiring/ScaleHiring";
 import TopSectionForSolution from "../../src/components/pages/Ssolutions/TopSection";
+import CommonHead from "../../src/components/CommonHead";
 // import {router} from "next/client";
 
 const Platform = () => {
   return (
     <div>
-      <Head>
-        <title>{appDetails.title}</title>
-        <meta name="description" content={appDetails.metaDescription}/>
-      </Head>
+      <CommonHead title="SkillCounty a Platform that works for any role"  metaDescription="Hire with evidence & build great teams using a Skill Platform that works for any role. SkillCounty Assessment Platform helps you hire the best engineers, developers, bankers and more."/>
       <TopNav/>
       <main>
         {/*<TopPlatformSection {...topRawData} hideBg={"invisible"} />*/}

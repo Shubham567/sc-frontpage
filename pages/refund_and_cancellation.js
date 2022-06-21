@@ -4,17 +4,14 @@ import Head from "next/head";
 import React from "react";
 import OnTopBgTrapez from "../src/components/pages/Home/OnTopBgTrapez";
 import Footer from "../src/components/Footer";
+import CommonHead from "../src/components/CommonHead";
 
 
 export default function RefundPolicyPage() {
 
   return (
     <div className="relative">
-      <Head>
-        <title>{appDetails.title}</title>
-        <meta name="description" content={appDetails.metaDescription} />
-      </Head>
-
+      <CommonHead title="Refund Policy - SkillCounty" />
 
       <TopNav/>
 

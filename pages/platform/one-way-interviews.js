@@ -9,14 +9,14 @@ import Image from "next/image";
 // import betterWayImage from "/assets/platforms/Better-way-to-screen-applicants.png";
 import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
 import constants from "../../src/Constants/Constants";
+import CommonHead from "../../src/components/CommonHead";
 
 const Platform = () => {
   return (
     <div>
-      <Head>
-        <title>{appDetails.title}</title>
-        <meta name="description" content={appDetails.metaDescription} />
-      </Head>
+      <CommonHead title="One way interview, Audio - Video Questions"
+                  metaDescription="Hire with evidence & build great teams using a Skill Platform that works for any role. With one way interviews or asynchronous interviews SkillCounty saves you time and enables you to assess soft skills like communication, presentation and more."
+      />
       <TopNav/>
       <main>
         {/*<TopPlatformSection {...topRawData} />*/}

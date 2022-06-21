@@ -12,6 +12,7 @@ import preventImpersonation from "/assets/platforms/prevent-impersonation-via-sc
 import additionalPlagiarismProtection from "/assets/platforms/additional-plagiarism-protection-measures.png";
 import restrictIPAddress from "/assets/platforms/Restrict IP address for fair test taking.png";
 import constants from "../../src/Constants/Constants"
+import CommonHead from "../../src/components/CommonHead";
 
 const actionHandler = ({actionData}) => {
   console.log("Button Clicked")
@@ -20,10 +21,9 @@ const actionHandler = ({actionData}) => {
 const Platform = () => {
   return (
     <div>
-      <Head>
-        <title>{appDetails.title}</title>
-        <meta name="description" content={appDetails.metaDescription} />
-      </Head>
+      <CommonHead title="Proctoring & Malpractice Protection"
+                  metaDescription="Hire with evidence & build great teams using a Skill Platform that works for any role. SkillCounty provides you with sophisticated proctoring tools to ensure the integrity of your assessments."
+      />
       <TopNav/>
       <main>
         {/*<TopPlatformSection {...topRawData} />*/}

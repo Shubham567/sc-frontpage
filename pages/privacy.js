@@ -5,16 +5,14 @@ import React from "react";
 import OnTopBgTrapez from "../src/components/pages/Home/OnTopBgTrapez";
 import TopEllipses from "../src/components/svgs/TopEllipses";
 import Footer from "../src/components/Footer";
+import CommonHead from "../src/components/CommonHead";
 
 
 export default function Privacy() {
 
   return (
     <div className="relative">
-      <Head>
-        <title>{appDetails.title}</title>
-        <meta name="description" content={appDetails.metaDescription} />
-      </Head>
+      <CommonHead title="Privacy Policy - SkillCounty" />
 
       <TopEllipses className="absolute top-0 right-0 -z-50"  />
       <TopNav/>

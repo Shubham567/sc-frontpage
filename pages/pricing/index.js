@@ -8,14 +8,14 @@ import OnTopBgTrapez from "../../src/components/pages/Home/OnTopBgTrapez";
 import Pricing from "../../src/components/pages/Pricing/PriceList/Pricing";
 import Feature from "../../src/components/pages/Pricing/Features/Features";
 import TopSection from "../../src/components/pages/Pricing/Top-Section/TopSection";
+import CommonHead from "../../src/components/CommonHead";
 
 const PricingMainPage = () => {
   return (
     <div>
-      <Head>
-        <title>{appDetails.title}</title>
-        <meta name="description" content={appDetails.metaDescription}/>
-      </Head>
+      <CommonHead title="Pricing"
+                  metaDescription="Hire with evidence and build great teams using a Skill Platform that works for any role and any business.  SkillCounty provides the best value for money with pricing tiers that range from FREE to Enterprise."
+      />
       <TopNav/>
       <main>
         <section className="h-screen">

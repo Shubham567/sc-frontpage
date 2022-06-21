@@ -10,14 +10,14 @@ import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSec
 import cultureFit from "/assets/platforms/Hire-the-best-fit for-your-culture.png";
 import findTheMotivation from "/assets/platforms/Find the motivation.png";
 import constants from "../../src/Constants/Constants";
+import CommonHead from "../../src/components/CommonHead";
 
 const Platform = () => {
   return (
     <div>
-      <Head>
-        <title>{appDetails.title}</title>
-        <meta name="description" content={appDetails.metaDescription} />
-      </Head>
+      <CommonHead title="Psychometric Assessments"
+                  metaDescription="Hire with evidence and build great teams using SkillCounty Assessment Platform that works for any role. In addition to assessing a candidate’s skills, SkillCounty enables you to measure a candidate’s fit using psychometric assessments."
+      />
       <TopNav/>
       <main>
         {/*<TopPlatformSection {...topRawData} />*/}

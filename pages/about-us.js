@@ -4,17 +4,14 @@ import Head from "next/head";
 import React from "react";
 import OnTopBgTrapez from "../src/components/pages/Home/OnTopBgTrapez";
 import Footer from "../src/components/Footer";
+import CommonHead from "../src/components/CommonHead";
 
 
 export default function RefundPolicyPage() {
 
   return (
     <div className="relative">
-      <Head>
-        <title>{appDetails.title}</title>
-        <meta name="description" content={appDetails.metaDescription} />
-      </Head>
-
+      <CommonHead title="Hire with evidence & build great teams" metaDescription="We help our customers in conduction any kind of assessments effortlessly at an affordable price. Contact us on contact@skillcounty.com to learn more." />
 
       <TopNav/>
 

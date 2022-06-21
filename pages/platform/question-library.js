@@ -12,15 +12,15 @@ import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSec
 import varietyOfQuestions from "/assets/platforms/Variety of Questions for a variety of roles.png";
 import ownLibrary from "/assets/platforms/A library of your own.png";
 import constants from "../../src/Constants/Constants";
+import CommonHead from "../../src/components/CommonHead";
 
 
 const Platform = () => {
   return (
     <div>
-      <Head>
-        <title>{appDetails.title}</title>
-        <meta name="description" content={appDetails.metaDescription} />
-      </Head>
+      <CommonHead title="Question Library"
+                  metaDescription="Hire with evidence and build great teams using SkillCounty Assessment Platform that works for any role. SkillCounty offers hundreds of expert crafted questions  that you can use to swiftly create high-quality assessments for a wide range of roles"
+      />
       <TopNav/>
       <main>
         {/*<TopPlatformSection {...topRawData} />*/}

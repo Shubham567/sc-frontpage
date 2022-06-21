@@ -11,14 +11,12 @@ import insightfulImage from "/assets/platforms/Insightful-auto-graded-reports.pn
 import saveNotes from "/assets/platforms/Save notes on a candidate or in a single click shortlist or reject.png"
 import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
 import constants from "../../src/Constants/Constants"
+import CommonHead from "../../src/components/CommonHead";
 
 const Platform = () => {
   return (
     <div>
-      <Head>
-        <title>{appDetails.title}</title>
-        <meta name="description" content={appDetails.metaDescription} />
-      </Head>
+      <CommonHead title="AI Based auto Evaluations " metaDescription="Hire with evidence & build great teams using a Skill Platform that works for any role. SkillCounty Assessment Platform employs AI to help you hire at scale and provide the best value for money." />
       <TopNav/>
       <main>
         {/*<TopPlatformSection {...topRawData} />*/}

@@ -9,14 +9,14 @@ import Image from "next/image";
 import OnTopBgTrapez from "../../src/components/pages/Home/OnTopBgTrapez";
 import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
 import constants from "../../src/Constants/Constants";
+import CommonHead from "../../src/components/CommonHead";
 
 const Platform = () => {
   return (
     <div>
-      <Head>
-        <title>{appDetails.title}</title>
-        <meta name="description" content={appDetails.metaDescription} />
-      </Head>
+      <CommonHead title="Custom Assessments"
+                  metaDescription="Hire with evidence & build great teams using a Skill Platform that works for any role. You can build custom assessments or use SkillCounty’s expert designed assessments to hire engineers, developers, teachers, marketing associates and more."
+      />
       <TopNav/>
       <main>
         {/*<TopPlatformSection {...topRawData} />*/}

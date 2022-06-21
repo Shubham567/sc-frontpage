@@ -8,18 +8,15 @@ import Footer from "../../src/components/Footer";
 import Image from "next/image";
 import TopSectionNew from "../../src/components/pages/Platform/TopSection/TopSectionNew";
 import constants from "../../src/Constants/Constants";
+import CommonHead from "../../src/components/CommonHead";
 
-const actionHandler = ({actionData}) => {
-  console.log("Button Clicked")
-}
 
 const Platform = () => {
   return (
     <div>
-      <Head>
-        <title>{appDetails.title}</title>
-        <meta name="description" content={appDetails.metaDescription} />
-      </Head>
+      <CommonHead title="Assessment Marketplace"
+                  metaDescription="Hire with evidence and build great teams using SkillCounty Assessment Platform that works for any role. SkillCounty offers expert designed assessments which cover a wide range of roles to help you reduce your time to hire and increase the quality of your hires."
+      />
       <TopNav/>
       <main>
         {/*<TopPlatformSection {...topRawData} />*/}
