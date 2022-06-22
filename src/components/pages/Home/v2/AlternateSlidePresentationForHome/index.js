@@ -6,18 +6,21 @@ import EffectIncrementUpto from "../../../../Effects/EffectIncrementUpto";
 
 const data = [
   {
-    title : "Top 3 hiring issues reported by companies in 2022",
+    title: "Top 3 hiring issues reported by companies in 2022",
     component: <div className="flex flex-col gap-8 items-center justify-center">
       {
         [
           {"text": "Difficult to find & attract quality candidates.", targetValue: 77},
           {"text": "Time to hire is high and increasing.", targetValue: 70},
-          {"text": "Talent teams are under resourced and are getting worse with increased resignations.", targetValue: 60},
+          {
+            "text": "Talent teams are under resourced and are getting worse with increased resignations.",
+            targetValue: 60
+          },
 
         ].map(item => {
           return <div key={item.text} className="w-full flex items-center gap-4">
             <div className="text-2xl text-secondary font-semibold">
-              <EffectIncrementUpto targetValue={item.targetValue} >%</EffectIncrementUpto>
+              <EffectIncrementUpto targetValue={item.targetValue}>%</EffectIncrementUpto>
             </div>
             <div className="max-w-sm text-primary">
               {item.text}
@@ -64,7 +67,8 @@ const data = [
         return (
           <p key={item.title} className="w-full text-primary">
             <span className="underline font-semibold">{item.title}</span>&nbsp;
-            <EffectIncrementUpto targetValue={item.targetValue} wrapperComponent="strong" className="text-2xl text-secondary" >%&nbsp;</EffectIncrementUpto>
+            <EffectIncrementUpto targetValue={item.targetValue} wrapperComponent="strong"
+                                 className="text-2xl text-secondary">%&nbsp;</EffectIncrementUpto>
             {item.content}
           </p>
         )
@@ -79,9 +83,10 @@ const breakPoint = 750;
 const AlternateSlidePresentationForHome = () => {
   const screen = useScreenSize();
   return (
-    <div className="flex justify-center items-center pt-16" style={{minHeight: 600}}>
+    <div>
       {
-        screen.width > breakPoint ? <AlternateSlidePresentationForHomeWideScreen data={data} /> : ""
+        screen.width > breakPoint ? <div className="flex justify-center items-center pt-16" style={{minHeight: 580}}>
+          <AlternateSlidePresentationForHomeWideScreen data={data}/></div> : ""
       }
     </div>
   );

@@ -5,7 +5,7 @@ import EffectAppearOnView from "../../Effects/EffectAppearOnView";
 
 const Advantage = () => {
   return (
-    <div className="mt-24 mb-72 relative">
+    <div className="mt-28 mb-72 relative">
       <div className="flex justify-center items-center flex-col">
         <h1 className="font-bold text-4xl tracking-wide text-primary text-center">SkillCounty Advantages</h1>
         <p style={{letterSpacing: "3.5px", wordSpacing: "5px"}}

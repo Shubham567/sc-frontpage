@@ -12,7 +12,7 @@ const TopSection = () => {
 
   return (
     <div className="w-full h-full p-4 flex justify-center items-center">
-      <div className="text-4xl -mt-8 md:text-6xl text-primary font-normal text-center tracking-normal leading-snug">
+      <div className="text-3xl sm:text-4xl -mt-8 md:text-6xl text-primary font-normal text-center tracking-normal leading-snug">
         Build the best teams with the <br/> <span className="font-bold">most affordable</span> solution
         <p className="text-lg sm:text-2xl mt-8 text-center">
           <a href="/subscribe/start-trial" className="underline">SignUp</a> for a free 14 days trial. No credit card required, <br/> No annual subscription (Cancel anytime).

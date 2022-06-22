@@ -37,7 +37,7 @@ export default function Home() {
           <HiringSolution/>
         </section>
 
-        <section>
+        <section >
           <AlternateSlidePresentationForHome />
         </section>
 

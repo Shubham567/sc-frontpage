@@ -4,12 +4,12 @@ import CollapsibleCard from "../../CollapsibleCard";
 
 const HiringAssessment = () => {
   return (
-    <div className="mt-24 overflow-x-hidden w-full text-dark relative flex justify-center flex-col align-center">
+    <div className="mt-20 sm:mt-24 overflow-x-hidden w-full text-dark relative flex justify-center flex-col align-center">
       <div>
         <div className="absolute -right-72 bottom-0 -z-10">
           <Image width="781px" height="824px" src="/images/dottedSkillCounty.png" alt="SkillCounty logo"/>
         </div>
-        <h1 className="text-center text-4xl font-normal text-primary mb-24 font-bold">Hiring Assessment Platform</h1>
+        <h1 className="text-center text-2xl md:text-3xl lg:text-4xl font-medium text-primary mb-24 font-bold">Hiring Assessment Platform</h1>
         {/*<EffectAppearOnView>*/}
           <div className="w-full flex flex-wrap justify-center items-stretch">
             {

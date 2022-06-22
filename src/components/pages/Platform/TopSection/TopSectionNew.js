@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import clsx from "clsx";
 
 const LeftSide = ({heading, description, descriptionTitle}) => {
-  return (<div className="h-full w-full md:w-1/2 flex justify-center items-center">
+  return (<div className="h-1/4 sm:h-full  w-full md:w-1/2 flex justify-center items-center">
     <div style={{borderLeft: "30px solid #FFE459"}} className="pt-12 md:ml-8 pb-12 pl-4 md:pl-12 pr-2 border-l-yellow ">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-normal text-primary">
+      <h1 style={{textShadow: "1px 1px #ffffff"}} className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-normal text-primary">
         {
           heading?.split(" ").map((item, i) => (
             (i < heading?.split(" ")?.length - 1) ? item + " " : <span className="font-bold">{item + " "}</span>
@@ -13,10 +13,10 @@ const LeftSide = ({heading, description, descriptionTitle}) => {
         }
         {/*Customizable <span className="font-bold">assessments</span>*/}
       </h1>
-      <p className="mt-6 text-primary font-normal text-lg sm:text-xl md:text-2xl">
+      <p style={{textShadow: "1px 1px #ffffff"}} className="mt-6 text-primary font-normal text-lg sm:text-xl md:text-2xl">
         {descriptionTitle}
       </p>
-      <p className="mt-4 text-primary font-normal text-sm sm:text-base">
+      <p style={{textShadow: "1px 1px #ffffff"}} className="mt-4 text-primary font-normal text-sm sm:text-base">
         {description}
       </p>
     </div>
@@ -40,7 +40,7 @@ const RightSide = ({image, imagePosition}) => {
 
 const TopSectionNew = ({heading, descriptionTitle, description, image, imagePosition}) => {
   return (
-    <div className="h-screen flex flex-col-reverse md:flex-row items-center justify-center">
+    <div className="h-screen flex mb-44 sm:mb-0 flex-col-reverse md:flex-row items-center justify-center">
       <LeftSide heading={heading} descriptionTitle={descriptionTitle} description={description} />
       <RightSide image={image} imagePosition={imagePosition} />
     </div>

@@ -75,7 +75,7 @@ const topRawData = {
   description: "With SkillCounty, you can conduct coding assessments, hackathons, remote coding interviews and remote design interviews. You can assess technical skills along with important adjacent skills that software engineers require like  planning, teamwork, execution, and communication.",
   descriptionTitle: "Find the best software engineers using coding assessments, hackathons and remote coding & design interviews",
   image: <Image src="/images/platform/Coding Interviews.png" alt="proctoring based image" height="632px" width="948px"/>,
-  imagePosition: "top-16 md:top-32"
+  imagePosition: "top-16 md:top-32 right-0"
 }
 
 

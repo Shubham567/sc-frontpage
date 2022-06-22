@@ -73,7 +73,7 @@ const topRawData = {
   description: "Align skills, culture and motivation for hiring the best and setting them up for success",
   descriptionTitle: "Go beyond skills and assess company-fit by getting more into a candidate’s personality",
   image: <Image src="/images/platform/thinking-adult-man.png" alt="thinking adult man" height="747px" width="946px"/>,
-  imagePosition: "top-28"
+  imagePosition: "top-24 md:top-16 xl:top-28"
 }
 
 

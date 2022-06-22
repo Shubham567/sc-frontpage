@@ -19,8 +19,8 @@ const PricingMainPage = () => {
       <TopNav/>
       <main>
         <section className="h-screen">
-          <div style={{backgroundImage: "url(/images/pricing/bgTop.png)", height: "88%"}}
-               className="w-full bg-no-repeat	bg-cover bg-dark">
+          <div style={{backgroundImage: "url(/images/pricing/bgTop.png)", }}
+               className="w-full h-screen sm:h-5/6 bg-no-repeat	bg-cover bg-dark">
             <TopSection/>
           </div>
         </section>

@@ -40,7 +40,7 @@ const Intro = () => {
               "text-center text-md font-medium tracking-wider -mt-1 lg:text-left xl:text-left 2xl:text-left px-0.5 rounded")}
                // style={{background: "rgba(255,255,255,0.3)"}}
             >
-              Upgrade your hiring. Use SkillCounty Assessment Platform to hire the right candidates faster and more efficiently.
+              Build a faster and scalable hiring process that attracts the best talent using the most user friendly hiring platform.
             </p>
           </div>
 

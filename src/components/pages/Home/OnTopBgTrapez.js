@@ -10,7 +10,7 @@ const OnTopBgTrapez = props => {
   const dispatch = useDispatch();
   const openModal = () => dispatch(actionSetHomeDemoRequestForm(true));
   return (
-    <div className="w-full relative flex md:flex-row flex-col p-4 gap-16 items-center justify-center" style={{minHeight: 400, width: "100%"}}>
+    <div className="w-full mt-24 relative flex md:flex-row flex-col p-4 gap-16 items-center justify-center" style={{minHeight: 400, width: "100%"}}>
       <BgTrapez className={clsx("absolute top-0", props.bgFillColor || "fill-primary")} width="100%" height="100%" style={{zIndex: -2}}/>
 
 

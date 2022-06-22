@@ -74,6 +74,6 @@ const topRawData = {
   description: "Save time by relying on automatic AI based evaluations that auto grade answers to both objective and subjective questions",
   descriptionTitle: "Power your hiring process with AI based evaluation and insightful assessment reports ",
   image: <Image src="/images/platform/business-presentation-pointing.png" alt="business presentation pointing ppt" height="934px" width="929px"/>,
-  imagePosition: "top-16 md:top-8"
+  imagePosition: "top-6 sm:top-4 xl:top-8"
 }
 

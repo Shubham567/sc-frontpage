@@ -72,7 +72,8 @@ const topRawData = {
   heading: "Assessment Marketplace",
   description: "Save yourself time by selecting pre-designed assessments that cover all the important skills required the specific role you are looking to fill",
   descriptionTitle: "Expert crafted role specific assessments",
-  image: <Image src="/images/platform/hands-holding-shopping-cart.png" alt="hands holding shopping cart" height="821px" width="868px"/>
+  image: <Image src="/images/platform/hands-holding-shopping-cart.png" alt="hands holding shopping cart" height="821px" width="868px"/>,
+  imagePosition: "top-8 sm:top-4"
 }
 
 
