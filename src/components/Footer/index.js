@@ -4,6 +4,7 @@ import {IoLogoFacebook, IoLogoInstagram, IoLogoTwitter, IoLogoYoutube, IoLogoLin
 import IconButton from "../IconButton";
 import Image from "next/image";
 import {useMatomo} from "@datapunt/matomo-tracker-react";
+import SocialLinks from "../SocialLinks";
 
 
 const sections = [
@@ -85,13 +86,7 @@ const sections = [
   }
 ]
 
-const socialLinks  = [
-  {name: "LinkedIn", link: "https://www.linkedin.com/showcase/skillcounty", icon: <IoLogoLinkedin />},
-  {name: "Twitter", link: "https://twitter.com/skillcounty_com", icon: <IoLogoTwitter />},
-  {name: "Instagram", link: "https://www.instagram.com/_skillcounty/", icon: <IoLogoInstagram />},
-  {name: "Facebook", link: "https://www.facebook.com/skillcounty", icon: <IoLogoFacebook />},
-  {name: "Youtube", link: "https://www.youtube.com/channel/UCWkB0Kw80TpzZSqLChMmYKw", icon: <IoLogoYoutube />},
-]
+
 
 const Footer = () => {
   const {trackPageView} = useMatomo();
@@ -127,15 +122,7 @@ const Footer = () => {
         </div>
         <div className="flex items-start sm:items-end flex-col p-2 gap-2">
           <div className="text-yellow font-semibold">Follow Us</div>
-          <div className="flex gap-2 text-yellow">
-            {
-              socialLinks.map(sl => <a href={sl.link} rel="noopener noreferrer" key={sl.name} target="_blank" >
-                <IconButton className="bg-yellow" aria-label={sl.name} contained>
-                  {sl.icon}
-                </IconButton>
-              </a>)
-            }
-          </div>
+          <SocialLinks />
         </div>
       </div>
       <div className="text-gray-dark text-sm text-center">

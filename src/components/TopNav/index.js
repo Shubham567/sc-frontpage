@@ -12,6 +12,7 @@ import SideMenu from "../SideMenu";
 import {useRouter} from "next/router";
 import DropDown from "../DropDown";
 import {Toaster} from "react-hot-toast";
+import SocialLinks from "../SocialLinks";
 
 const centralLinks = [
   {
@@ -127,7 +128,8 @@ const TopNav = props => {
         }}
       ></Toaster>
       <SideMenu open={openSideMenu} onClose={toggleSideMenu}>
-        <div className="flex flex-col text-primary p-2 gap-2">
+        <div className="flex h-full flex-col justify-between ">
+          <div className="flex flex-col text-primary p-2 gap-2">
           {
             sideMenuItems.map(menuItem => <div key={menuItem.name}>
               <Link href={menuItem.href}>
@@ -157,6 +159,8 @@ const TopNav = props => {
               }
             })
           }
+          </div>
+          <SocialLinks className="p-3 self-end"/>
         </div>
       </SideMenu>
     </nav>
