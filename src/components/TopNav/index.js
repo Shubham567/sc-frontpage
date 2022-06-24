@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import ScLogo from "../svgs/ScLogo";
 import Link from "next/link";
 import Button from "../Button";
-import {useToggle, useWindowScroll} from "@mantine/hooks";
+import {useWindowScroll} from "@mantine/hooks";
 import clsx from "clsx";
 import styles from "./TopNav.module.css";
 import useScreenSize from "../../hooks/useScreenSize";
@@ -133,6 +133,9 @@ const TopNav = props => {
         }}
       ></Toaster>
       <SideMenu open={openSideMenu} onClose={toggleSideMenu}>
+        <div>
+          <button onClick={toggleSideMenu}>Close</button>
+        </div>
         <div className="flex h-full flex-col justify-between ">
           <div className="flex flex-col text-primary p-2 gap-2">
             <div className="flex w-full border-b-2 mb-2 pb-2 border-b-gray-extra-light justify-between items-center">
