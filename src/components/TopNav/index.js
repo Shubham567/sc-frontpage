@@ -14,6 +14,7 @@ import DropDown from "../DropDown";
 import {Toaster} from "react-hot-toast";
 import Image from "next/image";
 import {GiCrossedBones} from "react-icons/gi";
+import SocialLinks from "../SocialLinks";
 
 const centralLinks = [
   {
@@ -131,7 +132,8 @@ const TopNav = props => {
         }}
       ></Toaster>
       <SideMenu open={openSideMenu} onClose={toggleSideMenu}>
-        <div className="flex flex-col text-primary p-2 gap-2">
+        <div className="flex h-full flex-col justify-between ">
+          <div className="flex flex-col text-primary p-2 gap-2">
           <div className="flex w-full justify-between items-center">
             <div className="pr-4 w-4/5">
               <Image src="/images/skillcounty-logo.svg" height="48px" width="240px" alt="SkillCounty Logo"/>
@@ -169,6 +171,8 @@ const TopNav = props => {
               }
             })
           }
+          </div>
+          <SocialLinks className="p-3 self-end"/>
         </div>
       </SideMenu>
     </nav>
