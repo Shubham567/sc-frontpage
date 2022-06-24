@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ScLogo from "../svgs/ScLogo";
 import Link from "next/link";
 import Button from "../Button";
@@ -15,10 +15,12 @@ import {Toaster} from "react-hot-toast";
 import Image from "next/image";
 import {GiCrossedBones} from "react-icons/gi";
 import SocialLinks from "../SocialLinks";
+import CollapsibleLink from "../CollapsibleLink";
 
 const centralLinks = [
   {
-    name: "Platform", menuItems: [
+    name: "Platform",
+    menuItems: [
       {
         name: "Customizable Assessments",
         href: "/platform/custom-assessments"
@@ -71,9 +73,8 @@ const TopNav = props => {
   const screen = useScreenSize();
   const router = useRouter();
 
-  const [openSideMenu, toggleSideMenu] = useToggle(false, [false, true]);
-
-  console.log(openSideMenu, toggleSideMenu)
+  const [openSideMenu, setOpenSideMenu] = useState(false);
+  const toggleSideMenu = () => setOpenSideMenu(!openSideMenu);
 
   return (
     <nav
@@ -134,45 +135,38 @@ const TopNav = props => {
       <SideMenu open={openSideMenu} onClose={toggleSideMenu}>
         <div className="flex h-full flex-col justify-between ">
           <div className="flex flex-col text-primary p-2 gap-2">
-          <div className="flex w-full justify-between items-center">
-            <div className="pr-4 w-4/5">
-              <Image src="/images/skillcounty-logo.svg" height="48px" width="240px" alt="SkillCounty Logo"/>
+            <div className="flex w-full border-b-2 mb-2 pb-2 border-b-gray-extra-light justify-between items-center">
+              <div className="pr-4 w-4/6">
+                <Image src="/images/skillcounty-logo.svg" height="48px" width="240px" alt="SkillCounty Logo"/>
+              </div>
+              <div onClick={toggleSideMenu}
+                   className="border-2 flex items-center -mt-2 justify-center w-6 h-6 p-1 rounded-full">
+                <GiCrossedBones className="text-sm"/>
+              </div>
             </div>
-            <div className="border-2 p-1 rounded-full">
-              <GiCrossedBones/>
-            </div>
-          </div>
-          {
-            sideMenuItems.map(menuItem => <div key={menuItem.name}>
-              <Link href={menuItem.href}>
-                {menuItem.name}
-              </Link>
-            </div>)
-          }
-          {
-            centralLinks.map(centralItem => {
-              if (centralItem.menuItems) {
-                return <div className="flex flex-col">
-                  <div>
-                    <span className="text-gray-dark">
-                      {centralItem.name}
-                    </span>
-                  </div>
-                  <div className="flex flex-col pl-2">
-                    {
-                      centralItem.menuItems.map(mi => <Link href={mi.href} key={mi.name}>
-                        {mi.name}
-                      </Link>)
-                    }
-                  </div>
-                </div>
-              } else {
-
+            <div style={{maxHeight: "81.5vh"}} className="overflow-y-auto">
+              {
+                sideMenuItems.map(menuItem => <div onClick={() => router.push(menuItem.href).then()} key={menuItem.name} className="font-semibold border-b-2 border-b-gray-hard-light text-dark p-2">
+                  <Link href={menuItem.href}>
+                    {menuItem.name}
+                  </Link>
+                </div>)
               }
-            })
-          }
+              {
+                centralLinks.map(centralItem => {
+                  if (centralItem.menuItems) {
+                    return <CollapsibleLink title={centralItem.name} dropDownItems={centralItem.menuItems} />
+                  } else {
+
+                  }
+                })
+              }
+            </div>
           </div>
-          <SocialLinks className="p-3 self-end"/>
+
+          <div className="border-t-2 pt-2 border-t-gray-extra-light flex justify-center">
+            <SocialLinks className="p-2 self-center"/>
+          </div>
         </div>
       </SideMenu>
     </nav>

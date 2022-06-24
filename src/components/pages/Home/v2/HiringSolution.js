@@ -17,7 +17,7 @@ import Image from "next/image";
 const HiringSolution = () => {
   return (
     <div className="xl:mt-36 md:mt-28 mt-24">
-      <h2 className="mb-8 text-primary font-medium text-center text-2xl md:text-3xl lg:text-4xl">
+      <h2 className="mb-8 text-primary font-bold text-center text-2xl md:text-3xl lg:text-4xl">
         Hiring Solutions
       </h2>
       <div className="mt-12">
