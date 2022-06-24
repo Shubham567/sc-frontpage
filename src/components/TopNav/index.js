@@ -12,6 +12,8 @@ import SideMenu from "../SideMenu";
 import {useRouter} from "next/router";
 import DropDown from "../DropDown";
 import {Toaster} from "react-hot-toast";
+import Image from "next/image";
+import {GiCrossedBones} from "react-icons/gi";
 
 const centralLinks = [
   {
@@ -69,6 +71,8 @@ const TopNav = props => {
   const router = useRouter();
 
   const [openSideMenu, toggleSideMenu] = useToggle(false, [false, true]);
+
+  console.log(openSideMenu, toggleSideMenu)
 
   return (
     <nav
@@ -128,6 +132,14 @@ const TopNav = props => {
       ></Toaster>
       <SideMenu open={openSideMenu} onClose={toggleSideMenu}>
         <div className="flex flex-col text-primary p-2 gap-2">
+          <div className="flex w-full justify-between items-center">
+            <div className="pr-4 w-4/5">
+              <Image src="/images/skillcounty-logo.svg" height="48px" width="240px" alt="SkillCounty Logo"/>
+            </div>
+            <div className="border-2 p-1 rounded-full">
+              <GiCrossedBones/>
+            </div>
+          </div>
           {
             sideMenuItems.map(menuItem => <div key={menuItem.name}>
               <Link href={menuItem.href}>

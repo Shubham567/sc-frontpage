@@ -3,7 +3,7 @@ import BackDrop from "../../BackDrop";
 import {useClickOutside} from "@mantine/hooks";
 import {AnimatePresence, motion} from "framer-motion";
 
-const menuWidth = 220;
+const menuWidth = 255;
 const SideMenu = ({x = "left",open,onClose, children,...props}) => {
   const outRef = useClickOutside(() => {
     onClose?.()
