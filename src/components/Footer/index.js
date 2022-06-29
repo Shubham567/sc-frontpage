@@ -88,6 +88,7 @@ const sections = [
 
 
 
+
 const Footer = () => {
   const {trackPageView} = useMatomo();
 
@@ -112,9 +113,17 @@ const Footer = () => {
                 {section.name}
               </h5>
                 {
-                  section.links.map(link => <Link href={link.link} key={link.link}>
-                    {link.name}
-                  </Link>)
+                  section.links.map(link => {
+                    if(section.name === "Blogs") {
+                      return <a key={link.link} href={link.link} rel="noopener" target="_blank" >{link.name}</a>
+                    }
+                    else{
+                      return <Link href={link.link} key={link.link}>
+                        {link.name}
+                      </Link>
+                    }
+
+                  })
                 }
             </div>
             )
