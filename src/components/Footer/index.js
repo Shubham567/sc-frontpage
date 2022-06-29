@@ -1,7 +1,5 @@
 import React, {useEffect} from 'react';
 import Link from "next/link";
-import {IoLogoFacebook, IoLogoInstagram, IoLogoTwitter, IoLogoYoutube, IoLogoLinkedin} from "react-icons/io";
-import IconButton from "../IconButton";
 import Image from "next/image";
 import {useMatomo} from "@datapunt/matomo-tracker-react";
 import SocialLinks from "../SocialLinks";
