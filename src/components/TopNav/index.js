@@ -19,7 +19,7 @@ import CollapsibleLink from "../CollapsibleLink";
 
 const centralLinks = [
   {
-    name: "Platform",
+    name: "Platform 🔻",
     menuItems: [
       {
         name: "Customizable Assessments",
