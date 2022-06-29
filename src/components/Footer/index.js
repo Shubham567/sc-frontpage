@@ -113,7 +113,7 @@ const Footer = () => {
                 {
                   section.links.map(link => {
                     if(section.name === "Blogs") {
-                      return <a key={link.link} href={link.link} rel="noopener" target="_blank" >{link.name}</a>
+                      return <a key={link.link} href={link.link} rel="noreferrer noopener" target="_blank" >{link.name}</a>
                     }
                     else{
                       return <Link href={link.link} key={link.link}>
